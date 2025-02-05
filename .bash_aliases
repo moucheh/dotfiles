@@ -5,8 +5,6 @@ make_directory_and_cd_into_it () {
     cd $1 
 }
  
-alias sc='sudo start_container'
- 
 alias clr='clear'
 alias md='make_directory_and_cd_into_it'
  
@@ -33,5 +31,3 @@ alias vim='nvim'
 alias vi='nvim'
 
 alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'
-
-alias vak='firefox https://vaktija.ba/tuzla'
