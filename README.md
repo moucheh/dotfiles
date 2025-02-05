@@ -10,5 +10,8 @@
 - swaync - notification center
 - waybar - top status bar
 - wofi - app launcher
-- wlogout - logout service
-- hyprlock - lock service
+- wlogout - logout utility 
+- hyprlock - lock utility 
+- hypridle - idle service
+- hyprpaper - wallpaper utility 
+- hyprshot - screenshot utility 
