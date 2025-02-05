@@ -3,8 +3,8 @@
         "position": "top",
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces"],
-        "modules-center": ["clock","tray"],
-        "modules-right": ["group/expand","bluetooth","network","battery","custom/notification"],
+        "modules-center": ["clock"],
+        "modules-right": ["tray","group/expand","bluetooth","network","battery","custom/notification"],
 
 
         "hyprland/workspaces": {
