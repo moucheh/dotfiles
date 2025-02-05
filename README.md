@@ -1,11 +1,11 @@
 # My dotfiles
 
-## OS - Arch Linux
-## Editor - nvim
-## terminal - ghostty
-## wm - hyprland
+### OS - Arch Linux
+### Editor - nvim
+### terminal - ghostty
+### wm - hyprland
 
-### Dependencies
+## Dependencies
 
 - swaync - notification center
 - waybar - top status bar
