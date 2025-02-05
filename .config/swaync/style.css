@@ -281,6 +281,7 @@
 .widget-buttons-grid > flowbox > flowboxchild > button {
     background: transparent;
     border-radius: 12px;
+    border: 1px solid cyan;
     text-shadow:none;
     box-shadow: 0px 0px 8px rgba(255,255,255, .02);
     transition: all .5s ease;
@@ -315,14 +316,14 @@ trough {
 }
 
 trough highlight {
-    padding: 5px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     transition: all .7s ease;
 }
 trough highlight:hover {
-    padding: 5px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
@@ -330,10 +331,10 @@ trough highlight:hover {
 }
 
 trough slider {
-    background: transparent;
+    background: cyan;
 }
 trough slider:hover {
-    background: transparent;
+    background: white;
 }
 
 .widget-volume {
