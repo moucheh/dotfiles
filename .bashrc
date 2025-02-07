@@ -10,8 +10,6 @@ export PATH="~/.dotnet/tools:$PATH"
 
 export PATH="/usr/bin/anydesk-6.4.0/:$PATH"
 
-export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
-
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -24,12 +22,6 @@ fi
 
 if [ -f ~/.bash_git ]; then
 . ~/.bash_git
-fi
-
-if [ -d "/opt1/" ]; then
-   export TERM=xterm-256color
-   source /opt1/script.sh
-   [ -z "$TMUX" ] && exec tmux
 fi
 
 RED='\033[0;31m'
