@@ -4,39 +4,39 @@ AccessModifierOffset: -2
 AlignAfterOpenBracket: BlockIndent
 AlignArrayOfStructures: Left
 AlignConsecutiveAssignments:
-  Enabled:         true
+  Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
-  AlignCompound:   true
-  AlignFunctionDeclarations: true
-  AlignFunctionPointers: true
-  PadOperators:    true
+  AlignCompound:   false
+  AlignFunctionDeclarations: false
+  AlignFunctionPointers: false
+  PadOperators:    false
 AlignConsecutiveBitFields:
-  Enabled:         true
+  Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
-  AlignCompound:   true
-  AlignFunctionDeclarations: true
-  AlignFunctionPointers: true
+  AlignCompound:   false
+  AlignFunctionDeclarations: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveDeclarations:
-  Enabled:         true
+  Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
-  AlignCompound:   true
-  AlignFunctionDeclarations: true
-  AlignFunctionPointers: true
+  AlignCompound:   false
+  AlignFunctionDeclarations: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveMacros:
-  Enabled:         true
+  Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
-  AlignCompound:   true
-  AlignFunctionDeclarations: true
-  AlignFunctionPointers: true
+  AlignCompound:   false
+  AlignFunctionDeclarations: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveShortCaseStatements:
-  Enabled:         true
+  Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCaseArrows: false
