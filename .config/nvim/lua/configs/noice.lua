@@ -10,4 +10,12 @@ noice.setup {
   cmdline = {
     view = 'cmdline',
   },
+  lsp = {
+    hover = {
+      enabled = false,
+    },
+    signature = {
+      enabled = false,
+    },
+  },
 }
