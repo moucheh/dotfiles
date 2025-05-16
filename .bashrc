@@ -47,3 +47,5 @@ export PS1="\[╭─ \w\n╰\[\033[0;34m\]\u\[\033[0m\]@\h \[\033[0;34m\]->>\[\0
 export EDITOR=/usr/bin/nvim
 export TERMINAL=/usr/bin/ghostty
 export OPENSSL_DIR=/usr/bin/openssl
+
+eval `keychain -q --eval --agents ssh gh_key gl_key`
