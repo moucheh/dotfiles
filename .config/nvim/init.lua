@@ -50,3 +50,5 @@ vim.notify = notify
 vim.schedule(function()
   require 'mappings'
 end)
+
+require('oil').setup()

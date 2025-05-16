@@ -14,3 +14,5 @@ map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
 map('n', '<leader>q', '<cmd> qall <cr>', { desc = 'quit vim' })
 
 map({ 'n', 'i', 'v' }, '<leader>dn', '<cmd> NoiceDismiss <cr>', { desc = 'dismiss notifications' })
+
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
