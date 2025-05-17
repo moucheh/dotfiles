@@ -36,6 +36,7 @@ alias bldwasc='clang++ -fsanitize=address *.c -o main'
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
+alias ran='source ranger'
 
 alias minecraft='java -jar ~/.local/bin/SKlauncher-3.2.12.jar'
 
