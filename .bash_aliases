@@ -36,12 +36,13 @@ alias bldwasc='clang++ -fsanitize=address *.c -o main'
 alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
-alias ran='source ranger'
 
-alias minecraft='java -jar ~/.local/bin/SKlauncher-3.2.12.jar'
+alias ran='source ranger'
+alias ttt='tt -showwpm -notheme -t 30 -blockcursor -bold'
 
 alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'
 
 gl++ () {
   g++ $1 -lGL -lGLU -lglut -o scene
 }
+

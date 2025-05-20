@@ -4,7 +4,7 @@ require('nvchad.configs.lspconfig').defaults()
 local lspconfig = require 'lspconfig'
 
 -- EXAMPLE
-local servers = { 'clangd', 'matlab_ls', 'emmet_language_server', 'vhdl_ls', 'ts_ls', 'yamlls' }
+local servers = { 'clangd', 'emmet_language_server', 'html', 'cssls', 'vhdl_ls', 'ts_ls', 'yamlls' }
 local nvlsp = require 'nvchad.configs.lspconfig'
 
 -- lsps with default config
@@ -59,20 +59,6 @@ lspconfig.bashls.setup {
   settings = {
     bashIde = {
       globPattern = '@(.sh|.inc|.bash|.command)',
-    },
-  },
-}
-
-lspconfig.matlab_ls.setup {
-  cmd = { 'matlab-language-server', '--stdio' },
-  single_file_support = true,
-  filetypes = { 'matlab' },
-  settings = {
-    MATLAB = {
-      indexWorkspace = true,
-      installPath = '',
-      matlabConnectionTimeout = 'onStart',
-      telemetry = false,
     },
   },
 }
