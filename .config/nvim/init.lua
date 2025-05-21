@@ -52,3 +52,5 @@ vim.schedule(function()
 end)
 
 require('oil').setup()
+
+require('lazy').load { plugins = { 'neo-img' } }

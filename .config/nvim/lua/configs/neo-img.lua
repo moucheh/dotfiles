@@ -1,0 +1,31 @@
+require('neo-img').setup {
+  supported_extensions = {
+    png = true,
+    jpg = true,
+    jpeg = true,
+    tiff = true,
+    tif = true,
+    svg = true,
+    webp = true,
+    bmp = true,
+    gif = true,
+    docx = true,
+    xlsx = true,
+    pdf = true,
+    pptx = true,
+    odg = true,
+    odp = true,
+    ods = true,
+    odt = true,
+    ico = true
+  },
+
+  size = '80%',
+  center = true,
+  auto_open = true,
+  oil_preview = true,
+  backend = 'kitty',
+  resizeMode = 'Fit',
+  offset = '2x3',
+  ttyimg = 'global',
+}
