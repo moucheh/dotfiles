@@ -1,0 +1,98 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "display": {
+        "separator": "• "
+    },
+    "logo":{
+      "source": "Fedora_small",
+      "padding": {
+        "top": 5,
+        "left": 2
+      }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "format": "             󱌃 {1}@{2} 󱌃 "
+        },
+        {
+            "type": "custom",
+            "format": "╭─────────────────────────────────────────╮"
+        },
+        {
+            "type": "host",
+            "key": " HST -  ",
+            "format": "{1}"
+        },
+        {
+            "type": "os",
+            "key": "  OS -  ",
+            "format": "{2} {9}"
+        },
+        {
+            "type": "kernel",
+            "key": " KER -  "
+        },
+        {
+            "type": "de",
+            "key": "  DE -  ",
+            "format": "{2} {3}"
+        },
+        {
+            "type": "wm",
+            "key": "  WM -  "
+        },
+        {
+            "type": "shell",
+            "key": "  SH -  "
+        },
+        {
+            "type": "terminal",
+            "key": " TER -  "
+        },
+        {
+          "type": "editor",
+          "key": "  ED -  "
+        },
+        {
+            "type": "uptime",
+            "key": " UPT - 󰔚 "
+        },
+        {
+            "type": "cpu",
+            "key": " CPU - 󰻠 ",
+            "format": "{1} {3}c/{4}t"
+        },
+        {
+            "type": "memory",
+            "key": " MEM -  "
+        },
+        {
+            "type": "battery",
+            "key": " BAT - 󰂄 ",
+            "format": "{3} {4} [{5}]"
+        },
+        {
+            "type": "display",
+            "key": " DSP - 󰍹 ",
+            "format": "{12}\" {1}x{2} @ {3}Hz [{7}]"
+        },
+        {
+            "type": "packages",
+            "key": " PKG -  "
+        },
+        {
+            "type": "localip",
+            "key": "  IP - 󱦂 "
+        },
+        {
+            "type": "custom",
+            "format": "╰─────────────────────────────────────────╯"
+        },
+        {
+            "type": "custom",
+            "format": "          \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
+        }
+    ]
+}
