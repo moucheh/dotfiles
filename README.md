@@ -1,12 +1,12 @@
 # moucheh Dotfiles
 
-- WM - Sway
-- Bar - waybar
-- Lock manager - swaylock
-- Launcher - rofi
-- Terminal - foot
-- Editor - nvim
-- Fastfetch
+- WM - [Sway](https://github.com/moucheh/dotfiles/blob/master/sway/config)
+- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/waybar)
+- Lock manager - [swaylock](https://github.com/moucheh/dotfiles/blob/master/swaylock/config)
+- Launcher - [rofi](https://github.com/moucheh/dotfiles/blob/master/rofi/config.rasi)
+- Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
+- Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
+- [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/fastfetch/config.jsonc)
 
 Make sure to clone the repository in your home directory
 
