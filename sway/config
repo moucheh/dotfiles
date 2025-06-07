@@ -217,6 +217,7 @@ bindsym $mod+r mode "resize"
 
 focus_follows_mouse no
 focus_on_window_activation smart
+default_border pixel 3
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 

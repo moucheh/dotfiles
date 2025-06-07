@@ -11,7 +11,8 @@
         "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "custom/cava_mviz"
+        "custom/cava_mviz",
+        "sway/window"
     ],
     "modules-center": [
         "idle_inhibitor",
@@ -170,6 +171,11 @@
     "custom/cava_mviz": {
       "exec": "$HOME/.config/waybar/cava.sh",
       "format": "{}"
+    },
+    "sway/window": {
+      "format": "{app_id}",
+      "icon": true,
+      "icon-size": 20
     }
     }
 }
