@@ -2,7 +2,7 @@
 
 - WM - [Sway](https://github.com/moucheh/dotfiles/blob/master/sway/config)
 - Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/waybar)
-- Lock manager - [swaylock](https://github.com/moucheh/dotfiles/blob/master/swaylock/config)
+- Lock manager - [swaylock-effects](https://github.com/jirutka/swaylock-effects)
 - Launcher - [rofi](https://github.com/moucheh/dotfiles/blob/master/rofi/config.rasi)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
