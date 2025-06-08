@@ -14,6 +14,7 @@ CONFIG_FOLDERS=(
   qt6ct
   rofi
   sway
+  swaylock
   waybar
 )
 
