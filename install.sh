@@ -21,8 +21,10 @@ CONFIG_FOLDERS=(
 for i in "${CONFIG_FOLDERS[@]}"; do
   if [ -e "$HOME/.config/$i" ]; then
     mv "$HOME/.config/$i" "$HOME/$BACKUP_FOLDER/$i"
+    echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i/" -t "$HOME/.config/"
+  echo "Installed $i"
 done
 
 
@@ -35,11 +37,14 @@ CONFIG_FILES=(
   .octaverc
   .prettierrc
   .tmux.conf
+  '.gtkrc-2.0'
 )
 
 for i in "${CONFIG_FILES[@]}"; do
   if [ -e "$HOME/$i" ]; then
     mv "$HOME/$i" "$HOME/$BACKUP_FOLDER/$i"
+    echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i" -t "$HOME"
+  echo "Installed $i"
 done
