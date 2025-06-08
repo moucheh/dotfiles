@@ -38,7 +38,7 @@ alias vi='nvim'
 alias v='nvim'
 
 alias ran='source ranger'
-alias ttt='tt -showwpm -notheme -t 30 -blockcursor -bold'
+alias ttt='typetest -showwpm -notheme -t 30 -blockcursor -bold'
 
 alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'
 
