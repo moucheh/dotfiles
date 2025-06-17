@@ -41,8 +41,6 @@ vim.opt.concealcursor = ""                         -- Don't hide cursor line mar
 vim.opt.synmaxcol = 300                            -- Syntax highlighting limit 
 
 -- File handling
-vim.opt.backup = true
-vim.opt.writebackup = true
 vim.opt.swapfile = true
 vim.opt.undofile = true                            -- Persistent undo
 vim.opt.undodir = vim.fn.expand("~/.vim/undodir")  -- Undo directory
