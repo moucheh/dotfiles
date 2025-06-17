@@ -34,7 +34,10 @@ require 'functions_autocmds'
 require 'nvchad.autocmds'
 
 vim.cmd 'set cmdheight=0'
-vim.cmd 'hi TabLineFill guibg=#00000000'
+
+vim.cmd [[
+  hi TabLineFill guibg=NONE ctermfg=242 ctermbg=NONE
+]]
 
 vim.cmd 'ShowkeysToggle'
 require('stay-centered').enable()
