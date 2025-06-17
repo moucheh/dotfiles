@@ -17,8 +17,6 @@ map({ 'n', 'i', 'v' }, '<leader>dn', '<cmd> NoiceDismiss <cr>', { desc = 'dismis
 
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
-vim.g.mapleader = " "
-
 -- Center screen when jumping
 map("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 map("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
