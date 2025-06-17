@@ -30,7 +30,7 @@ M.nvdash = {
 
 M.ui = {
   tabufline = {
-    lazyload = false,
+    lazyload = true,
   },
 }
 
