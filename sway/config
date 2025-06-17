@@ -49,7 +49,7 @@ exec swayidle -w \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep swaylock
 
-bindsym Ctrl+Alt+l exec swaylock 
+bindsym Ctrl+Alt+q exec swaylock
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
