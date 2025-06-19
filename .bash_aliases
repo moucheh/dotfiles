@@ -37,6 +37,9 @@ alias vim='nvim'
 alias vi='nvim'
 alias v='nvim'
 
+alias lg='lazygit'
+alias gst='git status'
+
 alias ran='source ranger'
 alias ttt='typetest -showwpm -notheme -t 30 -blockcursor -bold'
 
