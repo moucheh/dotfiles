@@ -5,6 +5,7 @@ BACKUP_FOLDER=".backup_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$HOME/$BACKUP_FOLDER"
 
 CONFIG_FOLDERS=(
+  ranger
   eza
   fastfetch
   foot
