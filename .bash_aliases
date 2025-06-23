@@ -40,6 +40,10 @@ alias v='nvim'
 alias lg='lazygit'
 alias gst='git status'
 
+alias ls='eza --icons'
+alias ll='eza --icons -l'
+alias la='eza --icons -laa'
+
 alias ran='source ranger'
 alias ttt='typetest -showwpm -notheme -t 30 -blockcursor -bold'
 
