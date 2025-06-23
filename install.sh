@@ -6,6 +6,7 @@ mkdir -p "$HOME/$BACKUP_FOLDER"
 
 CONFIG_FOLDERS=(
   ranger
+  lazygit
   eza
   fastfetch
   foot
