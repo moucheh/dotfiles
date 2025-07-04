@@ -33,15 +33,6 @@ require 'options'
 require 'functions_autocmds'
 require 'nvchad.autocmds'
 
-vim.cmd 'set cmdheight=0'
-
-vim.cmd [[
-  hi TabLineFill guibg=NONE ctermfg=242 ctermbg=NONE
-]]
-
-vim.cmd 'ShowkeysToggle'
-require('stay-centered').enable()
-
 local notify = require 'notify'
 
 notify.setup {
@@ -56,3 +47,6 @@ vim.schedule(function()
 end)
 
 require('oil').setup()
+require('showkeys').toggle()
+require('stay-centered').enable()
+

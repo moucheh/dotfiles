@@ -23,15 +23,6 @@ map("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 
--- Delete without yanking
-map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
-
--- Better window navigation
-map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-map("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-map("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
-
 -- Splitting & Resizing
 map("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 map("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
