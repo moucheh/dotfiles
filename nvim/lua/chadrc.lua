@@ -52,7 +52,7 @@ M.nvdash = {
 
 M.ui = {
   tabufline = {
-    lazyload = true,
+    lazyload = false,
   },
 }
 
