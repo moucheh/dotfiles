@@ -54,6 +54,10 @@ M.ui = {
   tabufline = {
     lazyload = false,
   },
+  statusline = {
+    theme = 'vscode_colored',
+    order = { 'mode', 'file', 'git', '%=', 'lsp_msg', '%=', 'diagnostics', 'cursor', 'lsp', 'cwd' },
+  },
 }
 
 return M
