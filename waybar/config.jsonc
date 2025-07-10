@@ -5,10 +5,10 @@
     "modules-left": [
         "sway/workspaces",
         "sway/window",
-        "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "custom/cava_mviz"
+        "custom/cava_mviz",
+        "sway/mode"
     ],
     "modules-center": [
         "idle_inhibitor",
