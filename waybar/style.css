@@ -39,6 +39,7 @@ button:hover {
   padding: 0 5px;
   background-color: transparent;
   color: #ffffff;
+  border-radius: 3px 3px 0 0;
 }
 
 #workspaces button:hover {
