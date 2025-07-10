@@ -160,9 +160,8 @@
     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
-        "max-length": 20,
+        "max-length": 30,
         "format-icons": {
-            "spotify": "",
             "default": "🎜"
         },
         "escape": true,
