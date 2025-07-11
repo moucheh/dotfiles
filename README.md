@@ -11,7 +11,7 @@
 
 Make sure to clone the repository in your home directory
     
-    git clone https://github.com/moucheh/dotfiles.git $HOME/dotfiles
+    git clone https://github.com/moucheh/dotfiles.git $HOME/.dotfiles
     
 And then run the install script, you may need to add executable permissions
 
