@@ -30,11 +30,20 @@ You may need to make it executable
 
 ## Sample images
 
-### Screenshot 1
+### Screenshot 1 (main)
 ![Image 1](images/pic1.png)
 
-### Screenshot 2
-![Image 1](images/pic2.png)
+### Screenshot 2 (nvim)
+![Image 2](images/pic2.png)
 
-### Screenshot 3
-![Image 1](images/pic3.png)
+### Screenshot 3 (fastfetch + cmatrix + cava)
+![Image 3](images/pic3.png)
+
+### Screenshot 4 (lazygit)
+![Image 4](images/pic4.png)
+
+### Screenshot 5 (ls replacement -> eza)
+![Image 5](images/pic5.png)
+
+### Screenshot 6 (sddm greeter)
+![Image 6](images/pic6.png)
