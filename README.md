@@ -28,6 +28,19 @@ You may need to make it executable
 
     chmod +x $(which autotiling)
 
+To enable sddm theme, you need to copy the 03-sway-fedora contents to /usr/share/sddm/themes,
+as well as set it inside /etc/sddm.conf file
+
+    sudo cp -r 03-sway-fedora /usr/share/sddm/themes/
+    sudo nvim /etc/sddm.conf
+
+Make sure you have these lines in your config file
+
+```
+[Theme]
+Current=03-sway-fedora
+```
+
 ## Sample images
 
 ### Screenshot 1 (main)
