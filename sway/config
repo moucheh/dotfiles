@@ -42,6 +42,8 @@ set $background /home/moucheh/Pictures/WallPapers/aerial_view_of_a_city_at_night
 
 output * bg $background fill
 
+exec wlsunset -l 44.5 -L 18.6 -t 4500 -T 6500
+
 ### Idle configuration
 
 exec swayidle -w \
