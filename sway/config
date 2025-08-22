@@ -230,3 +230,5 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 
 exec_always /home/moucheh/.local/bin/autotiling
 exec kdeconnect-indicator
+
+gaps inner 5
