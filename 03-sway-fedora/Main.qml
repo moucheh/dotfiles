@@ -198,6 +198,7 @@ Rectangle {
 			    color: "transparent"
 			    textColor: "white"
 			    focusColor: "#8dc3eb"
+          menuColor: "#8dc3eb"
 
                             arrowIcon: Qt.resolvedUrl("angle-down.png")
 
