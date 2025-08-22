@@ -43,3 +43,5 @@ export OPENSSL_DIR=/usr/bin/openssl
 export GRIM_DEFAULT_DIR=$(xdg-user-dir PICTURES)/Screenshots/
 
 eval `keychain -q --eval --agents ssh gh_key gl_key`
+
+set -o vi
