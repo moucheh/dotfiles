@@ -41,6 +41,16 @@ Make sure you have these lines in your config file
 Current=03-sway-fedora
 ```
 
+Copy pam.d/swaylock contents to /etc/pam.d/swaylock
+
+    sudo cp pam.d/swaylock /etc/pam.d
+
+You may need to delete the file if it already exists
+
+    sudo rm pam.d/swaylock
+
+This enables password entry as well as fingerprint scanner login.
+
 ## Sample images
 
 ### Screenshot 1 (main)
