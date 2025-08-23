@@ -19,6 +19,7 @@ CONFIG_FOLDERS=(
   sway
   swaylock
   waybar
+  dunst
 )
 
 for i in "${CONFIG_FOLDERS[@]}"; do
