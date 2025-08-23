@@ -67,7 +67,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 }
 
 input "type:keyboard" {
-  xkb_options caps:swapescape
+  xkb_options caps:swapescape,compose:ralt
 }
 
 input "type:pointer" {
