@@ -1,33 +1,33 @@
 format = """
-╭─ $directory $git_branch $fill $cpp$c$python$lua$rust$nodejs
+╭─ $directory $git_branch $cpp$c$python$lua$rust$nodejs
 ╰$username@$hostname $character"""
 
 add_newline = false
 
 [lua]
 symbol = " "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 
 [nodejs]
 symbol = " "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 
 [python]
 symbol = " "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 
 [rust]
 symbol = "󱘗 "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 
 [cpp]
 symbol = " "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 disabled = false
 
 [c]
 symbol = " "
-format = " [$symbol($version )]($style)"
+format = "[$symbol($version )]($style)"
 
 [username]
 show_always = true
@@ -47,9 +47,6 @@ truncate_to_repo = false
 
 [character]
 format = "[->>](blue) "
-
-[fill]
-symbol = " "
 
 [git_branch]
 symbol = " "
