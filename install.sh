@@ -32,13 +32,14 @@ for i in "${CONFIG_FOLDERS[@]}"; do
 done
 
 CONFIG_FILES=(
-  .bash_aliases
   .bashrc
-  .clang-format
-  .gitconfig
+  .bash_aliases
+  .bash_git
   .inputrc
-  .octaverc
+  .gitconfig
+  .clang-format
   .prettierrc
+  .octaverc
   .tmux.conf
   '.gtkrc-2.0'
   starship.toml
