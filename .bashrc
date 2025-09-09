@@ -46,4 +46,6 @@ eval `keychain -q --eval --agents ssh gh_key gl_key`
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
 
+PROMPT_COMMAND='printf "\e]7;file://%s%s\a" "$HOSTNAME" "$PWD"; '"$PROMPT_COMMAND"
+
 set -o vi
