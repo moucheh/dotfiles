@@ -52,6 +52,7 @@ for i in "${CONFIG_FILES[@]}"; do
     fi
     ln -s "$HOME/.dotfiles/starship.toml" -t "$HOME/.config/"
     echo "Installed starship configuration"
+    continue
   fi
 
   if [ -e "$HOME/$i" ]; then
