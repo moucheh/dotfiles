@@ -16,7 +16,6 @@ CONFIG_FOLDERS=(
   nvim
   qt5ct
   qt6ct
-  rofi
   sway
   swaylock
   waybar
