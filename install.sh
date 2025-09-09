@@ -10,6 +10,7 @@ CONFIG_FOLDERS=(
   eza
   fastfetch
   foot
+  'gtk-2.0'
   'gtk-3.0'
   lxqt
   nvim
