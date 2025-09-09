@@ -21,6 +21,7 @@ CONFIG_FOLDERS=(
   swaylock
   waybar
   dunst
+  fuzzel
 )
 
 for i in "${CONFIG_FOLDERS[@]}"; do
