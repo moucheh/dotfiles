@@ -28,9 +28,8 @@ for i in "${CONFIG_FOLDERS[@]}"; do
     echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i/" -t "$HOME/.config/"
-  echo "Installed $i"
+  echo "Installed $i configuration"
 done
-
 
 CONFIG_FILES=(
   .bash_aliases
@@ -42,13 +41,23 @@ CONFIG_FILES=(
   .prettierrc
   .tmux.conf
   '.gtkrc-2.0'
+  starship.toml
 )
 
 for i in "${CONFIG_FILES[@]}"; do
+  if [ "$i" == "starship.toml" ]; then
+    if [ -e "$HOME/.config/starship.toml" ]; then
+      mv "$HOME/.config/starship.toml" "$HOME/$BACKUP_FOLDER/starship.toml"
+      echo "Backed up current starship configuration to $BACKUP_FOLDER/$i"
+    fi
+    ln -s "$HOME/.dotfiles/starship.toml" -t "$HOME/.config/"
+    echo "Installed starship configuration"
+  fi
+
   if [ -e "$HOME/$i" ]; then
     mv "$HOME/$i" "$HOME/$BACKUP_FOLDER/$i"
     echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i" -t "$HOME"
-  echo "Installed $i"
+  echo "Installed $i configuration"
 done
