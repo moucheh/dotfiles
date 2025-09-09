@@ -41,7 +41,8 @@ Make sure you have these lines in your config file
 Current=03-sway-fedora
 ```
 
-Copy pam.d/swaylock contents to /etc/pam.d/swaylock
+If you'd like to have fingerprint unlocking as well as password unlocking
+copy pam.d/swaylock contents to /etc/pam.d/swaylock
 
     sudo cp pam.d/swaylock /etc/pam.d
 
