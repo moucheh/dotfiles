@@ -3,7 +3,7 @@
 - WM - [sway](https://github.com/moucheh/dotfiles/blob/master/sway/config)
 - Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/waybar)
 - Lock manager - [swaylock-effects](https://github.com/jirutka/swaylock-effects)
-- Launcher - [rofi](https://github.com/moucheh/dotfiles/blob/master/rofi/config.rasi)
+- Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
 - [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/fastfetch/config.jsonc)
