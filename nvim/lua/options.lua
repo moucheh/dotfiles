@@ -31,7 +31,7 @@ opt.incsearch = true                           -- Show matches as you type
 opt.termguicolors = true                       -- Enable 24-bit colors
 opt.showmatch = true                           -- Highlight matching brackets
 opt.matchtime = 2                              -- How long to show matching bracket
-opt.cmdheight = 1                              -- Command line height
+opt.cmdheight = 0                              -- Command line height
 opt.completeopt = "menuone,noinsert,noselect"  -- Completion options 
 opt.showmode = false                           -- Don't show mode in command line 
 opt.pumheight = 10                             -- Popup menu height 
@@ -67,5 +67,5 @@ opt.encoding = "UTF-8"                         -- Set encoding
 opt.splitbelow = true                          -- Horizontal splits go below
 opt.splitright = true                          -- Vertical splits go right
 
-opt.cmdheight = 0
-
+vim.g.neovide_opacity = 0.9
+o.guifont = "CaskaydiaCove Nerd Font:h12"
