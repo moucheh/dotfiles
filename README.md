@@ -51,7 +51,7 @@ copy pam.d/swaylock contents to /etc/pam.d/swaylock
 
 You may need to delete the file if it already exists
 
-    sudo rm pam.d/swaylock
+    sudo rm /etc/pam.d/swaylock
 
 This enables password entry as well as fingerprint scanner login.
 
