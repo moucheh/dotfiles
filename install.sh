@@ -31,7 +31,7 @@ for i in "${CONFIG_FOLDERS[@]}"; do
     echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i/" -t "$HOME/.config/"
-  echo "Installed $i configuration"
+  printf "\nInstalled $i configuration\n\n"
 done
 
 CONFIG_FILES=(
@@ -55,7 +55,7 @@ for i in "${CONFIG_FILES[@]}"; do
       echo "Backed up current starship configuration to $BACKUP_FOLDER/$i"
     fi
     ln -s "$HOME/.dotfiles/starship.toml" -t "$HOME/.config/"
-    echo "Installed starship configuration"
+    printf "\nInstalled starship configuration\n\n"
     continue
   fi
 
@@ -64,5 +64,72 @@ for i in "${CONFIG_FILES[@]}"; do
     echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
   fi
   ln -s "$HOME/.dotfiles/$i" -t "$HOME"
-  echo "Installed $i configuration"
+  printf "\nInstalled $i configuration\n\n"
 done
+
+printf "Configs installed\n\nContinuing...\n\n"
+
+read -n1 -p "Do you want to install swaylock-effects fork using dnf? (requires sudo) [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    sudo dnf copr enable trs-sod/swaylock-effects
+    sudo rpm -e --nodeps swaylock
+    sudo dnf install swaylock-effects
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+read -n1 -p "Do you want to install dependencies dnf? (requires sudo) [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    sudo dnf install sway git nvim\
+      waybar ranger tmux clangd clang clang++ cargo\
+      gcc g++ foot fuzzel lazygit nwg-drawer nwg-dock\
+      dunst nodejs npm python3 pip
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+read -n1 -p "Do you want to install the autotiling script using pip? [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    pip install autotiling
+    chmod +x $(which autotiling)
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+read -n1 -p "Do you want to install eza as the ls replacement using cargo? [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    cargo install eza
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+read -n1 -p "Do you want to install sddm-greeter theme? (requires sudo) [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    sudo cp -r 03-sway-fedora /usr/share/sddm/themes/
+    sudo rm /etc/sddm.conf
+    sudo cp sddm.conf /etc/
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+read -n1 -p "Do you want to install pam.d swaylock config to enable password entry? (requires sudo) [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    sudo rm /etc/pam.d/swaylock
+    sudo cp pam.d/swaylock /etc/pam.d/
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
+printf "\nSetup finished, enjoy!\n"
