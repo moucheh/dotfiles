@@ -83,3 +83,6 @@ This enables password entry as well as fingerprint scanner login.
 
 ### Screenshot 9 (nwg-drawer)
 ![Image 9](images/pic9.webp)
+
+### Full quality background
+![Background](bg.jpg)
