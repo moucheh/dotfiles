@@ -30,7 +30,7 @@ set $menu fuzzel
 output eDP-1 resolution 1920x1080 position 1920,0
 output HDMI-A-1 resolution 1920x1080 position 0,0
 
-set $background /home/moucheh/Pictures/WallPapers/aerial_view_of_a_city_at_night_01.jpg
+set $background $HOME/.dotfiles/bg.jpg
 
 output * bg $background fill
 
@@ -230,7 +230,7 @@ set $drawer nwg-drawer -mt 50\
                        -wm sway
 
 exec_always nwg-dock -d -nows -c "$drawer"
-exec_always /home/moucheh/.local/bin/autotiling
+exec_always $HOME/.local/bin/autotiling
 exec kdeconnect-indicator
 
 gaps inner 5

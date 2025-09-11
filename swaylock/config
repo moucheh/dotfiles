@@ -1,4 +1,4 @@
-image=/home/moucheh/Pictures/WallPapers/aerial_view_of_a_city_at_night_01.jpg
+image=$HOME/.dotfiles/bg.jpg
 scaling=fill
 clock
 indicator
