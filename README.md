@@ -58,28 +58,28 @@ This enables password entry as well as fingerprint scanner login.
 ## Sample images
 
 ### Screenshot 1 (main)
-![Image 1](images/pic1.png)
+![Image 1](images/pic1.webp)
 
 ### Screenshot 2 (nvim)
-![Image 2](images/pic2.png)
+![Image 2](images/pic2.webp)
 
 ### Screenshot 3 (fastfetch + cmatrix + cava)
-![Image 3](images/pic3.png)
+![Image 3](images/pic3.webp)
 
 ### Screenshot 4 (lazygit)
-![Image 4](images/pic4.png)
+![Image 4](images/pic4.webp)
 
 ### Screenshot 5 (ls replacement -> eza)
-![Image 5](images/pic5.png)
+![Image 5](images/pic5.webp)
 
 ### Screenshot 6 (sddm greeter)
-![Image 6](images/pic6.png)
+![Image 6](images/pic6.webp)
 
 ### Screenshot 7 (nwg-dock)
-![Image 7](images/pic7.png)
+![Image 7](images/pic7.webp)
 
 ### Screenshot 8 (fuzzel)
-![Image 8](images/pic8.png)
+![Image 8](images/pic8.webp)
 
 ### Screenshot 9 (nwg-drawer)
-![Image 9](images/pic9.png)
+![Image 9](images/pic9.webp)
