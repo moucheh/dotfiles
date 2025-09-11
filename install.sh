@@ -120,6 +120,15 @@ case $doit in
   n|N) printf "\n\nContinuing...\n\n";;
 esac
 
+read -n1 -p "Do you want to install starship to customize your prompt? [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    curl -sS https://starship.rs/install.sh | sh
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
 read -n1 -p "Do you want to install sddm-greeter theme? (requires sudo) [y/n]: " doit
 case $doit in
   y|Y)
