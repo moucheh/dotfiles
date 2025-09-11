@@ -1,5 +1,36 @@
 # .bashrc
 
+if ! [ -f /run/user/$UID/runonce_setcustomenv ]; then
+    touch /run/user/$UID/runonce_setcustomenv
+    if command -v zoxide >/dev/null 2>&1; then
+        ZOXIDE_IS_INSTALLED=true
+    else
+        ZOXIDE_IS_INSTALLED=false
+    fi
+    export ZOXIDE_IS_INSTALLED
+
+    if command -v starship >/dev/null 2>&1; then
+        STARSHIP_IS_INSTALLED=true
+    else
+        STARSHIP_IS_INSTALLED=false
+    fi
+    export STARSHIP_IS_INSTALLED
+
+    if command -v keychain >/dev/null 2>&1; then
+        KEYCHAIN_IS_INSTALLED=true
+    else
+        KEYCHAIN_IS_INSTALLED=false
+    fi
+    export KEYCHAIN_IS_INSTALLED
+
+    if command -v eza >/dev/null 2>&1; then
+        EZA_IS_INSTALLED=true
+    else
+        EZA_IS_INSTALLED=false
+    fi
+    export EZA_IS_INSTALLED
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -43,9 +74,17 @@ export OPENSSL_DIR=/usr/bin/openssl
 export GRIM_DEFAULT_DIR=$(xdg-user-dir PICTURES)/Screenshots/
 export GOPATH=$HOME/.go/
 
-eval `keychain -q --eval --agents ssh gh_key gl_key`
-eval "$(starship init bash)"
-eval "$(zoxide init --cmd cd bash)"
+if $KEYCHAIN_IS_INSTALLED; then
+  eval `keychain -q --eval --agents ssh gh_key gl_key`
+fi
+
+if $STARSHIP_IS_INSTALLED; then
+  eval "$(starship init bash)"
+fi
+
+if $ZOXIDE_IS_INSTALLED; then
+  eval "$(zoxide init --cmd cd bash)"
+fi
 
 PROMPT_COMMAND='printf "\e]7;file://%s%s\a" "$HOSTNAME" "$PWD"; '"$PROMPT_COMMAND"
 
