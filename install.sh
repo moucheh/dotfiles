@@ -21,6 +21,8 @@ CONFIG_FOLDERS=(
   waybar
   dunst
   fuzzel
+  nwg-dock
+  nwg-drawer
 )
 
 for i in "${CONFIG_FOLDERS[@]}"; do
