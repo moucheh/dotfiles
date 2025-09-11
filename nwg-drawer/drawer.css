@@ -1,0 +1,35 @@
+window {
+  background: rgba (40, 85, 119, 0.93);
+  color: #eeeeee;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+}
+
+entry {
+  background-color: rgba (0, 0, 0, 0.2);
+}
+
+button,
+image {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  background-color: rgba (255, 255, 255, 0.15);
+}
+
+#category-button {
+  margin: 0 10px 0 10px;
+}
+
+#pinned-box {
+  padding-bottom: 5px;
+  border-bottom: 1px dotted gray;
+}
+
+#files-box {
+  padding: 5px;
+  border: 1px dotted gray;
+  border-radius: 15px;
+}
