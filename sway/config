@@ -221,6 +221,7 @@ default_border pixel 3
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
 exec_always /home/moucheh/.local/bin/autotiling
+exec_always nwg-dock -d -nows -c "nwg-drawer"
 exec kdeconnect-indicator
 
 gaps inner 5
