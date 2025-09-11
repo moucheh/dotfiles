@@ -6,6 +6,8 @@
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
+- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/nwg-dock/style.css))
+- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/nwg-drawer/drawer.css))
 - [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/fastfetch/config.jsonc)
 - [Autotiling](https://pypi.org/project/autotiling/)
 
@@ -71,3 +73,12 @@ This enables password entry as well as fingerprint scanner login.
 
 ### Screenshot 6 (sddm greeter)
 ![Image 6](images/pic6.png)
+
+### Screenshot 7 (nwg-dock)
+![Image 7](images/pic7.png)
+
+### Screenshot 8 (fuzzel)
+![Image 8](images/pic8.png)
+
+### Screenshot 9 (nwg-drawer)
+![Image 9](images/pic9.png)
