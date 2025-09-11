@@ -6,8 +6,9 @@
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
-- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/nwg-dock/style.css))
-- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/nwg-drawer/drawer.css))
+- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/nwg-dock/style.css)
+- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/nwg-drawer/drawer.css)
+- Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/starship.toml)
 - [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/fastfetch/config.jsonc)
 - [Autotiling](https://pypi.org/project/autotiling/)
 
