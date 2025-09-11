@@ -38,9 +38,10 @@ unset rc
 export PS1="\[╭─ \w\n╰\[\033[0;34m\]\u\[\033[0m\]@\h \[\033[0;34m\]->>\[\033[0m\] "
 
 export EDITOR=/usr/bin/nvim
-export TERMINAL=/usr/bin/ghostty
+export TERMINAL=/usr/bin/foot
 export OPENSSL_DIR=/usr/bin/openssl
 export GRIM_DEFAULT_DIR=$(xdg-user-dir PICTURES)/Screenshots/
+export GOPATH=$HOME/.go/
 
 eval `keychain -q --eval --agents ssh gh_key gl_key`
 eval "$(starship init bash)"
