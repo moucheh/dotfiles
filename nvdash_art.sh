@@ -1,9 +1,12 @@
 #!/bin/bash
 figlet -f ~/.dotfiles/ansi_shadow.flf $1 > /tmp/ascii_art.txt
 
-sed '1i\' /tmp/ascii_art.txt
-sed -i "s/^/'/; s/\$/',/" /tmp/ascii_art.txt
-sed -i '1i header = {\n' /tmp/ascii_art.txt
+sed -i '1i\' /tmp/ascii_art.txt
+
+sed -i "s/^/' /; s/\$/ ',/" /tmp/ascii_art.txt
+
+sed -i '1i header = {' /tmp/ascii_art.txt
+
 sed -i '$a },\n' /tmp/ascii_art.txt
 
 sed -i '/header = {/,/},/d' ~/.dotfiles/nvim/lua/chadrc.lua
