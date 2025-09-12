@@ -163,4 +163,14 @@ case $doit in
   n|N) printf "\n\nContinuing...\n\n";;
 esac
 
+
+read -n1 -p "Do you want to generate custom nvdash art from your username? [y/n]: " doit
+case $doit in
+  y|Y)
+    echo;
+    ./nvdash_art.sh $USER
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+esac
+
 printf "\nSetup finished, enjoy!\nNote: You may want to reload your sway config, default keybind is Win+Shift+C\n"
