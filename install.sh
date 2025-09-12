@@ -5,7 +5,6 @@ BACKUP_FOLDER=".backup_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$HOME/$BACKUP_FOLDER"
 
 CONFIG_FOLDERS=(
-  ranger
   lazygit
   eza
   fastfetch
@@ -86,7 +85,7 @@ case $doit in
   y|Y|'')
     echo;
     sudo dnf install sway git nvim\
-      waybar ranger tmux clangd clang clang++ cargo\
+      waybar tmux clangd clang clang++ cargo\
       gcc g++ foot fuzzel lazygit nwg-drawer nwg-dock\
       dunst nodejs npm python3 pip
     ;;
