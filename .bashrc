@@ -1,7 +1,7 @@
 # .bashrc
 
-if ! [ -f /run/user/$UID/runonce_setcustomenv ]; then
-    touch /run/user/$UID/runonce_setcustomenv
+if ! [ -f /run/user/$UID/runonce_set_custom_env ]; then
+    touch /run/user/$UID/runonce_set_custom_env
     if command -v zoxide >/dev/null 2>&1; then
         ZOXIDE_IS_INSTALLED=true
     else
@@ -30,6 +30,12 @@ if ! [ -f /run/user/$UID/runonce_setcustomenv ]; then
     fi
     export EZA_IS_INSTALLED
 fi
+
+if ! [ -f /run/user/$UID/runonce_generate_nvdash_art ]; then
+    touch /run/user/$UID/runonce_generate_nvdash_art
+    ~/.dotfiles/nvdash_art.sh $USER
+fi
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
