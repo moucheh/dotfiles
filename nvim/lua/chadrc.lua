@@ -16,7 +16,6 @@ M.base46 = {
 }
 
 M.nvdash = {
-  load_on_startup = true,
   header = {
     ' ███╗   ███╗ ██████╗ ██╗   ██╗ ██████╗██╗  ██╗███████╗██╗  ██╗ ',
     ' ████╗ ████║██╔═══██╗██║   ██║██╔════╝██║  ██║██╔════╝██║  ██║ ',
@@ -26,6 +25,8 @@ M.nvdash = {
     ' ╚═╝     ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ',
     '                                                               ',
   },
+
+  load_on_startup = true,
   buttons = {
     { txt = '  Find File', keys = 'ff', cmd = 'Telescope find_files' },
     { txt = '  Recent Files', keys = 'fo', cmd = 'Telescope oldfiles' },
