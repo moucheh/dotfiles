@@ -15,9 +15,18 @@ set $up k
 set $right l
 set $term foot 
 set $browser brave-browser --ozone-platform=wayland
-set $filemanager foot -e ranger
+set $filemanager foot -e yazi
 # Your preferred application launcher
 set $menu fuzzel
+set $drawer nwg-drawer -mt 50\
+                       -mr 400\
+                       -mb 50\
+                       -ml 400\
+                       -pblock swaylock\
+                       -pbpoweroff poweroff\
+                       -pbreboot reboot\
+                       -wm sway
+
 
 ### Output configuration
 #
@@ -89,6 +98,7 @@ input "type:pointer" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $drawer
 
     # Take a screenshot (fullscreen)
     bindsym $mod+Shift+s exec grim ~/Pictures/Screenshots/"$(date +%Y%m%d_%H%M%S).png" &&\
@@ -220,14 +230,6 @@ default_border pixel 3
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
-set $drawer nwg-drawer -mt 50\
-                       -mr 400\
-                       -mb 50\
-                       -ml 400\
-                       -pblock swaylock\
-                       -pbpoweroff poweroff\
-                       -pbreboot reboot\
-                       -wm sway
 
 exec_always nwg-dock -d -hd 400 -nows -c "$drawer"
 exec_always $HOME/.local/bin/autotiling
