@@ -55,6 +55,12 @@ You may need to delete the file if it already exists
 
 This enables password entry as well as fingerprint scanner login.
 
+I've also added a script that does ascii art generation for nvim dashboard.
+Figlet is a dependency, you can install it through your distro's package manager.
+
+    sudo dnf install figlet
+    ~/.dotfiles/nvdash_art.sh moucheh
+
 ## Sample images
 
 ### Screenshot 1 (main)
