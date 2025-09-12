@@ -69,20 +69,21 @@ done
 
 printf "Configs installed\n\nContinuing...\n\n"
 
-read -n1 -p "Do you want to install swaylock-effects fork using dnf? (requires sudo) [y/n]: " doit
+read -n1 -p "Do you want to install swaylock-effects fork using dnf? (requires sudo) [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     sudo dnf copr enable trs-sod/swaylock-effects
     sudo rpm -e --nodeps swaylock
     sudo dnf install swaylock-effects
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install dependencies dnf? (requires sudo) [y/n]: " doit
+read -n1 -p "Do you want to install dependencies dnf? (requires sudo) [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     sudo dnf install sway git nvim\
       waybar ranger tmux clangd clang clang++ cargo\
@@ -90,69 +91,76 @@ case $doit in
       dunst nodejs npm python3 pip
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install the autotiling script using pip? [y/n]: " doit
+read -n1 -p "Do you want to install the autotiling script using pip? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     pip install autotiling
     chmod +x $(which autotiling)
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install eza as the ls replacement using cargo? [y/n]: " doit
+read -n1 -p "Do you want to install eza as the ls replacement using cargo? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     cargo install eza
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install zoxide as the cd replacement using cargo? [y/n]: " doit
+read -n1 -p "Do you want to install zoxide as the cd replacement using cargo? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     cargo install zoxide
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install starship to customize your prompt? [y/n]: " doit
+read -n1 -p "Do you want to install starship to customize your prompt? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     curl -sS https://starship.rs/install.sh | sh
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install sddm-greeter theme? (requires sudo) [y/n]: " doit
+read -n1 -p "Do you want to install sddm-greeter theme? (requires sudo) [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     sudo cp -r 03-sway-fedora /usr/share/sddm/themes/
     sudo rm /etc/sddm.conf
     sudo cp sddm.conf /etc/
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to install pam.d swaylock config to enable password entry? (requires sudo) [y/n]: " doit
+read -n1 -p "Do you want to install pam.d swaylock config to enable password entry? (requires sudo) [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     sudo rm /etc/pam.d/swaylock
     sudo cp pam.d/swaylock /etc/pam.d/
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
-read -n1 -p "Do you want to download and install CascaydiaCove Nerd Font? [y/n]: " doit
+read -n1 -p "Do you want to download and install CascaydiaCove Nerd Font? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip
     cd ~/.local/share/fonts/
@@ -161,16 +169,18 @@ case $doit in
     fc-cache -fv
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
 
-read -n1 -p "Do you want to generate custom nvdash art from your username? [y/n]: " doit
+read -n1 -p "Do you want to generate custom nvdash art from your username? [Y/n]: " doit
 case $doit in
-  y|Y)
+  y|Y|'')
     echo;
     ./nvdash_art.sh $USER
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
 esac
 
 printf "\nSetup finished, enjoy!\nNote: You may want to reload your sway config, default keybind is Win+Shift+C\n"
