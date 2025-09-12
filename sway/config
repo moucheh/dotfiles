@@ -229,7 +229,7 @@ set $drawer nwg-drawer -mt 50\
                        -pbreboot reboot\
                        -wm sway
 
-exec_always nwg-dock -d -nows -c "$drawer"
+exec_always nwg-dock -d -hd 400 -nows -c "$drawer"
 exec_always $HOME/.local/bin/autotiling
 exec kdeconnect-indicator
 
