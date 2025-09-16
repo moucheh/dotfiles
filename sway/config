@@ -122,6 +122,21 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning\
   -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.'\
   -B 'Yes, exit sway' 'swaymsg exit'
+
+### Clipboard
+#
+# Show clipboard history
+#
+bindsym $mod+c exec $term -e clipman pick --print0 --tool=CUSTOM --tool-args="fzf --prompt 'pick > ' --bind 'tab:up' --cycle --read0"
+#
+# Clear clipboard history entry
+#
+bindsym $mod+Alt+c exec $term -e clipman clear --print0 --tool=CUSTOM --tool-args="fzf --prompt 'clear > ' --bind 'tab:up' --cycle --read0"
+#
+# Clear all clipboard history entries
+#
+bindsym Ctrl+Alt+c exec clipman clear -a
+
 #
 # Moving around:
 #
@@ -244,4 +259,6 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 exec_always nwg-dock -d -hd 400 -nows -c "$drawer"
 exec_always $HOME/.local/bin/autotiling
 exec kdeconnect-indicator
+exec wl-paste -t text --watch clipman store
+exec clipman restore
 
