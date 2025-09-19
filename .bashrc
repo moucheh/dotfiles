@@ -76,6 +76,8 @@ export GOPATH=$HOME/.go/
 export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=qt5ct
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT="%Y-%m-%d %r %t"
 
 if $KEYCHAIN_IS_INSTALLED; then
   eval `keychain -q --eval --agents ssh gh_key gl_key`
