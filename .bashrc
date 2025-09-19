@@ -87,6 +87,8 @@ if $STARSHIP_IS_INSTALLED; then
   eval "$(starship init bash)"
 fi
 
+eval "$(fzf --bash)"
+
 if $ZOXIDE_IS_INSTALLED; then
   eval "$(zoxide init --cmd cd bash)"
 fi
