@@ -68,19 +68,7 @@ done
 
 printf "Configs installed\n\nContinuing...\n\n"
 
-read -n1 -p "Do you want to install swaylock-effects fork using dnf? (requires sudo) [Y/n]: " doit
-case $doit in
-  y|Y|'')
-    echo;
-    sudo dnf copr enable trs-sod/swaylock-effects
-    sudo rpm -e --nodeps swaylock
-    sudo dnf install swaylock-effects
-    ;;
-  n|N) printf "\n\nContinuing...\n\n";;
-  *) printf "\n\nInvalid option\n\n";;
-esac
-
-read -n1 -p "Do you want to install dependencies dnf? (requires sudo) [Y/n]: " doit
+read -n1 -p "Do you want to install dependencies using dnf? (requires sudo) [Y/n]: " doit
 case $doit in
   y|Y|'')
     echo;
@@ -88,6 +76,18 @@ case $doit in
       waybar tmux clangd clang clang++ cargo\
       gcc g++ foot fuzzel lazygit nwg-drawer nwg-dock\
       dunst nodejs npm python3 pip fzf
+    ;;
+  n|N) printf "\n\nContinuing...\n\n";;
+  *) printf "\n\nInvalid option\n\n";;
+esac
+
+read -n1 -p "Do you want to install swaylock-effects fork using dnf? (requires sudo) [Y/n]: " doit
+case $doit in
+  y|Y|'')
+    echo;
+    sudo dnf copr enable trs-sod/swaylock-effects
+    sudo rpm -e --nodeps swaylock
+    sudo dnf install swaylock-effects
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
   *) printf "\n\nInvalid option\n\n";;
@@ -138,9 +138,9 @@ read -n1 -p "Do you want to install sddm-greeter theme? (requires sudo) [Y/n]: "
 case $doit in
   y|Y|'')
     echo;
-    sudo cp -r $HOME/.dotfiles/03-sway-fedora /usr/share/sddm/themes/
-    sudo rm /etc/sddm.conf
-    sudo cp $HOME/.dotfiles/etc/sddm.conf /etc/
+    sudo cp -r 03-sway-fedora /usr/share/sddm/themes/
+    sudo mv /etc/sddm.conf "$HOME/$BACKUP_FOLDER/sddm.conf"
+    sudo cp etc/sddm.conf /etc/
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
   *) printf "\n\nInvalid option\n\n";;
@@ -150,8 +150,8 @@ read -n1 -p "Do you want to install pam.d swaylock config to enable password ent
 case $doit in
   y|Y|'')
     echo;
-    sudo rm /etc/pam.d/swaylock
-    sudo cp $HOME/.dotfiles/etc/pam.d/swaylock /etc/pam.d/
+    sudo mv /etc/pam.d/swaylock "$HOME/$BACKUP_FOLDER/swaylock"
+    sudo cp etc/pam.d/swaylock /etc/pam.d/
     ;;
   n|N) printf "\n\nContinuing...\n\n";;
   *) printf "\n\nInvalid option\n\n";;
