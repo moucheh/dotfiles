@@ -5,8 +5,12 @@ local map = vim.keymap.set
 map('n', ';', ':', { desc = 'CMD enter command mode' })
 map('i', 'jk', '<ESC>')
 
-map('n', '<leader>cf', function()
-  require('conform').format { lsp_format = 'fallback' }
+map({ 'n', 'v' }, '<leader>cf', function()
+  require('conform').format {
+    lsp_format = 'fallback',
+    async = false,
+    timeout_ms = 500,
+  }
 end, { desc = 'Format current file' })
 
 map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
