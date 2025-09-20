@@ -4,7 +4,7 @@ BACKUP_FOLDER=".backup_$(date +%Y%m%d_%H%M%S)"
 
 mkdir -p "$HOME/$BACKUP_FOLDER"
 
-CONFIG_FOLDERS=(
+CONFIG_FILES=(
   lazygit
   eza
   fastfetch
@@ -25,7 +25,7 @@ CONFIG_FOLDERS=(
   starship.toml
 )
 
-for i in "${CONFIG_FOLDERS[@]}"; do
+for i in "${CONFIG_FILES[@]}"; do
   if [ "$i" == "starship.toml" ]; then
     if [ -e "$HOME/.config/starship.toml" ]; then
       mv "$HOME/.config/starship.toml" "$HOME/$BACKUP_FOLDER/starship.toml"
@@ -44,7 +44,7 @@ for i in "${CONFIG_FOLDERS[@]}"; do
   printf "\nInstalled $i configuration\n\n"
 done
 
-CONFIG_FILES=(
+HIDDEN_FILES=(
   bashrc
   bash_aliases
   bash_git
@@ -57,7 +57,7 @@ CONFIG_FILES=(
   'gtkrc-2.0'
 )
 
-for i in "${CONFIG_FILES[@]}"; do
+for i in "${HIDDEN_FILES[@]}"; do
   if [ -e "$HOME/.$i" ]; then
     mv "$HOME/.$i" "$HOME/$BACKUP_FOLDER/$i"
     echo "Backed up current $i configuration to $BACKUP_FOLDER/$i"
