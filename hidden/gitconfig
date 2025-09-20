@@ -1,0 +1,8 @@
+[init]
+  defaultBranch = master
+
+[push]
+  autoSetupRemote = true
+
+[include]
+  path = ~/.gitconfig.user
