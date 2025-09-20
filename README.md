@@ -1,15 +1,15 @@
 # moucheh Dotfiles
 
-- WM - [sway](https://github.com/moucheh/dotfiles/blob/master/sway/config)
-- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/waybar)
+- WM - [sway](https://github.com/moucheh/dotfiles/blob/master/config/sway/config)
+- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/waybar)
 - Lock manager - [swaylock-effects](https://github.com/jirutka/swaylock-effects)
-- Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/fuzzel/fuzzel.ini)
-- Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/foot/foot.ini)
-- Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/nvim)
-- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/nwg-dock/style.css)
-- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/nwg-drawer/drawer.css)
-- Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/starship.toml)
-- [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/fastfetch/config.jsonc)
+- Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
+- Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
+- Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/config/nvim)
+- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/config/nwg-dock/style.css)
+- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/config/nwg-drawer/drawer.css)
+- Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/config/starship.toml)
+- [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/config/fastfetch/config.jsonc)
 - [Autotiling](https://pypi.org/project/autotiling/)
 
 Make sure to clone the repository in your home directory
@@ -89,6 +89,15 @@ Figlet is a dependency, you can install it through your distro's package manager
 
 ### Screenshot 9 (nwg-drawer)
 ![Image 9](images/pic9.webp)
+
+### Screenshot 10
+Clipboard management using wl-clipboard + clipman + fzf
+
+Default keybinds:
+- Win+C     - pick an entry
+- Win+Alt+C - clear an entry
+
+![Image 10](images/pic10.webp)
 
 ### Full quality background
 ![Background](bg.jpg)
