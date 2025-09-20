@@ -47,7 +47,7 @@ Current=03-sway-fedora
 If you'd like to have fingerprint unlocking as well as password unlocking
 copy pam.d/swaylock contents to /etc/pam.d/swaylock
 
-    sudo cp pam.d/swaylock /etc/pam.d
+    sudo cp etc/pam.d/swaylock /etc/pam.d
 
 You may need to delete the file if it already exists
 
@@ -59,7 +59,7 @@ I've also added a script that does ascii art generation for nvim dashboard.
 Figlet is a dependency, you can install it through your distro's package manager.
 
     sudo dnf install figlet
-    ~/.dotfiles/nvdash_art.sh moucheh
+    ~/.dotfiles/scripts/nvdash_art.sh moucheh
 
 ## Sample images
 
