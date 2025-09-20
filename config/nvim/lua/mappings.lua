@@ -48,4 +48,8 @@ map('v', '>', '>gv', { desc = 'Indent right and reselect' })
 -- Better J behavior
 map('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position' })
 
-map('n', '<leader>tr', ':Telescope registers<CR>',  { desc = 'Show registers in a Telescope panel'})
+map('n', '<leader>tr', ':Telescope registers<CR>', { desc = 'Show registers in a Telescope panel' })
+
+map('n', '<leader>gb', ':Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' })
+
+map('n', '<leader>ng', ':Neogit<CR>', { desc = 'Toggle Neogit' })
