@@ -94,8 +94,9 @@ Figlet is a dependency, you can install it through your distro's package manager
 Clipboard management using wl-clipboard + clipman + fzf
 
 Default keybinds:
-- Win+C     - pick an entry
-- Win+Alt+C - clear an entry
+- Win+C      - pick an entry
+- Win+Alt+C  - clear an entry
+- Ctrl+Alt+C - clear all entries
 
 ![Image 10](images/pic10.webp)
 
