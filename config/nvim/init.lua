@@ -50,3 +50,22 @@ require('oil').setup()
 require('showkeys').toggle()
 require('stay-centered').enable()
 
+-- lsp config
+local servers = {
+  'clangd',
+  'emmet_language_server',
+  'html',
+  'cssls',
+  'vhdl_ls',
+  'ts_ls',
+  'yamlls',
+  'bashls',
+  'cssls',
+  'html',
+  'lua_ls',
+  'pyright'
+}
+
+for _, server in ipairs(servers) do
+  vim.lsp.enable(server)
+end
