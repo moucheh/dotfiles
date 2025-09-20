@@ -11,7 +11,7 @@ map({ 'n', 'v' }, '<leader>cf', function()
     async = false,
     timeout_ms = 500,
   }
-end, { desc = 'Format current file' })
+end, { desc = 'Format current buffer/selection' })
 
 map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
 
@@ -47,8 +47,5 @@ map('v', '>', '>gv', { desc = 'Indent right and reselect' })
 
 -- Better J behavior
 map('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position' })
-
--- Quick config editing
-map('n', '<leader>rc', ':e ~/.config/nvim/init.lua<CR>', { desc = 'Edit config' })
 
 map('n', '<leader>tr', ':Telescope registers<CR>',  { desc = 'Show registers in a Telescope panel'})
