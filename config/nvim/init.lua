@@ -63,7 +63,7 @@ local servers = {
   'cssls',
   'html',
   'lua_ls',
-  'pyright'
+  'pyright',
 }
 
 for _, server in ipairs(servers) do
