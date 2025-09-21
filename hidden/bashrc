@@ -29,6 +29,13 @@ if ! [ -f /run/user/$UID/runonce_set_custom_env ]; then
         EZA_IS_INSTALLED=false
     fi
     export EZA_IS_INSTALLED
+
+    if command -v fzf >/dev/null 2>&1; then
+        FZF_IS_INSTALLED=true
+    else
+        FZF_IS_INSTALLED=false
+    fi
+    export FZF_IS_INSTALLED
 fi
 
 # Source global definitions
@@ -89,7 +96,9 @@ if $STARSHIP_IS_INSTALLED; then
   eval "$(starship init bash)"
 fi
 
-eval "$(fzf --bash)"
+if $FZF_IS_INSTALLED; then
+  eval "$(fzf --bash)"
+fi
 
 if $ZOXIDE_IS_INSTALLED; then
   eval "$(zoxide init --cmd cd bash)"
