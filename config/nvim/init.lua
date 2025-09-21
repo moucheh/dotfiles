@@ -64,6 +64,7 @@ local servers = {
   'html',
   'lua_ls',
   'pyright',
+  'tinymist',
 }
 
 for _, server in ipairs(servers) do

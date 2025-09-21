@@ -13,6 +13,7 @@ local options = {
     typescript = { 'prettierd' },
     typescriptreact = { 'prettierd' },
     vhdl = { 'vsg' },
+    typst = { 'prettypst' },
   },
 }
 
