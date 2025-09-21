@@ -70,7 +70,9 @@ export PS1="\[╭─ \w\n╰\[\033[0;34m\]\u\[\033[0m\]@\h \[\033[0;34m\]->>\[\0
 
 export EDITOR=/usr/bin/nvim
 export TERMINAL=/usr/bin/foot
-export OPENSSL_DIR=/usr/bin/openssl
+export OPENSSL_DIR=/etc/pki/tls
+export OPENSSL_LIB_DIR=/usr/lib64
+export OPENSSL_INCLUDE_DIR=/usr/include/openssl
 export GRIM_DEFAULT_DIR=$(xdg-user-dir PICTURES)/Screenshots/
 export GOPATH=$HOME/.go/
 export QT_QPA_PLATFORM=wayland
