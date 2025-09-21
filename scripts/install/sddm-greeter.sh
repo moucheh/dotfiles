@@ -11,6 +11,7 @@ case $doit in
   y|Y|'')
     echo;
     sudo cp -r $DOTFILES/03-sway-fedora /usr/share/sddm/themes/
+    sudo cp $DOTFILES/images/bg.jpg /usr/share/sddm/themes/03-sway-fedora/
     if [ -e /etc/sddm.conf ]; then
       mkdir -p "$DOTFILES_BACKUP_FOLDER/etc"
       sudo mv /etc/sddm.conf "$DOTFILES_BACKUP_FOLDER/etc/sddm.conf"
