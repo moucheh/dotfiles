@@ -4,6 +4,7 @@ local options = {
     cpp = { 'clang-format' },
     objc = { 'clang-format' },
     objcpp = { 'clang-format' },
+    java = { 'google-java-format' },
     lua = { 'stylua' },
     css = { 'prettierd' },
     html = { 'prettierd' },
@@ -14,6 +15,7 @@ local options = {
     typescriptreact = { 'prettierd' },
     vhdl = { 'vsg' },
     typst = { 'prettypst' },
+    fsharp = { 'fantomas' },
   },
 }
 
