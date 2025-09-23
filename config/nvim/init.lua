@@ -65,6 +65,8 @@ local servers = {
   'lua_ls',
   'pyright',
   'tinymist',
+  'fsautocomplete',
+  'jdtls',
 }
 
 for _, server in ipairs(servers) do
