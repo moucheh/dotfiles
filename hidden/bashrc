@@ -83,6 +83,7 @@ export OPENSSL_LIB_DIR=/usr/lib64
 export OPENSSL_INCLUDE_DIR=/usr/include/openssl
 export GRIM_DEFAULT_DIR=$(xdg-user-dir PICTURES)/Screenshots/
 export GOPATH=$HOME/.go/
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=qt5ct
