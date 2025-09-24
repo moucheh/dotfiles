@@ -69,6 +69,4 @@ local servers = {
   'jdtls',
 }
 
-for _, server in ipairs(servers) do
-  vim.lsp.enable(server)
-end
+vim.lsp.enable(servers)
