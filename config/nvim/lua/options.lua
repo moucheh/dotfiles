@@ -9,7 +9,7 @@ o.cursorlineopt = 'both' -- to enable cursorline!
 opt.number = true                              -- Line numbers
 opt.relativenumber = true                      -- Relative line numbers
 opt.cursorline = true                          -- Highlight current line
-opt.wrap = true                                -- Don't wrap lines
+opt.wrap = true                                -- Wrap lines
 opt.scrolloff = 10                             -- Keep 10 lines above/below cursor 
 opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
 
@@ -42,7 +42,7 @@ opt.concealcursor = ""                         -- Don't hide cursor line markup
 opt.synmaxcol = 300                            -- Syntax highlighting limit 
 
 -- File handling
-opt.swapfile = true
+opt.swapfile = false
 opt.undofile = true                            -- Persistent undo
 opt.undodir = vim.fn.expand("~/.vim/undodir")  -- Undo directory
 opt.updatetime = 300                           -- Faster completion
