@@ -38,6 +38,7 @@ local notify = require 'notify'
 notify.setup {
   render = 'compact',
   stages = 'fade',
+  merge_duplicates = true
 }
 
 vim.notify = notify
