@@ -1,8 +1,6 @@
 local opt = vim.opt
 local o = vim.o
 
-opt.path:append(vim.fn.expand('~/.local/share/nvim/mason/bin'))
-
 o.cursorlineopt = 'both'
 o.cursorline = true
 
