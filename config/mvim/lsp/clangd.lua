@@ -42,7 +42,7 @@ local function symbol_info(bufnr, client)
 end
 
 vim.lsp.config['clangd'] = {
-  cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/clangd' },
+  cmd = { 'clangd' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
   root_markers = {
     '.clangd',

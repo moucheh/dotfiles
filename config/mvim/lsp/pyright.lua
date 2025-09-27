@@ -16,7 +16,7 @@ end
 
 ---@type vim.lsp.Config
 vim.lsp.config['pyright'] = {
-  cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/pyright-langserver', '--stdio' },
+  cmd = { 'pyright-langserver', '--stdio' },
   filetypes = { 'python' },
   root_markers = {
     'pyproject.toml',

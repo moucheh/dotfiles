@@ -1,5 +1,5 @@
 vim.lsp.config['lua_ls'] = {
-  cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/lua-language-server' },
+  cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
   root_markers = {
     '.luarc.json',

@@ -32,7 +32,7 @@ end
 
 ---@type vim.lsp.Config
 vim.lsp.config['tinymist'] = {
-  cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/tinymist' },
+  cmd = { 'tinymist' },
   filetypes = { 'typst' },
   root_markers = { '.git' },
   on_attach = function(client, bufnr)

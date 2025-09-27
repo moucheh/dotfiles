@@ -51,7 +51,7 @@ end
 
 vim.lsp.config['fsautocomplete'] = {
   default_config = {
-    cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/fsautocomplete', '--adaptive-lsp-server-enabled' },
+    cmd = { 'fsautocomplete', '--adaptive-lsp-server-enabled' },
     root_dir = root_pattern('*.sln', '*.fsproj', '.git'),
     filetypes = { 'fsharp' },
     init_options = {

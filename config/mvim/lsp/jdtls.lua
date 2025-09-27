@@ -33,7 +33,7 @@ end
 ---@type vim.lsp.Config
 vim.lsp.config['jdtls'] = {
   cmd = {
-    vim.fn.expand '~/.local/share/nvim/mason/bin/jdtls',
+    'jdtls',
     '-configuration',
     get_jdtls_config_dir(),
     '-data',

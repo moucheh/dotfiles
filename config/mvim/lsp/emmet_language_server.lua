@@ -1,7 +1,7 @@
 
 vim.lsp.config['emmet_language_server'] = {
   default_config = {
-    cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/emmet-language-server', '--stdio' },
+    cmd = { 'emmet-language-server', '--stdio' },
     filetypes = {
       'css',
       'eruby',

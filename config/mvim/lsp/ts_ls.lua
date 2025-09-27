@@ -1,6 +1,6 @@
 vim.lsp.config['ts_ls'] = {
   init_options = { hostInfo = 'neovim' },
-  cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/typescript-language-server', '--stdio' },
+  cmd = { 'typescript-language-server', '--stdio' },
   filetypes = {
     'javascript',
     'javascriptreact',
