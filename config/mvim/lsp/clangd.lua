@@ -41,7 +41,7 @@ local function symbol_info(bufnr, client)
   end, bufnr)
 end
 
-vim.lsp.config['clangd'] = {
+return {
   cmd = { 'clangd' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
   root_markers = {

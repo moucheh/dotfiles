@@ -31,7 +31,7 @@ local function create_tinymist_command(command_name, client, bufnr)
 end
 
 ---@type vim.lsp.Config
-vim.lsp.config['tinymist'] = {
+return {
   cmd = { 'tinymist' },
   filetypes = { 'typst' },
   root_markers = { '.git' },

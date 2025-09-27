@@ -31,7 +31,7 @@ local function get_jdtls_jvm_args()
 end
 
 ---@type vim.lsp.Config
-vim.lsp.config['jdtls'] = {
+return {
   cmd = {
     'jdtls',
     '-configuration',

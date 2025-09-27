@@ -1,4 +1,4 @@
-vim.lsp.config['vhdl_ls'] = {
+return {
   cmd = { 'vhdl_ls' },
   filetypes = { 'vhd', 'vhdl' },
   root_markers = {
