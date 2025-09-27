@@ -2,7 +2,6 @@ local map = vim.keymap.set
 
 vim.g.mapleader = ' '
 
-map('n', ';', ':')
 map('n', '<C-s>', ':write<CR>')
 map('n', '<C-c>', 'ggVGy')
 map('n', '<leader>cf', 'ggVGgq')
