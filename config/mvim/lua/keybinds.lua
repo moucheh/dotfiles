@@ -37,7 +37,6 @@ map('i', '"', '<Esc>a""<Esc>i')
 map('i', '(', '<Esc>a()<Esc>i')
 map('i', '{', '<Esc>a{}<Esc>i')
 map('i', '[', '<Esc>a[]<Esc>i')
-map('i', '<', '<Esc>a<><Esc>i')
 map('i', '`', '<Esc>a``<Esc>i')
 
 map('n', 'gd', vim.lsp.buf.definition)
