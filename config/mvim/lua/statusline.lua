@@ -72,7 +72,15 @@ end
 o.statusline = "%!v:lua.Statusline()"
 o.laststatus = 3
 
-api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "#005f87", bold = true })
-api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "#003f5c" })
-api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "#003f5c" })
-api.nvim_set_hl(0, "StatusPos", { fg = "#ffffff", bg = "#005f87", bold = true })
+local function set_statusline_colors()
+  api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "#005f87", bold = true })
+  api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "#003f5c" })
+  api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "#003f5c" })
+  api.nvim_set_hl(0, "StatusPos", { fg = "#ffffff", bg = "#005f87", bold = true })
+end
+
+set_statusline_colors()
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = set_statusline_colors
+})

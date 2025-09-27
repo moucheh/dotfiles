@@ -1,6 +1,22 @@
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = function(_)
+    vim.cmd([[
+      hi normal guibg=none ctermbg=none
+      hi tablinefill guibg=none ctermbg=none
+
+      hi Pmenu       ctermfg=14  ctermbg=0
+      hi PmenuSel    ctermfg=14  ctermbg=0
+      hi PmenuSbar   ctermbg=0
+      hi PmenuThumb  ctermbg=0
+
+      hi! link NormalFloat Normal
+      hi! link FloatBorder LineNr
+      hi WildMenu    ctermfg=14  ctermbg=0
+    ]])
+  end,
+})
+
 vim.cmd.colorscheme('sorbet')
-vim.cmd('hi normal guibg=none ctermbg=none')
-vim.cmd('hi tablinefill guibg=none ctermbg=none')
 
 local config_path = vim.fn.expand('~/.config/mvim')
 package.path = package.path .. ";" .. config_path .. "/lua/?.lua"
