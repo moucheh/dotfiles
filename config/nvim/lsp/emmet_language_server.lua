@@ -1,4 +1,4 @@
-vim.lsp.config['emmet_language_server'] = {
+return {
   filetypes = {
     'css',
     'eruby',
