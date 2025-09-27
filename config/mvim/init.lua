@@ -1,8 +1,11 @@
 vim.api.nvim_create_autocmd('ColorScheme', {
   callback = function(_)
-    vim.cmd([[
+    vim.cmd[[
       hi normal guibg=none ctermbg=none
-      hi tablinefill guibg=none ctermbg=none
+
+      hi TabLine guibg=#1e1e2e guifg=#89b4fa ctermbg=NONE ctermfg=Blue
+      hi TabLineSel guibg=#89b4fa guifg=#1e1e2e ctermbg=NONE ctermfg=White
+      hi TabLineFill guibg=NONE guifg=#89b4fa ctermbg=NONE ctermfg=DarkBlue
 
       hi Pmenu       ctermfg=14  ctermbg=0
       hi PmenuSel    ctermfg=14  ctermbg=0
@@ -12,7 +15,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       hi! link NormalFloat Normal
       hi! link FloatBorder LineNr
       hi WildMenu    ctermfg=14  ctermbg=0
-    ]])
+    ]]
   end,
 })
 
@@ -30,6 +33,7 @@ vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
 
 require('statusline')
+require('bufferline')
 require('opts')
 require('autocmds')
 require('functions')
