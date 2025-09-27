@@ -15,6 +15,7 @@ map('n', '<leader>lg', ':LazyGit<CR>')
 map('n', '-', ':Explore<CR>')
 map('n', '<leader>e', ':Rexplore<CR>')
 map('n', '<leader>q', ':quit<CR>')
+map('n', '<leader>Q', ':quitall!<CR>')
 
 map('n', 'n', 'nzzzv', { desc = 'Next search result (centered)' })
 map('n', 'N', 'Nzzzv', { desc = 'Previous search result (centered)' })

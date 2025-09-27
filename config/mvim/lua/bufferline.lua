@@ -74,8 +74,7 @@ function CloseCurrentBuffer()
   _G.CloseBuffer(bufnr)
 end
 
-vim.keymap.set('n', '<leader>x', function()
-  CloseCurrentBuffer()
-end)
+local map = vim.keymap.set
+map('n', '<space>x', function() CloseCurrentBuffer() end)
 
-vim.keymap.set('n', '<leader>X', ':bdelete!<CR>')
+map('n', '<space>X', ':bdelete!<CR>')
