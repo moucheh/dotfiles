@@ -1,6 +1,15 @@
 local api = vim.api
 local o = vim.o
 
+local icon_map = {
+  lua = "", py = "", js = "", ts = "",
+  html = "", css = "", json = "", md = "",
+  sh = "", vim = "", cpp = "", c = "",
+  h = "", java = "", go = "", rs = "",
+  toml = "", txt = "", lock = "", [""] = "",
+  fzf = "󰈞"
+}
+
 local mode_map = {
   ['n'] = 'NORMAL',
   ['i'] = 'INSERT',
@@ -17,7 +26,7 @@ local function git_branch()
   if handle then
     local result = handle:read("*a"):gsub("\n", "")
     handle:close()
-    if result ~= '' then return ' ' .. result end
+    if result ~= '' then return ' ' .. result end
   end
   return ''
 end
@@ -26,7 +35,7 @@ local function lsp_diagnostics()
   local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
   local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
   local info = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
-  return string.format("✘ %d ⚠ %d ℹ %d", errors, warnings, info)
+  return string.format(" %d  %d 󰋽 %d", errors, warnings, info)
 end
 
 local function lsp_clients()
@@ -40,13 +49,13 @@ local function lsp_clients()
 end
 
 function Statusline()
-  local mode = mode_map[vim.fn.mode()] or vim.fn.mode()
-  local file = vim.fn.expand("%:t") ~= "" and vim.fn.expand("%:t") or "[No Name]"
+  local mode = (' ' .. mode_map[vim.fn.mode()]) or vim.fn.mode()
+  local file =
+    vim.fn.expand("%:t") ~= "" and (string.find(vim.fn.expand("%:t"), "FZF")
+    and "FZF" or vim.fn.expand("%:t")) or "[No Name]"
   local readonly = vim.bo.readonly and "" or ""
   local modified = vim.bo.modified and "[+]" or ""
-  local ft = vim.bo.filetype ~= "" and vim.bo.filetype or "none"
-  local enc = vim.bo.fenc ~= "" and vim.bo.fenc or "none"
-  local fmt = vim.bo.fileformat
+  local ft = icon_map[vim.bo.filetype ~= "" and vim.bo.filetype] or ""
   local branch = git_branch()
   local diag = lsp_diagnostics()
   local lsp = lsp_clients()
@@ -54,12 +63,14 @@ function Statusline()
     vim.fn.line(".") * 100 / vim.fn.line("$"))
 
   return table.concat {
-    "%#StatusMode#", -- Highlight group
+    "%#StatusMode#",
     " ", mode, " ",
     "%#StatusFile#",
-    " ", file, " ", modified, " ", readonly,
-    " [", ft, " | ", enc, " | ", fmt, "] ",
-    branch ~= "" and ("[" .. branch .. "] ") or "",
+    " ", ft,
+    " ", file,
+    " ", modified,
+    " ", readonly,
+    branch ~= "" and (" [" .. branch .. "] ") or "",
     "%#StatusDiag#",
     diag ~= "" and (" | " .. diag) or "",
     "%=",
