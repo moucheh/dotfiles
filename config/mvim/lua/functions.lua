@@ -8,7 +8,7 @@ function FzfGrepFloating()
       if [ "$LINE" -eq "$LINE" ] 2>/dev/null; then
         START=$((LINE - 15)); [ $START -lt 1 ] && START=1;
         END=$((LINE + 15));
-        bat --style=numbers --color=always --highlight-line "$LINE" --line-range "$START:$END" "$FILE";
+        bat --theme=Nord --style=numbers --color=always --highlight-line "$LINE" --line-range "$START:$END" "$FILE";
       else
         echo "Invalid line number: $LINE";
       fi
