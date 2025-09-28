@@ -6,6 +6,7 @@
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/config/nvim)
+- mvim - [fully native nvim setup no external plugins](https://github.com/moucheh/dotfiles/tree/master/config/mvim)
 - Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/config/nwg-dock/style.css)
 - Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/config/nwg-drawer/drawer.css)
 - Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/config/starship.toml)
@@ -60,6 +61,10 @@ Figlet is a dependency, you can install it through your distro's package manager
 
     sudo dnf install figlet
     ~/.dotfiles/scripts/nvdash_art.sh moucheh
+
+If you would like to try out the fully native nvim setup (mvim - it has no external plugins), you can run it with the follwoing command
+
+    nvim -u ~/.dotfiles/config/mvim/init.lua
 
 ## Sample images
 
