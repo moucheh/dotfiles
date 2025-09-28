@@ -3,11 +3,35 @@ function FzfGrepFloating()
 
   local has_bat = vim.fn.executable("bat") == 1
   local preview_cmd = has_bat
-    and [[bat --style=numbers --color=always --highlight-line {2} --line-range :500 {1}]]
-    or [[head -n 100 {1}]]
+    and [[
+      FILE={1}; LINE={2};
+      if [ "$LINE" -eq "$LINE" ] 2>/dev/null; then
+        START=$((LINE - 20)); [ $START -lt 1 ] && START=1;
+        END=$((LINE + 20));
+        bat --style=numbers --color=always --highlight-line "$LINE" --line-range "$START:$END" "$FILE";
+      else
+        echo "Invalid line number: $LINE";
+      fi
+    ]]
+    or [[
+      FILE={1}; LINE={2};
+      if [ "$LINE" -eq "$LINE" ] 2>/dev/null; then
+        START=$((LINE - 10)); [ $START -lt 1 ] && START=1;
+        END=$((LINE + 10));
+        sed -n "${START},${END}p" "$FILE";
+      else
+        echo "Invalid line number: $LINE";
+      fi
+    ]]
+
+  local rg_cmd = [[rg --line-number --no-heading --color=never '']]
+  local clean_cmd = [[awk -F ':' 'BEGIN { OFS=":" } { sub(/^[ \t]+/, "", $3); print $1, $2, $3 }']]
 
   local fzf_cmd = string.format(
-    "rg --line-number --no-heading --color=never '' | fzf --ansi --preview '%s' --delimiter ':' --bind tab:up,ctrl-j:down > %s",
+    "%s | %s | fzf --ansi --preview '%s' --delimiter ':' --with-nth 3.. " ..
+    "--bind tab:up,ctrl-j:down > %s",
+    rg_cmd,
+    clean_cmd,
     preview_cmd,
     vim.fn.shellescape(tmpfile)
   )
@@ -18,6 +42,8 @@ function FzfGrepFloating()
   local col = math.floor((vim.o.columns - width) / 2)
 
   local buf = vim.api.nvim_create_buf(false, true)
+  vim.api.nvim_buf_set_option(buf, "filetype", "fzf")
+
   local win = vim.api.nvim_open_win(buf, true, {
     relative = 'editor',
     row = row,
