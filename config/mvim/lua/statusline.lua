@@ -92,8 +92,8 @@ function Statusline()
     " ", file,
     " ", modified,
     " ", readonly,
-    branch ~= "" and (" [" .. branch .. "] ") or "",
     "%#StatusGit#",
+    branch ~= "" and (" [" .. branch .. "] ") or "",
     gitdiff ~= "" and (" [" .. gitdiff .. "] ") or "",
     "%#StatusDiag#",
     diag ~= "" and (" | " .. diag) or "",
@@ -108,7 +108,7 @@ o.statusline = "%!v:lua.Statusline()"
 o.laststatus = 3
 
 local function set_statusline_colors()
-  api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "none", bold = true })
+  api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "Gray", bold = true })
   api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "none" })
   api.nvim_set_hl(0, "StatusGit",  { fg = "#ffffff", bg = "none", bold = true })
   api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "none" })
