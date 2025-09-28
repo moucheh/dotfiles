@@ -221,14 +221,16 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 local map = vim.keymap.set
-map('n', '<space>x', CloseCurrentBuffer)
-map('n', '<space>X', ':bdelete!<CR>')
+
+map('n', '<space>x', CloseCurrentBuffer, { desc = 'Close buffer' })
+map('n', '<space>X', ':bdelete!<CR>', { desc = 'Force close buffer' })
 
 map('n', '<S-Tab>', function()
   wrap_bprev()
   _G.EnsureBufferVisible()
-end)
+end, { desc = 'Previous buffer' })
+
 map('n', '<Tab>', function()
   wrap_bnext()
   _G.EnsureBufferVisible()
-end)
+end, { desc = 'Next buffer' })
