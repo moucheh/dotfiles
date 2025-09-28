@@ -16,32 +16,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
       hi! link NormalFloat Normal
       hi! link FloatBorder LineNr
-
-      hi CmpItemKindText        guifg=#abb2bf gui=none       ctermfg=145
-      hi CmpItemKindMethod      guifg=#c678dd gui=italic     ctermfg=134
-      hi CmpItemKindFunction    guifg=#61afef gui=none       ctermfg=75
-      hi CmpItemKindConstructor guifg=#e5c07b gui=none       ctermfg=180
-      hi CmpItemKindField       guifg=#e06c75 gui=none       ctermfg=167
-      hi CmpItemKindVariable    guifg=#d19a66 gui=none       ctermfg=173
-      hi CmpItemKindClass       guifg=#e5c07b gui=bold       ctermfg=180
-      hi CmpItemKindInterface   guifg=#56b6c2 gui=none       ctermfg=74
-      hi CmpItemKindModule      guifg=#61afef gui=none       ctermfg=75
-      hi CmpItemKindProperty    guifg=#e06c75 gui=none       ctermfg=167
-      hi CmpItemKindUnit        guifg=#d19a66 gui=none       ctermfg=173
-      hi CmpItemKindValue       guifg=#56b6c2 gui=none       ctermfg=74
-      hi CmpItemKindEnum        guifg=#56b6c2 gui=bold       ctermfg=74
-      hi CmpItemKindKeyword     guifg=#c678dd gui=italic     ctermfg=134
-      hi CmpItemKindSnippet     guifg=#98c379 gui=none       ctermfg=108
-      hi CmpItemKindColor       guifg=#56b6c2 gui=none       ctermfg=74
-      hi CmpItemKindFile        guifg=#61afef gui=none       ctermfg=75
-      hi CmpItemKindReference   guifg=#abb2bf gui=none       ctermfg=145
-      hi CmpItemKindFolder      guifg=#61afef gui=none       ctermfg=75
-      hi CmpItemKindEnumMember  guifg=#56b6c2 gui=none       ctermfg=74
-      hi CmpItemKindConstant    guifg=#d19a66 gui=none       ctermfg=173
-      hi CmpItemKindStruct      guifg=#e06c75 gui=none       ctermfg=167
-      hi CmpItemKindEvent       guifg=#c678dd gui=none       ctermfg=134
-      hi CmpItemKindOperator    guifg=#56b6c2 gui=none       ctermfg=74
-      hi CmpItemKindTypeParameter guifg=#d19a66 gui=none     ctermfg=173
     ]]
   end,
 })
