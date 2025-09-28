@@ -84,6 +84,12 @@ function Statusline()
   local lineinfo = string.format("Ln %d, Col %d [%d%%%%]", vim.fn.line("."), vim.fn.col("."),
     vim.fn.line(".") * 100 / vim.fn.line("$"))
 
+  local rec_reg = vim.fn.reg_recording()
+  local recording = ""
+  if rec_reg ~= "" then
+    recording = string.format("  Recording @%s ", rec_reg)
+  end
+
   return table.concat {
     "%#StatusMode#",
     " ", mode, " ",
@@ -98,6 +104,7 @@ function Statusline()
     "%#StatusDiag#",
     diag ~= "" and (" | " .. diag) or "",
     "%=",
+    recording,
     lsp ~= "" and (lsp .. " | ") or "",
     "%#StatusPos#",
     " ", lineinfo, " ",
