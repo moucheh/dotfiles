@@ -31,6 +31,27 @@ local function git_branch()
   return ''
 end
 
+local function git_diff_stats()
+  local handle = io.popen('git diff --numstat 2>/dev/null')
+  if not handle then return "" end
+
+  local added, removed, file_count = 0, 0, 0
+
+  for line in handle:lines() do
+    local a, d, _ = line:match("^(%d+)%s+(%d+)%s+(.+)")
+    if a and d then
+      added = added + tonumber(a)
+      removed = removed + tonumber(d)
+      file_count = file_count + 1
+    end
+  end
+
+  handle:close()
+
+  if file_count == 0 then return "" end
+  return string.format("󰈢 %d  %d  %d", file_count, added, removed)
+end
+
 local function lsp_diagnostics()
   local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
   local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
@@ -57,6 +78,7 @@ function Statusline()
   local modified = vim.bo.modified and "[+]" or ""
   local ft = icon_map[vim.bo.filetype ~= "" and vim.bo.filetype] or ""
   local branch = git_branch()
+  local gitdiff = git_diff_stats()
   local diag = lsp_diagnostics()
   local lsp = lsp_clients()
   local lineinfo = string.format("Ln %d, Col %d [%d%%%%]", vim.fn.line("."), vim.fn.col("."),
@@ -71,6 +93,8 @@ function Statusline()
     " ", modified,
     " ", readonly,
     branch ~= "" and (" [" .. branch .. "] ") or "",
+    "%#StatusGit#",
+    gitdiff ~= "" and (" [" .. gitdiff .. "] ") or "",
     "%#StatusDiag#",
     diag ~= "" and (" | " .. diag) or "",
     "%=",
@@ -86,6 +110,7 @@ o.laststatus = 3
 local function set_statusline_colors()
   api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "#005f87", bold = true })
   api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "#003f5c" })
+  api.nvim_set_hl(0, "StatusGit", { fg = "#ffffff", bg = "#003f5c", bold = true })
   api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "#003f5c" })
   api.nvim_set_hl(0, "StatusPos", { fg = "#ffffff", bg = "#005f87", bold = true })
 end
