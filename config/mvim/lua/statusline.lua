@@ -108,11 +108,15 @@ o.statusline = "%!v:lua.Statusline()"
 o.laststatus = 3
 
 local function set_statusline_colors()
-  api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "#005f87", bold = true })
-  api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "#003f5c" })
-  api.nvim_set_hl(0, "StatusGit", { fg = "#ffffff", bg = "#003f5c", bold = true })
-  api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "#003f5c" })
-  api.nvim_set_hl(0, "StatusPos", { fg = "#ffffff", bg = "#005f87", bold = true })
+  api.nvim_set_hl(0, "StatusMode", { fg = "#ffffff", bg = "none", bold = true })
+  api.nvim_set_hl(0, "StatusFile", { fg = "#ffffff", bg = "none" })
+  api.nvim_set_hl(0, "StatusGit",  { fg = "#ffffff", bg = "none", bold = true })
+  api.nvim_set_hl(0, "StatusDiag", { fg = "#ffffff", bg = "none" })
+  api.nvim_set_hl(0, "StatusPos",  { fg = "#ffffff", bg = "none", bold = true })
+  vim.cmd[[
+    hi StatusLine   guifg=#FFFFFF guibg=none ctermfg=White ctermbg=none
+    hi StatusLineNC guifg=#FFFFFF guibg=none ctermfg=White ctermbg=none
+  ]]
 end
 
 set_statusline_colors()
