@@ -3,7 +3,7 @@ local map = vim.keymap.set
 vim.g.mapleader = ' '
 
 map('n', '<C-s>', ':write<CR>', { desc = 'Save current file' })
-map('n', '<C-c>', 'ggVGy', { desc = 'Copy entire file to clipboard' })
+map('n', '<C-c>', ':%y+<CR>', { desc = 'Copy entire file to clipboard' })
 map('n', '<leader>cf', 'ggVGgq', { desc = 'Format entire file' })
 map('n', '<leader>rc', ':e ~/.config/mvim/init.lua<CR>', { desc = 'Edit init.lua file' })
 map('n', '<leader>ff', ':FZF<CR>', { desc = 'Open file search in FZF' })
@@ -40,3 +40,6 @@ map('i', '`', '<Esc>a``<Esc>i', { desc = 'Insert closing backtic' })
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP go to definition' })
 map('n', 'gD', vim.lsp.buf.declaration, { desc = 'LSP go to declaration' })
 map('n', 'gr', vim.lsp.buf.references, { desc = 'LSP go to references' })
+map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP diagnostic loclist" })
+
+map("n", "<Esc>", ":noh<CR>", { desc = "general clear highlights" })
