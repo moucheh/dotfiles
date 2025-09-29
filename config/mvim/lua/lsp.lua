@@ -32,7 +32,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.lsp.completion.get()
       end)
     end
+
+    if client and client.server_capabilities.semanticTokensProvider and client.semantic_tokens then
+          client.semantic_tokens:on_attach(ev.buf)
+    end
   end
 })
 
 vim.diagnostic.config({ virtual_text = true })
+
+vim.cmd[[
+  syntax on
+  filetype plugin indent on
+]]
