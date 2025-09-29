@@ -52,4 +52,5 @@ map('n', '<leader>tr', ':Telescope registers<CR>', { desc = 'Show registers in a
 
 map('n', '<leader>gb', ':Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' })
 
+map('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Toggle LazyGit' })
 map('n', '<leader>ng', ':Neogit<CR>', { desc = 'Toggle Neogit' })
