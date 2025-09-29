@@ -16,6 +16,8 @@ end, { desc = 'Format current buffer/selection' })
 map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
 
 map('n', '<leader>q', '<cmd> qall <cr>', { desc = 'quit vim' })
+map('n', '<leader>Q', '<cmd> qall! <cr>', { desc = 'force quit vim' })
+map('n', '<leader>X', '<cmd> bd! <cr>', { desc = 'force close buffer' })
 
 map({ 'n', 'i', 'v' }, '<leader>dn', '<cmd> NoiceDismiss <cr>', { desc = 'dismiss notifications' })
 
