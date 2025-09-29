@@ -42,34 +42,9 @@ notify.setup {
 }
 
 vim.notify = notify
+require 'lsp'
 
 vim.schedule(function()
   require 'mappings'
 end)
 
-require('oil').setup()
-require('showkeys').toggle()
-require('stay-centered').enable()
-
--- lsp config
-local servers = {
-  'clangd',
-  'emmet_language_server',
-  'html',
-  'cssls',
-  'vhdl_ls',
-  'ts_ls',
-  'yamlls',
-  'bashls',
-  'cssls',
-  'html',
-  'lua_ls',
-  'pyright',
-  'tinymist',
-  'fsautocomplete',
-  'jdtls',
-}
-
-vim.lsp.enable(servers)
-
-vim.diagnostic.config { virtual_text = true }
