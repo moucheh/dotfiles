@@ -45,3 +45,4 @@ map('n', '<leader>ds', vim.diagnostic.setloclist, { desc = 'LSP diagnostic locli
 map('n', '<Esc>', ':noh<CR>', { desc = 'General clear highlights' })
 map('t', '<C-x>', '<C-\\><C-N>', { desc = 'Enter normal mode from terminal' })
 map('n', '<A-t>', '<C-w>s<C-w>j:resize 15<CR>:term<CR>i', { desc = 'Open terminal in a horizontal split' })
+map('t', '<C-w>k', '<C-\\><C-N><C-w>k', { desc = 'Focus away from term' })
