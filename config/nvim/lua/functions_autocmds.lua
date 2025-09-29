@@ -1,7 +1,8 @@
--- Basic autocommands
+require 'nvchad.autocmds'
+require 'lazygit'
+
 local augroup = vim.api.nvim_create_augroup("UserConfig", {})
 
--- Highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = augroup,
   callback = function()
@@ -9,7 +10,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Return to last edit position when opening files
 vim.api.nvim_create_autocmd("BufReadPost", {
   group = augroup,
   callback = function()
@@ -21,7 +21,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
--- Auto-resize splits when window is resized
 vim.api.nvim_create_autocmd("VimResized", {
   group = augroup,
   callback = function()
@@ -29,19 +28,15 @@ vim.api.nvim_create_autocmd("VimResized", {
   end,
 })
 
--- Command-line completion
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 vim.opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
 
--- Better diff options
 vim.opt.diffopt:append("linematch:60")
 
--- Performance improvements
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 
--- Create undo directory if it doesn't exist
 local undodir = vim.fn.expand("~/.vim/undodir")
 if vim.fn.isdirectory(undodir) == 0 then
   vim.fn.mkdir(undodir, "p")
