@@ -14,6 +14,7 @@ local servers = {
   'tinymist',
   'fsautocomplete',
   'jdtls',
+  'sqlls',
 }
 
 vim.lsp.enable(servers)
