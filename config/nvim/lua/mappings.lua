@@ -46,6 +46,8 @@ map('v', '>', '>gv', { desc = 'Indent right and reselect' })
 map('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position' })
 
 map('n', '<leader>tr', ':Telescope registers<CR>', { desc = 'Show registers in a Telescope panel' })
+map('n', '<leader>dt', ':Telescope diagnostics<CR>', { desc = 'Show diagnostics in a Telescope panel' })
+map('n', '<leader>gr', ':Telescope lsp_references<CR>', { desc = 'Show lsp references in a Telescope panel' })
 
 map('n', '<leader>gb', ':Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' })
 
