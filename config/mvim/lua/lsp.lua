@@ -14,7 +14,7 @@ local servers = {
   'tinymist',
   'fsautocomplete',
   'jdtls',
-  'sqlls',
+  'sqls',
 }
 
 for _, server in ipairs(servers) do

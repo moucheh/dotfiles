@@ -21,6 +21,19 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  callback = function(args)
+    local buf = args.buf
+    local name = vim.api.nvim_buf_get_name(buf)
+
+    if vim.bo[buf].filetype == '' then
+      if name:match 'sql' then
+        vim.bo[buf].filetype = 'sql'
+      end
+    end
+  end
+})
+
 vim.api.nvim_create_autocmd("VimResized", {
   group = augroup,
   callback = function()
