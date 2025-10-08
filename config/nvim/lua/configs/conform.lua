@@ -16,6 +16,7 @@ local options = {
     vhdl = { 'vsg' },
     typst = { 'prettypst' },
     fsharp = { 'fantomas' },
+    sql = { 'sleek' },
   },
 }
 
