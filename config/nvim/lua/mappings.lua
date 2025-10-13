@@ -1,9 +1,6 @@
 local map = vim.keymap.set
 
-map('n', ';', ':', { desc = 'CMD enter command mode' })
-map('i', 'jk', '<ESC>')
-
-map({ 'n', 'v' }, '<leader>cf', function()
+map({ 'n', 'v', '' }, '<leader>cf', function()
   require('conform').format {
     lsp_format = 'fallback',
     async = false,
@@ -15,9 +12,9 @@ map('n', '<leader>q', ':qall<CR>', { desc = 'quit vim' })
 map('n', '<leader>Q', ':qall!<CR>', { desc = 'force quit vim' })
 map('n', '<leader>X', ':bd!<CR>', { desc = 'force close buffer' })
 
-map({ 'n', 'i', 'v' }, '<leader>dn', ':NoiceDismiss<CR>', { desc = 'dismiss notifications' })
+map({ 'n', 'i', 'v' }, '<leader>dn', '<CMD>NoiceDismiss<CR>', { desc = 'dismiss notifications' })
 
-map('n', '-', ':Oil<CR>', { desc = 'Open parent directory' })
+map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 map('n', 'n', 'nzzzv', { desc = 'Next search result (centered)' })
 map('n', 'N', 'Nzzzv', { desc = 'Previous search result (centered)' })
@@ -45,7 +42,7 @@ map('n', '<leader>tr', ':Telescope registers<CR>', { desc = 'Show registers in a
 map('n', '<leader>dt', ':Telescope diagnostics<CR>', { desc = 'Show diagnostics in a Telescope panel' })
 map('n', '<leader>gr', ':Telescope lsp_references<CR>', { desc = 'Show lsp references in a Telescope panel' })
 
-map('n', '<leader>gb', ':Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' })
+map('n', '<leader>gb', '<CMD>Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' })
 
 map('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Toggle LazyGit' })
 map('n', '<leader>ng', ':Neogit<CR>', { desc = 'Toggle Neogit' })
@@ -58,16 +55,16 @@ map('n', '<C-j>', '<C-w>j', { desc = 'switch window down' })
 map('n', '<C-k>', '<C-w>k', { desc = 'switch window up' })
 
 map('n', '<C-s>', ':w<CR>', { desc = 'general save file' })
-map('n', '<C-c>', ':%y+<CR>', { desc = 'general copy whole file' })
+map('n', '<C-c>', '<CMD>%y+<CR>', { desc = 'general copy whole file' })
 
-map('n', '<Esc>', ':noh<CR>', { desc = 'general clear highlights' })
+map('n', '<Esc>', '<CMD>noh<CR>', { desc = 'general clear highlights' })
 
-map('n', '<leader>ch', ':NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
+map('n', '<leader>ch', '<CMD>NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
 
 map('n', '<leader>ds', vim.diagnostic.setloclist, { desc = 'LSP diagnostic loclist' })
 
 if require('nvconfig').ui.tabufline.enabled then
-  map('n', '<leader>b', ':enew<CR>', { desc = 'buffer new' })
+  map('n', '<leader>b', '<CMD>enew<CR>', { desc = 'buffer new' })
 
   map('n', '<Tab>', function()
     require('nvchad.tabufline').next()
