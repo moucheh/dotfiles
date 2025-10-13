@@ -55,6 +55,18 @@ M.ui = {
   statusline = {
     theme = 'vscode_colored',
     order = { 'mode', 'file', 'git', '%=', 'lsp_msg', '%=', 'diagnostics', 'cursor', 'lsp', 'cwd' },
+    modules = {
+      mode = function()
+        local utils = require 'nvchad.stl.utils'
+        if not utils.is_activewin() then
+          return ''
+        end
+
+        local modes = utils.modes
+        local m = vim.api.nvim_get_mode().mode
+        return '%#St_' .. modes[m][2] .. 'mode#' .. '  ' .. modes[m][1] .. ' '
+      end,
+    },
   },
 }
 
