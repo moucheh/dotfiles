@@ -1,5 +1,3 @@
-require 'nvchad.mappings'
-
 local map = vim.keymap.set
 
 map('n', ';', ':', { desc = 'CMD enter command mode' })
@@ -13,15 +11,13 @@ map({ 'n', 'v' }, '<leader>cf', function()
   }
 end, { desc = 'Format current buffer/selection' })
 
-map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
+map('n', '<leader>q', ':qall<CR>', { desc = 'quit vim' })
+map('n', '<leader>Q', ':qall!<CR>', { desc = 'force quit vim' })
+map('n', '<leader>X', ':bd!<CR>', { desc = 'force close buffer' })
 
-map('n', '<leader>q', '<cmd> qall <cr>', { desc = 'quit vim' })
-map('n', '<leader>Q', '<cmd> qall! <cr>', { desc = 'force quit vim' })
-map('n', '<leader>X', '<cmd> bd! <cr>', { desc = 'force close buffer' })
+map({ 'n', 'i', 'v' }, '<leader>dn', ':NoiceDismiss<CR>', { desc = 'dismiss notifications' })
 
-map({ 'n', 'i', 'v' }, '<leader>dn', '<cmd> NoiceDismiss <cr>', { desc = 'dismiss notifications' })
-
-map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+map('n', '-', ':Oil<CR>', { desc = 'Open parent directory' })
 
 map('n', 'n', 'nzzzv', { desc = 'Next search result (centered)' })
 map('n', 'N', 'Nzzzv', { desc = 'Previous search result (centered)' })
@@ -53,3 +49,53 @@ map('n', '<leader>gb', ':Gitsigns blame<CR>', { desc = 'Toggle gitsigns blame' }
 
 map('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Toggle LazyGit' })
 map('n', '<leader>ng', ':Neogit<CR>', { desc = 'Toggle Neogit' })
+
+-- Taken from nvchad
+
+map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
+map('n', '<C-l>', '<C-w>l', { desc = 'switch window right' })
+map('n', '<C-j>', '<C-w>j', { desc = 'switch window down' })
+map('n', '<C-k>', '<C-w>k', { desc = 'switch window up' })
+
+map('n', '<C-s>', ':w<CR>', { desc = 'general save file' })
+map('n', '<C-c>', ':%y+<CR>', { desc = 'general copy whole file' })
+
+map('n', '<Esc>', ':noh<CR>', { desc = 'general clear highlights' })
+
+map('n', '<leader>ch', ':NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
+
+map('n', '<leader>ds', vim.diagnostic.setloclist, { desc = 'LSP diagnostic loclist' })
+
+if require('nvconfig').ui.tabufline.enabled then
+  map('n', '<leader>b', ':enew<CR>', { desc = 'buffer new' })
+
+  map('n', '<Tab>', function()
+    require('nvchad.tabufline').next()
+  end, { desc = 'buffer goto next' })
+
+  map('n', '<S-Tab>', function()
+    require('nvchad.tabufline').prev()
+  end, { desc = 'buffer goto prev' })
+
+  map('n', '<leader>x', function()
+    require('nvchad.tabufline').close_buffer()
+  end, { desc = 'buffer close' })
+end
+
+map('n', '<C-/>', 'gcc', { desc = 'toggle comment', remap = true })
+map('v', '<C-/>', 'gc', { desc = 'toggle comment', remap = true })
+
+map('n', '<leader>fw', ':Telescope live_grep<CR>', { desc = 'telescope live grep' })
+map('n', '<leader>fo', ':Telescope oldfiles<CR>', { desc = 'telescope find oldfiles' })
+map('n', '<leader>fz', ':Telescope current_buffer_fuzzy_find<CR>', { desc = 'telescope find in current buffer' })
+map('n', '<leader>ff', ':Telescope find_files<CR>', { desc = 'telescope find files' })
+map(
+  'n',
+  '<leader>fa',
+  ':Telescope find_files follow=true no_ignore=true hidden=true<CR>',
+  { desc = 'telescope find all files' }
+)
+
+map({ 'n', 't' }, '<A-h>', function()
+  require('nvchad.term').toggle { pos = 'sp', id = 'htoggleTerm' }
+end, { desc = 'terminal toggleable horizontal term' })
