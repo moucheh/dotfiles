@@ -1,4 +1,4 @@
-dofile(vim.g.base46_cache .. "cmp")
+dofile(vim.g.base46_cache .. 'cmp')
 
 return {
   'hrsh7th/nvim-cmp',
