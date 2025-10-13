@@ -1,15 +1,17 @@
 require 'lazygit'
 
 local augroup = vim.api.nvim_create_augroup("UserConfig", {})
+local autocmd = vim.api.nvim_create_autocmd
+local opt = vim.opt
 
-vim.api.nvim_create_autocmd("TextYankPost", {
+autocmd("TextYankPost", {
   group = augroup,
   callback = function()
     vim.highlight.on_yank()
   end,
 })
 
-vim.api.nvim_create_autocmd("BufReadPost", {
+autocmd("BufReadPost", {
   group = augroup,
   callback = function()
     local mark = vim.api.nvim_buf_get_mark(0, '"')
@@ -20,7 +22,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+autocmd({ "BufRead", "BufNewFile" }, {
   callback = function(args)
     local buf = args.buf
     local name = vim.api.nvim_buf_get_name(buf)
@@ -33,21 +35,21 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   end
 })
 
-vim.api.nvim_create_autocmd("VimResized", {
+autocmd("VimResized", {
   group = augroup,
   callback = function()
     vim.cmd("tabdo wincmd =")
   end,
 })
 
-vim.opt.wildmenu = true
-vim.opt.wildmode = "longest:full,full"
-vim.opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
+opt.wildmenu = true
+opt.wildmode = "longest:full,full"
+opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
 
-vim.opt.diffopt:append("linematch:60")
+opt.diffopt:append("linematch:60")
 
-vim.opt.redrawtime = 10000
-vim.opt.maxmempattern = 20000
+opt.redrawtime = 10000
+opt.maxmempattern = 20000
 
 local undodir = vim.fn.expand("~/.vim/undodir")
 if vim.fn.isdirectory(undodir) == 0 then
@@ -55,8 +57,6 @@ if vim.fn.isdirectory(undodir) == 0 then
 end
 
 -- Taken from nvchad
-
-local autocmd = vim.api.nvim_create_autocmd
 
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = vim.api.nvim_create_augroup("NvFilePost", { clear = true }),
