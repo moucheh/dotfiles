@@ -1,7 +1,6 @@
-require 'nvchad.options'
-
 vim.wo.relativenumber = true
 
+local g = vim.g
 local o = vim.o
 local opt = vim.opt
 o.cursorlineopt = 'both'
@@ -67,3 +66,26 @@ opt.splitright = true
 
 vim.g.neovide_opacity = 0.9
 o.guifont = 'CaskaydiaCove Nerd Font:h12'
+
+o.laststatus = 3
+o.splitkeep = "screen"
+
+opt.fillchars = { eob = " " }
+
+o.ruler = false
+
+opt.shortmess:append "sI"
+
+o.signcolumn = "yes"
+
+opt.whichwrap:append "<>[]hl"
+
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
+
+local is_windows = vim.fn.has "win32" ~= 0
+local sep = is_windows and "\\" or "/"
+local delim = is_windows and ";" or ":"
+vim.env.PATH = table.concat({ vim.fn.stdpath "data", "mason", "bin" }, sep) .. delim .. vim.env.PATH
