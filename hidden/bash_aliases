@@ -5,7 +5,7 @@ make_directory_and_cd_into_it () {
     cd $1 
 }
  
-alias clr='clear'
+alias c='clear'
 alias md='make_directory_and_cd_into_it'
  
 alias run='clear && ./main'
