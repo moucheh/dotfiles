@@ -109,3 +109,4 @@ fi
 PROMPT_COMMAND='printf "\e]7;file://%s%s\a" "$HOSTNAME" "$PWD"; '"$PROMPT_COMMAND"
 
 set -o vi
+bind -m vi-insert "\\C-L":clear-screen
