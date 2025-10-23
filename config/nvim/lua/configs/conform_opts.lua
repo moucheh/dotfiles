@@ -15,7 +15,7 @@ local options = {
     typescriptreact = { 'prettierd' },
     vhdl = { 'vsg' },
     typst = { 'prettypst' },
-    fsharp = { 'fantomas' },
+    fsharp = { 'fsautocomplete' },
     sql = { 'sleek' },
   },
 }
