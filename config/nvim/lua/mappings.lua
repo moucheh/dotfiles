@@ -62,6 +62,9 @@ map('n', '<Esc>', '<CMD>noh<CR>', { desc = 'general clear highlights' })
 map('n', '<leader>ch', '<CMD>NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
 
 map('n', '<leader>ds', vim.diagnostic.setloclist, { desc = 'LSP diagnostic loclist' })
+map('n', '<leader>gh', function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = 'Toggle LSP inlay hints' })
 
 if require('nvconfig').ui.tabufline.enabled then
   map('n', '<leader>b', '<CMD>enew<CR>', { desc = 'buffer new' })
