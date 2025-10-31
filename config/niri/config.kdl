@@ -71,6 +71,7 @@ spawn-at-startup "dunst"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/bg.jpg"
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 
 hotkey-overlay {
     skip-at-startup
