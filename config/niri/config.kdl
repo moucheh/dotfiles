@@ -62,7 +62,7 @@ layout {
     background-color "transparent"
 }
 
-spawn-at-startup "waybar" "--config" "/home/moucheh/.config/niri/waybar/config.jsonc" "--style" "/home/moucheh/.config/niri/waybar/style.css"
+spawn-sh-at-startup "waybar -c ~/.config/niri/waybar/config.jsonc -s ~/.config/niri/waybar/style.css"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "wlsunset" "-l" "44.5" "-L" "18.6" "-t" "4500" "-T" "6500"
 spawn-at-startup "wl-paste" "-t" "text" "--watch" "clipman" "store"
@@ -70,7 +70,7 @@ spawn-at-startup "clipman" "restore"
 spawn-at-startup "dunst"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet"
-spawn-at-startup "swaybg" "-m" "fill" "-o" "*" "-i" "/home/moucheh/.dotfiles/images/bg.jpg"
+spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/bg.jpg"
 
 hotkey-overlay {
     skip-at-startup
@@ -90,21 +90,23 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: nwg-drawer" { spawn-sh "nwg-drawer -mt 50 -mr 400 -mb 50 -ml 400 -pblock swaylock -pbpoweroff poweroff -pbreboot reboot -wm niri"; }
     Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn "brave-browser"; }
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn "foot" "-e" "yazi"; }
+    Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn-sh "foot -e yazi"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+;/usr/libexec/sway/volume-helper"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-;/usr/libexec/sway/volume-helper"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.05"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.05"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle;/usr/libexec/sway/volume-helper"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "~/.config/niri/scripts/brightness_up.sh"; }
 
-    Mod+O repeat=false { toggle-overview; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "~/.config/niri/scripts/brightness_down.sh"; }
+
+    Mod+O repeat=false { spawn-sh "~/.config/niri/scripts/toggle_overview.sh"; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -121,7 +123,7 @@ binds {
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { spawn-sh ""; }
+    Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
     Mod+Ctrl+Left  { focus-monitor-left; }
@@ -172,8 +174,8 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    Mod+TouchpadScrollDown { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
-    Mod+TouchpadScrollUp   { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
+    Mod+TouchpadScrollDown { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.02"; }
+    Mod+TouchpadScrollUp   { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.02"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -210,9 +212,11 @@ binds {
 
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
+    Mod+0 { set-column-width "50%"; }
 
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+0 { set-window-height "100%"; }
 
     Mod+Space { switch-focus-between-floating-and-tiling; }
     Mod+Shift+Space { toggle-window-floating; }
@@ -229,6 +233,10 @@ binds {
     Ctrl+Alt+Delete { quit; }
 
     Mod+Shift+P { power-off-monitors; }
+
+    Mod+C hotkey-overlay-title="Pick an entry from clipboard history" { spawn-sh "foot -e ~/.config/niri/scripts/clipboard_pick.sh"; }
+    Mod+Shift+C hotkey-overlay-title="Clear an entry from clipboard history" { spawn-sh "foot -e ~/.config/niri/scripts/clipboard_clear.sh"; }
+    Mod+Alt+C hotkey-overlay-title="Clear all entries from clipboard history" { spawn "clipman" "clear" "-a"; }
 }
 
 layer-rule {
