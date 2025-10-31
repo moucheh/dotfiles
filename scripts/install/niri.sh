@@ -5,7 +5,7 @@ case $doit in
   y|Y|'')
     echo;
       sudo dnf copr enable yalter/niri
-      sudo dnf install niri waybar fuzzel mate-polkit swaybg swaylock wlsunset clipman dunst blueman-applet nm-applet wl-clipboard
+      sudo dnf install niri waybar fuzzel mate-polkit swaybg swaylock-effects wlsunset clipman dunst blueman-applet nm-applet  wl-clipboard
       ln -s ~/.dotfiles/config/niri ~/.config
       printf "You can now select niri from your login manager as a session\n\n"
     ;;
