@@ -106,4 +106,4 @@ Default keybinds:
 ![Image 10](images/pic10.webp)
 
 ### Full quality background
-![Background](bg.jpg)
+![Background](images/bg.jpg)
