@@ -246,5 +246,5 @@ layer-rule {
 }
 
 animations {
-  off
+  // off
 }
