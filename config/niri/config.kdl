@@ -240,6 +240,10 @@ binds {
     Mod+Alt+C hotkey-overlay-title="Clear all entries from clipboard history" { spawn "clipman" "clear" "-a"; }
 }
 
+clipboard {
+  disable-primary
+}
+
 layer-rule {
   match namespace="^wallpaper$"
   place-within-backdrop true
