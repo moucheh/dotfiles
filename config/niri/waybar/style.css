@@ -8,11 +8,8 @@ window#waybar {
   color: #fff;
   transition-property: background-color;
   transition-duration: .5s;
-}
-
-.modules-left, .modules-right, .modules-center {
-  background-color: rgba(40, 85, 119, 0.8);
-  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #7fc8ff;
 }
 
 .modules-left {

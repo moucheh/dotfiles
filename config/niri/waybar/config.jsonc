@@ -9,7 +9,6 @@
         "custom/cava_mviz"
     ],
     "modules-center": [
-        "idle_inhibitor",
         "clock"
     ],
     "modules-right": [
@@ -27,13 +26,6 @@
     },
     "niri/language" : {
       "tooltip": false
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
     },
     "tray": {
         "spacing": 10
