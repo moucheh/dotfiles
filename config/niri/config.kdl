@@ -12,6 +12,7 @@ input {
         natural-scroll
         accel-profile "flat"
         scroll-method "two-finger"
+        click-method "clickfinger"
     }
 
     mouse {
