@@ -60,7 +60,22 @@ layout {
         active-color "#7fc8ff"
         inactive-color "#505050"
     }
-    background-color "transparent"
+    background-color "#00000050"
+}
+
+overview {
+  workspace-shadow {
+    softness 40
+    spread 10
+    offset x=0 y=10
+    color "#7fc8ff50"
+  }
+}
+
+gestures {
+  hot-corners {
+    off
+  }
 }
 
 spawn-sh-at-startup "waybar -c ~/.config/niri/waybar/config.jsonc -s ~/.config/niri/waybar/style.css"
