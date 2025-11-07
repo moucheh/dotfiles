@@ -47,6 +47,10 @@ map('n', '<leader>gb', '<CMD>Gitsigns blame<CR>', { desc = 'Toggle gitsigns blam
 map('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Toggle LazyGit' })
 map('n', '<leader>ng', ':Neogit<CR>', { desc = 'Toggle Neogit' })
 
+map('n', '<C-A>w', ':HopWord<CR>', { desc = 'Hop to word' })
+map('n', '<C-A>f', ':HopChar1<CR>', { desc = 'Hop to character' })
+map('n', '<C-A>c', ':HopCamelCase<CR>', { desc = 'Hop to camelcase word' })
+
 -- Taken from nvchad
 
 map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
