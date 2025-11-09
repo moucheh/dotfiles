@@ -91,7 +91,7 @@ export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %r %t"
 
 if $KEYCHAIN_IS_INSTALLED; then
-  eval `keychain -q --eval --agents ssh gh_key gl_key`
+  eval `keychain -q --eval gh_key gl_key`
 fi
 
 if $STARSHIP_IS_INSTALLED; then
