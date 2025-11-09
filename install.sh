@@ -16,8 +16,6 @@ $SCRIPTS/install/hidden.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
 
 printf "Configs installed\n\nContinuing...\n\n"
 
-$SCRIPTS/install/sddm-greeter.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
-
 $SCRIPTS/install/dependencies.sh
 
 $SCRIPTS/install/swaylock-effects.sh
@@ -31,8 +29,6 @@ $SCRIPTS/install/eza.sh
 $SCRIPTS/install/zoxide.sh
 
 $SCRIPTS/install/starship.sh
-
-$SCRIPTS/install/sddm-greeter.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
 
 $SCRIPTS/install/nerdfont.sh
 
