@@ -86,7 +86,7 @@ spawn-at-startup "clipman" "restore"
 spawn-at-startup "dunst"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet"
-spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/bg.jpg"
+spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 
 hotkey-overlay {

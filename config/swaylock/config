@@ -1,4 +1,4 @@
-image=$HOME/.dotfiles/images/bg.jpg
+image=$HOME/.dotfiles/images/waves.jpg
 scaling=fill
 clock
 indicator
