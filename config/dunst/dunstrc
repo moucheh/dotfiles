@@ -350,10 +350,10 @@
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#285577"
+    background = "#000000DD"
     foreground = "#ffffff"
     highlight = "#8dc3eb"
-    frame_color = "#cccccc"
+    frame_color = "#7fc8ff"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
