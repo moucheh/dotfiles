@@ -1,7 +1,8 @@
 # moucheh Dotfiles
 
-- WM - [sway](https://github.com/moucheh/dotfiles/blob/master/config/sway/config)
-- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/waybar)
+- WM - [niri](https://github.com/moucheh/dotfiles/tree/master/config/niri)
+- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/niri/waybar)
+- Login manager - [Tuigreet + greetd](https://github.com/apognu/tuigreet)
 - Lock manager - [swaylock-effects](https://github.com/jirutka/swaylock-effects)
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
@@ -11,7 +12,6 @@
 - Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/config/nwg-drawer/drawer.css)
 - Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/config/starship.toml)
 - [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/config/fastfetch/config.jsonc)
-- [Autotiling](https://pypi.org/project/autotiling/)
 
 Make sure to clone the repository in your home directory
     
@@ -23,14 +23,6 @@ And then run the install script, you may need to add executable permissions
     ./install.sh
 
 If you already have a config for something that is included in these dotfiles, that config will be copied to a backup folder of current date and time, it will start with a dot so it will be hiden, but won't be lost.
-
-For autotiling to work, you need to install a python package
-
-    pip install autotiling
-
-You may need to make it executable
-
-    chmod +x $(which autotiling)
 
 If you'd like to have fingerprint unlocking as well as password unlocking
 copy pam.d/swaylock contents to /etc/pam.d/swaylock
@@ -61,36 +53,40 @@ If you would like to try out the fully native nvim setup (mvim - it has no exter
 ### Screenshot 2 (nvim)
 ![Image 2](images/pic2.webp)
 
-### Screenshot 3 (fastfetch + cmatrix + cava)
+### Screenshot 3 (nvim lazy pkg manager)
 ![Image 3](images/pic3.webp)
 
-### Screenshot 4 (lazygit)
+### Screenshot 4 (Overview 1)
 ![Image 4](images/pic4.webp)
 
-### Screenshot 5 (ls replacement -> eza)
+### Screenshot 5 (Overview 2)
 ![Image 5](images/pic5.webp)
 
-### Screenshot 6 (sddm greeter)
-![Image 6](images/pic6.webp)
-
-### Screenshot 7 (nwg-dock)
-![Image 7](images/pic7.webp)
-
-### Screenshot 8 (fuzzel)
-![Image 8](images/pic8.webp)
-
-### Screenshot 9 (nwg-drawer)
-![Image 9](images/pic9.webp)
-
-### Screenshot 10
+### Screenshot 6
 Clipboard management using wl-clipboard + clipman + fzf
 
 Default keybinds:
-- Win+C      - pick an entry
-- Win+Alt+C  - clear an entry
-- Ctrl+Alt+C - clear all entries
+- Super+C        - pick an entry
+- Super+Shift+C  - clear an entry
+- Super+Alt+C    - clear all entries
 
+![Image 6](images/pic6.webp)
+
+### Screenshot 7 (eza)
+![Image 7](images/pic7.webp)
+
+### Screenshot 8 (lazygit)
+![Image 8](images/pic8.webp)
+
+### Screenshot 9 (yazi)
+![Image 9](images/pic9.webp)
+
+### Screenshot 10 (fuzzel and dunst)
 ![Image 10](images/pic10.webp)
 
-### Full quality background
-![Background](images/bg.jpg)
+### Screenshot 11 (nwg-drawer)
+![Image 11](images/pic11.webp)
+
+### Full quality wallpaper
+![Background](images/waves.jpg)
+
