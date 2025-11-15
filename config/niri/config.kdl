@@ -88,6 +88,7 @@ spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+spawn-at-startup "lavalauncher"
 
 hotkey-overlay {
     skip-at-startup
@@ -242,6 +243,7 @@ binds {
     Mod+Shift+Space { toggle-window-floating; }
 
     Mod+W { toggle-column-tabbed-display; }
+    Mod+Shift+W { spawn-sh "killall -SIGUSR2 waybar"; }
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
