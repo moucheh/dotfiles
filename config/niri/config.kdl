@@ -113,8 +113,6 @@ binds {
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn-sh "foot -e yazi"; }
 
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
-
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.05"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.05"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle;/usr/libexec/sway/volume-helper"; }
@@ -254,7 +252,8 @@ binds {
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Shift+P hotkey-overlay-title="Power off monitors" { power-off-monitors; }
+    Mod+Ctrl+P hotkey-overlay-title="Toggle hyprpicker" { spawn "hyprpicker"; }
 
     Mod+C hotkey-overlay-title="Pick an entry from clipboard history" { spawn-sh "foot -e ~/.config/niri/scripts/clipboard_pick.sh"; }
     Mod+Shift+C hotkey-overlay-title="Clear an entry from clipboard history" { spawn-sh "foot -e ~/.config/niri/scripts/clipboard_clear.sh"; }
