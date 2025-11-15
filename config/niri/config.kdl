@@ -124,7 +124,7 @@ binds {
 
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "~/.config/niri/scripts/brightness_down.sh"; }
 
-    Mod+O repeat=false { spawn-sh "~/.config/niri/scripts/toggle_overview.sh"; }
+    Mod+O hotkey-overlay-title="Toggle overview (hides waybar)" repeat=false { spawn-sh "~/.config/niri/scripts/toggle_overview.sh"; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -243,7 +243,7 @@ binds {
     Mod+Shift+Space { toggle-window-floating; }
 
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Shift+W { spawn-sh "killall -SIGUSR2 waybar"; }
+    Mod+Shift+W hotkey-overlay-title="Rerender waybar" { spawn-sh "killall -SIGUSR2 waybar"; }
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
