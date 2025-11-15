@@ -87,6 +87,9 @@ Default keybinds:
 ### Screenshot 11 (nwg-drawer)
 ![Image 11](images/pic11.webp)
 
+### Screenshot 12 (lavalauncher)
+![Image 12](images/pic12.webp)
+
 ### Full quality wallpaper
 ![Background](images/waves.jpg)
 
