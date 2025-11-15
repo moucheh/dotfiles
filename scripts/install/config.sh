@@ -18,6 +18,7 @@ CONFIG_FILES=(
   qt5ct
   qt6ct
   sway
+  niri
   swaylock
   waybar
   dunst

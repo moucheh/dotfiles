@@ -22,8 +22,6 @@ $SCRIPTS/install/swaylock-effects.sh
 
 $SCRIPTS/install/pam-swaylock.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
 
-$SCRIPTS/install/autotiling.sh
-
 $SCRIPTS/install/eza.sh
 
 $SCRIPTS/install/zoxide.sh
