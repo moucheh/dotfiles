@@ -33,7 +33,7 @@ set $drawer nwg-drawer -mt 50\
 output eDP-1 resolution 1920x1080 position 1920,0
 output HDMI-A-1 resolution 1920x1080 position 0,0
 
-set $background $HOME/.dotfiles/images/bg.jpg
+set $background $HOME/.dotfiles/images/waves.jpg
 
 output * bg $background fill
 
