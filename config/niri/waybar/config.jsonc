@@ -18,6 +18,7 @@
         "memory",
         "temperature",
         "pulseaudio",
+        "custom/bluetooth_battery",
         "battery"
     ],
     "niri/workspaces" : {
@@ -87,12 +88,17 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$HOME/.config/niri/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/cava_mviz": {
-      "exec": "$HOME/.config/waybar/cava.sh",
+      "exec": "$HOME/.config/niri/waybar/cava.sh",
       "format": "{}",
       "tooltip": false
+    },
+    "custom/bluetooth_battery": {
+      "format": "󰥉 {}",
+      "tooltip": false,
+      "exec": "$HOME/.config/niri/waybar/bluetooth_battery.sh"
     },
     "niri/window": {
       "format": "{app_id}",
