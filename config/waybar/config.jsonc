@@ -88,8 +88,8 @@
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "0%   {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "0%   {icon}",
         "format-muted": "0% ",
         "format-icons": {
             "headphone": "",
