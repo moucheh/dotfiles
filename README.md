@@ -90,6 +90,9 @@ Default keybinds:
 ### Screenshot 12 (lavalauncher)
 ![Image 12](images/pic12.webp)
 
+### Screenshot 13 (swaync)
+![Image 13](images/pic13.webp)
+
 ### Full quality wallpaper
 ![Background](images/waves.jpg)
 
