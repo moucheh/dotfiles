@@ -83,7 +83,7 @@ spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "wlsunset" "-l" "44.5" "-L" "18.6" "-t" "4500" "-T" "6500"
 spawn-at-startup "wl-paste" "-t" "text" "--watch" "clipman" "store"
 spawn-at-startup "clipman" "restore"
-spawn-at-startup "dunst"
+spawn-at-startup "swaync"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "nm-applet"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
@@ -112,6 +112,7 @@ binds {
     Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn-sh "brave-browser --enable-features=UseOzonePlatform --ozone-platform=wayland"; }
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn-sh "foot -e yazi"; }
+    Mod+N hotkey-overlay-title="Toggle notification center: swaync" { spawn-sh "swaync-client -t"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.05"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.05"; }
