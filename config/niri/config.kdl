@@ -89,6 +89,7 @@ spawn-at-startup "nm-applet"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup "lavalauncher"
+spawn-at-startup "swayosd-server"
 
 hotkey-overlay {
     skip-at-startup
@@ -114,14 +115,14 @@ binds {
     Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn-sh "foot -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center: swaync" { spawn-sh "swaync-client -t"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.05"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.05"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle;/usr/libexec/sway/volume-helper"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume raise 5"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume lower 5"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "swayosd-client --output-volume mute-toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "swayosd-client --input-volume mute-toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "~/.config/niri/scripts/brightness_up.sh"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "swayosd-client --brightness raise 5"; }
 
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "~/.config/niri/scripts/brightness_down.sh"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "swayosd-client --brightness lower 5"; }
 
     Mod+O hotkey-overlay-title="Toggle overview (hides waybar)" repeat=false { spawn-sh "~/.config/niri/scripts/toggle_overview.sh"; }
 
@@ -194,8 +195,8 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    Mod+TouchpadScrollDown { spawn-sh "~/.config/niri/scripts/volume_up.sh 0.02"; }
-    Mod+TouchpadScrollUp   { spawn-sh "~/.config/niri/scripts/volume_down.sh 0.02"; }
+    Mod+TouchpadScrollDown { spawn-sh "swayosd-client --output-volume raise 2"; }
+    Mod+TouchpadScrollUp   { spawn-sh "swayosd-client --output-volume lower 2"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
