@@ -93,6 +93,9 @@ Default keybinds:
 ### Screenshot 13 (swaync)
 ![Image 13](images/pic13.webp)
 
+### Screenshot 14 (swayosd)
+![Image 14](images/pic14.webp)
+
 ### Full quality wallpaper
 ![Background](images/waves.jpg)
 
