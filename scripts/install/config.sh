@@ -17,6 +17,8 @@ CONFIG_FILES=(
   qt5ct
   qt6ct
   sway
+  swaync
+  swayosd
   niri
   swaylock
   waybar
