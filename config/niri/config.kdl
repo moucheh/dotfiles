@@ -124,6 +124,10 @@ binds {
 
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "swayosd-client --brightness lower"; }
 
+    XF86Display { spawn-sh "wl-mirror eDP-1"; }
+
+    XF86Tools { spawn-sh "foot -e nvim ~/.config/niri/config.kdl"; }
+
     Mod+O hotkey-overlay-title="Toggle overview (hides waybar)" repeat=false { spawn-sh "~/.config/niri/scripts/toggle_overview.sh"; }
 
     Mod+Q repeat=false { close-window; }
@@ -282,6 +286,13 @@ window-rule {
     match app-id=r#"^com\.obsproject\.Studio$"#
 
     block-out-from "screencast"
+}
+
+window-rule {
+  match app-id=r#"^at\.yrlf\.wl_mirror$"#
+
+  open-on-output "HDMI-A-1"
+  open-fullscreen true
 }
 
 animations {
