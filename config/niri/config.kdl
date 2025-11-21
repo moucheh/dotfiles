@@ -97,7 +97,7 @@ hotkey-overlay {
 
 prefer-no-csd
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png"
 
 window-rule {
     geometry-corner-radius 12
@@ -269,6 +269,19 @@ clipboard {
 layer-rule {
   match namespace="^wallpaper$"
   place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="swaync"
+
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^com\.obsproject\.Studio$"#
+
+    block-out-from "screencast"
 }
 
 animations {
