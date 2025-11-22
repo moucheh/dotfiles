@@ -8,7 +8,8 @@ vt = 1
 
 # `agreety` is the bundled agetty/login-lookalike. You can replace `/bin/sh`
 # with whatever you want started, such as `sway`.
-command = "tuigreet --time -g 'Welcome' --user-menu --power-shutdown poweroff --power-reboot reboot --cmd niri-session"
+command = "tuigreet -t -g 'Welcome' -r --power-shutdown poweroff --power-reboot reboot --cmd niri-session"
+
 
 # The user to run the command as. The privileges this user must have depends
 # on the greeter. A graphical greeter may for example require the user to be
