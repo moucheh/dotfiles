@@ -298,6 +298,13 @@ window-rule {
   open-fullscreen true
 }
 
+window-rule {
+  match title=r#"^Picture in picture$"#
+  match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
+
+  open-floating true
+}
+
 animations {
   // off
 }
