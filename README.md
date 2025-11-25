@@ -102,6 +102,9 @@ Default keybinds:
 ### Screenshot 15 (wlogout)
 ![Image 15](images/pic15.webp)
 
+### Screenshot 16 (swaylock)
+![Image 16](images/pic16.webp)
+
 ### Full quality wallpaper
 ![Background](images/waves.jpg)
 
