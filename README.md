@@ -84,7 +84,7 @@ Default keybinds:
 ### Screenshot 9 (yazi)
 ![Image 9](images/pic9.webp)
 
-### Screenshot 10 (fuzzel and dunst)
+### Screenshot 10 (fuzzel)
 ![Image 10](images/pic10.webp)
 
 ### Screenshot 11 (nwg-drawer)
@@ -98,6 +98,9 @@ Default keybinds:
 
 ### Screenshot 14 (swayosd)
 ![Image 14](images/pic14.webp)
+
+### Screenshot 15 (wlogout)
+![Image 15](images/pic15.webp)
 
 ### Full quality wallpaper
 ![Background](images/waves.jpg)

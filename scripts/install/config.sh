@@ -20,6 +20,7 @@ CONFIG_FILES=(
   swaync
   swayosd
   niri
+  wlogout
   swaylock
   waybar
   dunst
