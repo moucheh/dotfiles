@@ -118,6 +118,7 @@ binds {
     }
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Ctrl+Alt+E hotkey-overlay-title="Open power menu: wlogout" { spawn-sh "wlogout -c 8 -r 8"; }
     Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn-sh "foot -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center: swaync" { spawn-sh "swaync-client -t"; }
 
