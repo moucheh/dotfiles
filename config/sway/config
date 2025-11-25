@@ -47,6 +47,7 @@ exec swayidle -w \
          before-sleep swaylock
 
 bindsym Ctrl+Alt+q exec swaylock
+bindsym Ctrl+Alt+e exec wlogout -c 8 -r 8
 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -245,7 +246,8 @@ bindsym $mod+o mode "opacity"
 focus_follows_mouse no
 focus_on_window_activation smart
 default_border pixel 3
-gaps inner 5
+gaps inner 8
+client.focused #7fc8ff #7fc8ff #ffffff #7fc8ff #7fc8ff
 
 #
 # Include
@@ -262,4 +264,6 @@ exec_always $HOME/.local/bin/autotiling
 exec kdeconnect-indicator
 exec wl-paste -t text --watch clipman store
 exec clipman restore
+exec swaync
+exec swayosd-server
 
