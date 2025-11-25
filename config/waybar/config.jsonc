@@ -3,47 +3,27 @@
     "height": 30,
     "spacing": 6,
     "modules-left": [
-        "sway/workspaces",
-        "sway/window",
-        "sway/scratchpad",
+        "niri/workspaces",
+        "niri/window",
         "custom/media",
-        "custom/cava_mviz",
-        "sway/mode"
+        "custom/cava_mviz"
     ],
     "modules-center": [
-        "idle_inhibitor",
         "clock"
     ],
     "modules-right": [
         "tray",
+        "custom/clipboard",
         "network",
         "cpu",
         "memory",
         "temperature",
-        "sway/language",
         "pulseaudio",
+        "custom/bluetooth_battery",
         "battery"
     ],
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>",
-        "tooltip": false
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "sway/language" : {
-      "tooltip": false
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
+    "niri/workspaces" : {
+      "show-special": true
     },
     "tray": {
         "spacing": 10
@@ -51,11 +31,13 @@
     "clock": {
         "format": "{:%d ~ %I:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%A, %d %B %Y}"
+        "format-alt": "{:%A, %d %B %Y}",
+        "on-click-right": "swaync-client -t"
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "foot -e btop -p 0"
     },
     "memory": {
         "format": "{}% "
@@ -109,18 +91,31 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$HOME/.config/niri/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/cava_mviz": {
-      "exec": "$HOME/.config/waybar/cava.sh",
+      "exec": "$HOME/.config/niri/waybar/cava.sh",
       "format": "{}",
       "tooltip": false
     },
-    "sway/window": {
+    "custom/bluetooth_battery": {
+      "format": "󰥉 {}",
+      "tooltip": false,
+      "exec": "$HOME/.config/niri/waybar/bluetooth_battery.sh"
+    },
+    "niri/window": {
       "format": "{app_id}",
       "icon": true,
       "icon-size": 20,
-      "tooltip": false
+      "tooltip": false,
+      "on-click-middle": "niri msg action close-window"
+    },
+    "custom/clipboard": {
+      "format": "",
+      "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
+      "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
+      "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
+      "on-click-middle": "clipman clear -a"
     }
   }
 }

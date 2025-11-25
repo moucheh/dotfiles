@@ -256,6 +256,7 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 #
 # Autoexec
 #
+exec waybar -c $HOME/.config/sway/waybar/config.jsonc -s $HOME/.config/sway/waybar/style.css
 exec_always nwg-dock -d -hd 400 -nows -c "$drawer"
 exec_always $HOME/.local/bin/autotiling
 exec kdeconnect-indicator

@@ -78,7 +78,7 @@ gestures {
   }
 }
 
-spawn-sh-at-startup "waybar -c ~/.config/niri/waybar/config.jsonc -s ~/.config/niri/waybar/style.css"
+spawn-sh-at-startup "waybar"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "wlsunset" "-l" "44.5" "-L" "18.6" "-t" "4500" "-T" "6500"
 spawn-at-startup "wl-paste" "-t" "text" "--watch" "clipman" "store"
