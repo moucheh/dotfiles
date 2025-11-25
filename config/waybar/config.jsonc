@@ -22,9 +22,6 @@
         "custom/bluetooth_battery",
         "battery"
     ],
-    "niri/workspaces" : {
-      "show-special": true
-    },
     "tray": {
         "spacing": 10
     },
@@ -94,28 +91,28 @@
         "exec": "$HOME/.config/niri/waybar/mediaplayer.py 2> /dev/null"
     },
     "custom/cava_mviz": {
-      "exec": "$HOME/.config/niri/waybar/cava.sh",
-      "format": "{}",
-      "tooltip": false
+        "exec": "$HOME/.config/niri/waybar/cava.sh",
+        "format": "{}",
+        "tooltip": false
     },
     "custom/bluetooth_battery": {
-      "format": "󰥉 {}",
-      "tooltip": false,
-      "exec": "$HOME/.config/niri/waybar/bluetooth_battery.sh"
+        "format": "󰥉 {}",
+        "tooltip": false,
+        "exec": "$HOME/.config/niri/waybar/bluetooth_battery.sh"
     },
     "niri/window": {
-      "format": "{app_id}",
-      "icon": true,
-      "icon-size": 20,
-      "tooltip": false,
-      "on-click-middle": "niri msg action close-window"
+        "format": "{app_id}",
+        "icon": true,
+        "icon-size": 20,
+        "tooltip": false,
+        "on-click-middle": "niri msg action close-window"
     },
     "custom/clipboard": {
-      "format": "",
-      "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
-      "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
-      "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
-      "on-click-middle": "clipman clear -a"
+        "format": "",
+        "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
+        "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
+        "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
+        "on-click-middle": "clipman clear -a"
     }
   }
 }
