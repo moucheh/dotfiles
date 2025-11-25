@@ -111,8 +111,8 @@
     "custom/clipboard": {
         "format": "",
         "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
-        "on-click": "foot -e $HOME/.config/scripts/clipboard_pick.sh",
-        "on-click-right": "foot -e $HOME/.config/scripts/clipboard_clear.sh",
+        "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
+        "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
         "on-click-middle": "clipman clear -a"
     }
   }
