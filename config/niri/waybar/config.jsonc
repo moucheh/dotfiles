@@ -13,6 +13,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/clipboard",
         "network",
         "cpu",
         "memory",
@@ -30,7 +31,8 @@
     "clock": {
         "format": "{:%d ~ %I:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%A, %d %B %Y}"
+        "format-alt": "{:%A, %d %B %Y}",
+        "on-click-right": "swaync-client -t"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -104,7 +106,15 @@
       "format": "{app_id}",
       "icon": true,
       "icon-size": 20,
-      "tooltip": false
+      "tooltip": false,
+      "on-click-middle": "niri msg action close-window"
+    },
+    "custom/clipboard": {
+      "format": "",
+      "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
+      "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
+      "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
+      "on-click-middle": "clipman clear -a"
     }
   }
 }
