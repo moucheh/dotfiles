@@ -106,6 +106,7 @@
         "icon": true,
         "icon-size": 20,
         "tooltip": false,
+        "on-click": "niri msg action maximize-column",
         "on-click-middle": "niri msg action close-window"
     },
     "custom/clipboard": {
