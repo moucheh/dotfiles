@@ -120,11 +120,11 @@ layer-rule {
 }
 
 layer-rule {
-  match namespace="^launcher$"
+    match namespace="^launcher$"
 
-  shadow {
-    on
-  }
+    shadow {
+        on
+    }
 }
 
 layer-rule {
