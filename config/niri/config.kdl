@@ -110,6 +110,8 @@ gestures {
 
 clipboard {
   disable-primary
+cursor {
+    hide-when-typing
 }
 
 layer-rule {
