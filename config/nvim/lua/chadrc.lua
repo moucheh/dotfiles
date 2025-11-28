@@ -23,14 +23,14 @@ M.nvdash = {
 
   load_on_startup = true,
   buttons = {
-    { txt = '  Find File', keys = 'ff', cmd = 'Telescope find_files' },
-    { txt = '  Recent Files', keys = 'fo', cmd = 'Telescope oldfiles' },
-    { txt = '󰈭  Find Word', keys = 'fw', cmd = 'Telescope live_grep' },
+    { txt = '  Find File', keys = 'ff', cmd = ':lua require("fzf-lua").files()' },
+    { txt = '  Recent Files', keys = 'fo', cmd = ':lua require("fzf-lua").oldfiles()' },
+    { txt = '󰈭  Find Word', keys = 'fw', cmd = ':lua require("fzf-lua").live_grep()' },
     { txt = '󱥚  Themes', keys = 'th', cmd = ":lua require('nvchad.themes').open()" },
     { txt = '  Mappings', keys = 'ch', cmd = 'NvCheatsheet' },
     { txt = '  LazyGit', keys = 'lg', cmd = 'LazyGit' },
     { txt = '  Neogit', keys = 'ng', cmd = 'Neogit' },
-    { txt = '  Show Registers', keys = 'tr', cmd = ':Telescope registers<CR>' },
+    { txt = '  Show Registers', keys = 'tr', cmd = ':lua require("fzf-lua").registers()' },
 
     { txt = '─', hl = 'NvDashFooter', no_gap = true, rep = true },
 
