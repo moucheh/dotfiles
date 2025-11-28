@@ -85,13 +85,6 @@ return {
   },
 
   {
-    'stevearc/conform.nvim',
-    opts = {
-      formatters_by_ft = { lua = { 'stylua' } },
-    },
-  },
-
-  {
     'lewis6991/gitsigns.nvim',
     event = 'User FilePost',
     opts = {
