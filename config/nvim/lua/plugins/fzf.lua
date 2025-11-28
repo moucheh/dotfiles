@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   cmd = { 'FzfLua' },
   opts = function()
-    require('fzf-lua').setup {
+    return {
       winopts = {
         height = 0.85,
         width = 0.80,
@@ -40,6 +40,12 @@ return {
             foldenable = false,
             foldmethod = 'manual',
           },
+        },
+      },
+      files = {
+        true,
+        actions = {
+          ['default'] = require('fzf-lua.actions').file_edit,
         },
       },
     }

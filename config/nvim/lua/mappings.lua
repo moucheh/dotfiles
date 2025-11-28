@@ -38,17 +38,11 @@ map('v', '>', '>gv', { desc = 'Indent right and reselect' })
 
 map('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position' })
 
-map('n', '<leader>tr', function()
-  require('fzf-lua').registers()
-end, { desc = 'Show registers in a fzf-lua panel' })
+map('n', '<leader>tr', ':FzfLua registers<CR>', { desc = 'Show registers in a fzf-lua panel' })
 
-map('n', '<leader>dt', function()
-  require('fzf-lua').diagnostics_workspace()
-end, { desc = 'Show diagnostics in a fzf-lua panel' })
+map('n', '<leader>dt', ':FzfLua diagnostics_workspace<CR>', { desc = 'Show diagnostics in a fzf-lua panel' })
 
-map('n', '<leader>gr', function()
-  require('fzf-lua').lsp_references()
-end, { desc = 'Show lsp references in a fzf-lua panel' })
+map('n', '<leader>gr', ':FzfLua lsp_references<CR>', { desc = 'Show lsp references in a fzf-lua panel' })
 
 map('i', '<C-x><C-f>', function()
   require('fzf-lua').complete_file {
@@ -104,22 +98,12 @@ end
 map('n', '<C-/>', 'gcc', { desc = 'toggle comment', remap = true })
 map('v', '<C-/>', 'gc', { desc = 'toggle comment', remap = true })
 
-map('n', '<leader>fa', function()
-  require('fzf-lua').global()
-end, { desc = 'fzf-lua global' })
+map('n', '<leader>fa', ':FzfLua global<CR>', { desc = 'fzf-lua global' })
 
-map('n', '<leader>fw', function()
-  require('fzf-lua').live_grep()
-end, { desc = 'fzf-lua live grep' })
-map('n', '<leader>fo', function()
-  require('fzf-lua').oldfiles()
-end, { desc = 'fzf-lua find oldfiles' })
-map('n', '<leader>fz', function()
-  require('fzf-lua').grep_curbuf()
-end, { desc = 'fzf-lua find in current buffer' })
-map('n', '<leader>ff', function()
-  require('fzf-lua').files()
-end, { desc = 'fzf-lua find files' })
+map('n', '<leader>fw', ':FzfLua live_grep<CR>', { desc = 'fzf-lua live grep' })
+map('n', '<leader>fo', ':FzfLua oldfiles<CR>', { desc = 'fzf-lua find oldfiles' })
+map('n', '<leader>fz', ':FzfLua grep_curbuf<CR>', { desc = 'fzf-lua find in current buffer' })
+map('n', '<leader>ff', ':FzfLua files<CR>', { desc = 'fzf-lua find files' })
 
 map({ 'n', 't' }, '<A-h>', function()
   require('nvchad.term').toggle { pos = 'sp', id = 'htoggleTerm' }
