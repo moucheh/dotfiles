@@ -6,6 +6,10 @@ input {
         numlock
     }
 
+    mouse {
+        accel-profile "flat"
+    }
+
     touchpad {
         tap
         dwt
@@ -13,10 +17,6 @@ input {
         accel-profile "flat"
         scroll-method "two-finger"
         click-method "clickfinger"
-    }
-
-    mouse {
-        accel-profile "flat"
     }
 
     trackpoint {
@@ -44,6 +44,23 @@ output "HDMI-A-1" {
     position x=0 y=0
 }
 
+spawn-sh-at-startup "waybar"
+spawn-at-startup "kdeconnect-indicator"
+spawn-sh-at-startup "wlsunset -l 44.5 -L 18.6 -t 4500 -T 6500"
+spawn-sh-at-startup "wl-paste -t text --watch clipman store"
+spawn-sh-at-startup "clipman restore"
+spawn-at-startup "nm-applet"
+spawn-at-startup "blueman-applet"
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+spawn-at-startup "swaync"
+spawn-at-startup "swayosd-server"
+spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
+spawn-at-startup "lavalauncher"
+
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png"
+
+prefer-no-csd
+
 layout {
     gaps 8
     center-focused-column "never"
@@ -63,6 +80,10 @@ layout {
     background-color "#00000050"
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 overview {
   workspace-shadow {
     softness 40
@@ -78,31 +99,64 @@ gestures {
   }
 }
 
-spawn-sh-at-startup "waybar"
-spawn-at-startup "kdeconnect-indicator"
-spawn-at-startup "wlsunset" "-l" "44.5" "-L" "18.6" "-t" "4500" "-T" "6500"
-spawn-at-startup "wl-paste" "-t" "text" "--watch" "clipman" "store"
-spawn-at-startup "clipman" "restore"
-spawn-at-startup "swaync"
-spawn-at-startup "blueman-applet"
-spawn-at-startup "nm-applet"
-spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
-spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
-spawn-at-startup "lavalauncher"
-spawn-at-startup "swayosd-server"
-
-hotkey-overlay {
-    skip-at-startup
+clipboard {
+  disable-primary
 }
 
-prefer-no-csd
+layer-rule {
+  match namespace="^wallpaper$"
+  place-within-backdrop true
+}
 
-screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png"
+layer-rule {
+  match namespace="^launcher$"
+
+  shadow {
+    on
+  }
+}
+
+layer-rule {
+    match namespace="swaync"
+
+    block-out-from "screencast"
+}
 
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^com\.obsproject\.Studio$"#
+
+    block-out-from "screencast"
+}
+
+window-rule {
+  match app-id=r#"^at\.yrlf\.wl_mirror$"#
+
+  open-on-output "HDMI-A-1"
+  open-fullscreen true
+}
+
+window-rule {
+  match title=r#"^Picture in picture$"#
+  match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
+
+  open-floating true
+}
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -156,8 +210,8 @@ binds {
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
+    Mod+Shift+Home { move-column-to-first; }
+    Mod+Shift+End  { move-column-to-last; }
 
     Mod+Ctrl+H     { focus-monitor-left; }
     Mod+Ctrl+J     { focus-monitor-down; }
@@ -184,11 +238,6 @@ binds {
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
-
-    Mod+WheelScrollRight      { focus-column-right; }
-    Mod+WheelScrollLeft       { focus-column-left; }
-    Mod+Ctrl+WheelScrollRight { move-column-right; }
-    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
     Mod+Shift+WheelScrollDown      { focus-column-right; }
     Mod+Shift+WheelScrollUp        { focus-column-left; }
@@ -251,7 +300,6 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     Mod+Shift+P hotkey-overlay-title="Power off monitors" { power-off-monitors; }
@@ -269,53 +317,3 @@ binds {
         spawn "clipman" "clear" "-a";
     }
 }
-
-clipboard {
-  disable-primary
-}
-
-layer-rule {
-  match namespace="^wallpaper$"
-  place-within-backdrop true
-}
-
-layer-rule {
-    match namespace="swaync"
-
-    block-out-from "screencast"
-}
-
-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^com\.obsproject\.Studio$"#
-
-    block-out-from "screencast"
-}
-
-window-rule {
-  match app-id=r#"^at\.yrlf\.wl_mirror$"#
-
-  open-on-output "HDMI-A-1"
-  open-fullscreen true
-}
-
-window-rule {
-  match title=r#"^Picture in picture$"#
-  match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
-
-  open-floating true
-}
-
-animations {
-  // off
-}
-
-workspace "1"
-workspace "2"
-workspace "3"
-workspace "4"
-workspace "5"
-workspace "6"
-workspace "7"
-workspace "8"
-workspace "9"
