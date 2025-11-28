@@ -1,3 +1,8 @@
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
 input {
     keyboard {
         xkb {
