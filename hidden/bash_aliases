@@ -25,12 +25,6 @@ alias v='nvim'
 alias lg='lazygit'
 alias gst='git status'
 
-if $EZA_IS_INSTALLED; then
-  alias ls='eza --icons'
-  alias ll='eza --icons -l'
-  alias la='eza --icons -laa'
-fi
-
 alias ttt='typetest -showwpm -notheme -t 30 -blockcursor -bold'
 
 alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'

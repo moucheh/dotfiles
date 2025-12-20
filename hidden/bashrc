@@ -1,43 +1,5 @@
 # .bashrc
 
-if ! [ -f /run/user/$UID/runonce_set_custom_env ]; then
-    touch /run/user/$UID/runonce_set_custom_env
-    if command -v zoxide >/dev/null 2>&1; then
-        ZOXIDE_IS_INSTALLED=true
-    else
-        ZOXIDE_IS_INSTALLED=false
-    fi
-    export ZOXIDE_IS_INSTALLED
-
-    if command -v starship >/dev/null 2>&1; then
-        STARSHIP_IS_INSTALLED=true
-    else
-        STARSHIP_IS_INSTALLED=false
-    fi
-    export STARSHIP_IS_INSTALLED
-
-    if command -v keychain >/dev/null 2>&1; then
-        KEYCHAIN_IS_INSTALLED=true
-    else
-        KEYCHAIN_IS_INSTALLED=false
-    fi
-    export KEYCHAIN_IS_INSTALLED
-
-    if command -v eza >/dev/null 2>&1; then
-        EZA_IS_INSTALLED=true
-    else
-        EZA_IS_INSTALLED=false
-    fi
-    export EZA_IS_INSTALLED
-
-    if command -v fzf >/dev/null 2>&1; then
-        FZF_IS_INSTALLED=true
-    else
-        FZF_IS_INSTALLED=false
-    fi
-    export FZF_IS_INSTALLED
-fi
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -89,20 +51,8 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %r %t"
 
-if $KEYCHAIN_IS_INSTALLED; then
-  eval `keychain -q --eval gh_key gl_key`
-fi
-
-if $STARSHIP_IS_INSTALLED; then
-  eval "$(starship init bash)"
-fi
-
-if $FZF_IS_INSTALLED; then
-  eval "$(fzf --bash)"
-fi
-
-if $ZOXIDE_IS_INSTALLED; then
-  eval "$(zoxide init --cmd cd bash)"
+if [ -f ~/.bash_integration ]; then
+  . ~/.bash_integration
 fi
 
 PROMPT_COMMAND='printf "\e]7;file://%s%s\a" "$HOSTNAME" "$PWD"; '"$PROMPT_COMMAND"

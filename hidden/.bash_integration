@@ -1,0 +1,8 @@
+eval `keychain -q --eval gh_key gl_key`
+eval "$(starship init bash)"
+eval "$(fzf --bash)"
+eval "$(zoxide init --cmd cd bash)"
+
+alias ls='eza --icons'
+alias ll='eza --icons -l'
+alias la='eza --icons -laa'
