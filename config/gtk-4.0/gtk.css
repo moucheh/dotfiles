@@ -1,0 +1,11 @@
+window,
+headerbar,
+.surface,
+popover,
+menu {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+switch {
+  background-color: rgb(127, 200, 255);
+}
