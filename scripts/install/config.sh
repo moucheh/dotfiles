@@ -13,6 +13,7 @@ CONFIG_FILES=(
   foot
   'gtk-2.0'
   'gtk-3.0'
+  'gtk-4.0'
   nvim
   qt5ct
   qt6ct
