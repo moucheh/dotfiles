@@ -1,0 +1,42 @@
+input {
+    keyboard {
+        xkb {
+            options "compose:ralt,caps:swapescape"
+        }
+        numlock
+    }
+
+    mouse {
+        accel-profile "flat"
+    }
+
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        accel-profile "flat"
+        scroll-method "two-finger"
+        click-method  "clickfinger"
+    }
+
+    trackpoint {
+        accel-speed 0.2
+        accel-profile "flat"
+    }
+
+    warp-mouse-to-focus
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+clipboard {
+    disable-primary
+}
+
+cursor {
+    hide-when-typing
+}

@@ -1,0 +1,31 @@
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png"
+
+switch-events {
+    lid-close { spawn "swaylock"; }
+}
+
+prefer-no-csd
+
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+overview {
+    workspace-shadow {
+        softness 40
+        spread   10
+        offset   x=0 y=10
+        color "#7fc8ff50"
+    }
+}
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+workspace "6"
+workspace "7"
+workspace "8"
+workspace "9"

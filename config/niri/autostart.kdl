@@ -1,0 +1,16 @@
+spawn-sh-at-startup "waybar"
+spawn-at-startup    "kdeconnect-indicator"
+spawn-sh-at-startup "wlsunset -l 44.5 -L 18.6 -t 4500 -T 6500"
+spawn-sh-at-startup "wl-paste -t text --watch clipman store"
+spawn-sh-at-startup "clipman restore"
+spawn-at-startup    "nm-applet"
+spawn-at-startup    "blueman-applet"
+spawn-at-startup    "/usr/libexec/polkit-mate-authentication-agent-1"
+spawn-at-startup    "swaync"
+spawn-at-startup    "swayosd-server"
+spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
+spawn-at-startup    "lavalauncher"
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}

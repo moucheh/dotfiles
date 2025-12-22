@@ -1,0 +1,44 @@
+layer-rule {
+  match namespace="^wallpaper$"
+  place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^launcher$"
+
+    shadow {
+        on
+    }
+}
+
+layer-rule {
+    match namespace="swaync"
+
+    block-out-from  "screencast"
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^com\.obsproject\.Studio$"#
+
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id=r#"^at\.yrlf\.wl_mirror$"#
+
+    open-on-output "HDMI-A-1"
+    open-fullscreen true
+}
+
+window-rule {
+    match title=r#"^Picture in picture$"#
+    match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
+
+    open-floating true
+}
