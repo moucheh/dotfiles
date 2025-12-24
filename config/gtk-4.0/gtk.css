@@ -1,11 +1,11 @@
-window,
-headerbar,
-.surface,
-popover,
-menu {
-  background-color: rgba(0, 0, 0, 0.9);
-}
+:root {
+  --accent-color: #7fc8ff;
+  --accent-bg-color: #7fc8ff;
+  --accent-fg-color: #ffffff;
 
-switch {
-  background-color: rgb(127, 200, 255);
+  --accent-hover-bg-color: #7fc8ff;
+  --accent-active-bg-color: #7fc8ff;
+
+  --accent-disabled-bg-color: #c0c0c0;
+  --accent-disabled-fg-color: #666666;
 }
