@@ -12,7 +12,6 @@ local servers = {
   'lua_ls',
   'pyright',
   'tinymist',
-  'fsautocomplete',
   'jdtls',
   'sqls',
 }
