@@ -51,6 +51,8 @@ map('n', '<C-A>w', ':HopWord<CR>', { desc = 'Hop to word' })
 map('n', '<C-A>f', ':HopChar1<CR>', { desc = 'Hop to character' })
 map('n', '<C-A>c', ':HopCamelCase<CR>', { desc = 'Hop to camelcase word' })
 
+map('n', '<leader>nt', ':Neotree toggle<CR>', { desc = 'Toggle Neotree' })
+
 -- Taken from nvchad
 
 map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
