@@ -30,7 +30,7 @@ M.nvdash = {
     { txt = '  Mappings', keys = 'ch', cmd = 'NvCheatsheet' },
     { txt = '  LazyGit', keys = 'lg', cmd = 'LazyGit' },
     { txt = '  Neogit', keys = 'ng', cmd = 'Neogit' },
-    { txt = '  Show Registers', keys = 'tr', cmd = ':Telescope registers<CR>' },
+    { txt = '  Show Registers', keys = 'tr', cmd = 'Telescope registers' },
 
     { txt = '─', hl = 'NvDashFooter', no_gap = true, rep = true },
 
