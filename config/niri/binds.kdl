@@ -112,11 +112,11 @@ binds {
     Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
-    Mod+R       { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R  { reset-window-height; }
-    Mod+F       { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+R       repeat=false { switch-preset-column-width; }
+    Mod+Shift+R repeat=false { switch-preset-window-height; }
+    Mod+Ctrl+R  repeat=false { reset-window-height; }
+    Mod+F       repeat=false { maximize-column; }
+    Mod+Shift+F repeat=false { fullscreen-window; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }
 
