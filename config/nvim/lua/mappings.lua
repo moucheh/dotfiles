@@ -53,6 +53,18 @@ map('n', '<C-A>c', ':HopCamelCase<CR>', { desc = 'Hop to camelcase word' })
 
 map('n', '<leader>nt', ':Neotree toggle<CR>', { desc = 'Toggle Neotree' })
 
+map({ 'n', 'x' }, '<C-A>', function()
+  require('opencode').ask('@this: ', { submit = true })
+end, { desc = 'Ask opencode' })
+
+map({ 'n', 'x' }, '<C-X>', function()
+  require('opencode').select()
+end, { desc = 'Execute opencode action…' })
+
+map({ 'n', 't' }, '<C-.>', function()
+  require('opencode').toggle()
+end, { desc = 'Toggle opencode' })
+
 -- Taken from nvchad
 
 map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
