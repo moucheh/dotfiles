@@ -14,6 +14,7 @@ local servers = {
   'tinymist',
   'jdtls',
   'sqls',
+  'rust_analyzer'
 }
 
 vim.lsp.enable(servers)
