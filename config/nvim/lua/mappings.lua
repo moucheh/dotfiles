@@ -53,11 +53,11 @@ map('n', '<C-A>c', ':HopCamelCase<CR>', { desc = 'Hop to camelcase word' })
 
 map('n', '<leader>nt', ':Neotree toggle<CR>', { desc = 'Toggle Neotree' })
 
-map({ 'n', 'x' }, '<C-A>', function()
+map({ 'n', 'x' }, '<leader><C-A>', function()
   require('opencode').ask('@this: ', { submit = true })
 end, { desc = 'Ask opencode' })
 
-map({ 'n', 'x' }, '<C-X>', function()
+map({ 'n', 'x' }, '<leader><C-X>', function()
   require('opencode').select()
 end, { desc = 'Execute opencode action…' })
 
