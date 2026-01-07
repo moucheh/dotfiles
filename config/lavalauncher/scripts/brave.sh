@@ -1,3 +1,3 @@
 #!/bin/bash
 
-brave-browser --enable-features=UseOzonePlatform --ozone-platform=wayland
+flatpak run com.brave.Browser --disable-features=GlobalShortcutsPortal
