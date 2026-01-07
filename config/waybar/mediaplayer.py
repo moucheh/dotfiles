@@ -91,8 +91,11 @@ class PlayerManager:
             for player in players[::-1]:
                 if player.props.status == "Playing":
                     return player
-            # if none are playing, show the first one
-            return players[0]
+            # if none are playing, show the first paused player (but not input devices)
+            for player in players[::-1]:
+                if player.props.status == "Paused":
+                    return player
+            return None
         else:
             logger.debug("No players found")
             return None
