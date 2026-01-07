@@ -8,7 +8,7 @@ binds {
     }
 
     Mod+B hotkey-overlay-title="Open a web browser: brave" {
-        spawn-sh "brave-browser --enable-features=UseOzonePlatform --ozone-platform=wayland";
+        spawn-sh "flatpak run com.brave.Browser --disable-features=GlobalShortcutsPortal"
     }
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: swaylock"     { spawn "swaylock"; }
