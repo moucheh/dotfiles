@@ -1,4 +1,4 @@
 #!/bin/bash
 
 swaylock &
-systemctl hibernate
+loginctl hibernate

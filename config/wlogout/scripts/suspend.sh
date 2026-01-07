@@ -1,4 +1,4 @@
 #!/bin/bash
 
 swaylock &
-systemctl suspend
+loginctl suspend
