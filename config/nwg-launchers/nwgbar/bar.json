@@ -1,22 +1,22 @@
 [
   {
     "name": "Lock screen",
-    "exec": "swaylock -f -c 000000",
+    "exec": "gtklock -f -c 000000",
     "icon": "system-lock-screen"
   },
   {
     "name": "Logout",
-    "exec": "swaymsg exit",
+    "exec": "niri msg action quit",
     "icon": "system-log-out"
   },
   {
     "name": "Reboot",
-    "exec": "systemctl reboot",
+    "exec": "loginctl reboot",
     "icon": "system-reboot"
   },
   {
     "name": "Shutdown",
-    "exec": "systemctl -i poweroff",
+    "exec": "loginctl -i poweroff",
     "icon": "system-shutdown"
   }
 ]

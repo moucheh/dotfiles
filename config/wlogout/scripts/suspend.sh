@@ -1,4 +1,4 @@
 #!/bin/bash
 
-swaylock &
+gtklock &
 loginctl suspend
