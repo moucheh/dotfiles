@@ -25,6 +25,7 @@
   --group-collapse-tranistion: opacity 400ms ease-in-out;
   --hover-transition: var(--hover-tranistion);
   --group-collapse-transition: var(--group-collapse-tranistion);
+  font-family: 'Noto Sans Regular', sans-serif;
 }
 
 /* Fallback for older CSS themes */
