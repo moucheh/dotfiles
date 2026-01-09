@@ -3,8 +3,8 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: foot"                { spawn "foot"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel"           { spawn "fuzzel"; }
-    Mod+Shift+D hotkey-overlay-title="Run an Application: nwg-drawer" {
-        spawn-sh "nwg-drawer -mt 50 -mr 400 -mb 50 -ml 400 -pblock swaylock -pbpoweroff poweroff -pbreboot reboot -wm niri";
+    Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid" {
+        spawn-sh "nwggrid";
     }
 
     Mod+B hotkey-overlay-title="Open a web browser: brave" {
