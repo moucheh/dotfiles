@@ -1,0 +1,50 @@
+button,
+label,
+image {
+  background: none;
+  border-style: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-shadow: none;
+  border-radius: 1rem;
+}
+
+button:hover {
+  background-color: rgba (255, 255, 255, 0.1);
+}
+
+button:focus {
+  box-shadow: 0 0 0 3px #7fc8ff;
+  background-color: rgba (127, 200, 255, 0.1);
+}
+
+button:checked {
+  background-color: rgba (127, 200, 255, 0.1);
+}
+
+#searchbox {
+  background: none;
+  border: 2px solid #7fc8ff;
+  border-radius: 0.75rem;
+  padding: 0.5em 1em;
+  color: #ccc;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+#separator {
+  background-color: rgba(200, 200, 200, 0.5);
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#description {
+  margin-bottom: 1.25rem;
+}
