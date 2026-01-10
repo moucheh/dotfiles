@@ -102,12 +102,19 @@
         "interval": 60
     },
     "niri/window": {
-        "format": "{app_id}",
-        "icon": true,
-        "icon-size": 20,
-        "tooltip": false,
-        "on-click": "niri msg action maximize-column",
-        "on-click-middle": "niri msg action close-window"
+      "format": "{}",
+      "rewrite": {
+        "YouTube Music -.*": "YouTube Music",
+        ".*- Brave": "Brave",
+        ".*- FreeTube": "FreeTube",
+        "SuperTux.*": "SuperTux",
+        "OBS.*": "OBS"
+      },
+      "icon": true,
+      "icon-size": 20,
+      "tooltip": false,
+      "on-click": "niri msg action maximize-column",
+      "on-click-middle": "niri msg action close-window"
     },
     "custom/clipboard": {
         "format": "",
