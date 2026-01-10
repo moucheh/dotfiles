@@ -28,6 +28,7 @@ CONFIG_FILES=(
   nwg-launchers
   starship.toml
   lavalauncher
+  btop
 )
 
 for i in "${CONFIG_FILES[@]}"; do

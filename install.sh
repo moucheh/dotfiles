@@ -16,8 +16,6 @@ $SCRIPTS/install/hidden.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
 
 printf "Configs installed\n\nContinuing...\n\n"
 
-$SCRIPTS/install/dependencies.sh
-
 $SCRIPTS/install/eza.sh
 
 $SCRIPTS/install/zoxide.sh
