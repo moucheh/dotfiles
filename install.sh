@@ -18,10 +18,6 @@ printf "Configs installed\n\nContinuing...\n\n"
 
 $SCRIPTS/install/dependencies.sh
 
-$SCRIPTS/install/swaylock-effects.sh
-
-$SCRIPTS/install/pam-swaylock.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
-
 $SCRIPTS/install/eza.sh
 
 $SCRIPTS/install/zoxide.sh

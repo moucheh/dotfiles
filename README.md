@@ -1,18 +1,17 @@
 # moucheh Dotfiles
 
 - WM - [niri](https://github.com/moucheh/dotfiles/tree/master/config/niri)
-- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/niri/waybar)
-- Login manager - [Tuigreet + greetd](https://github.com/apognu/tuigreet)
-- Lock manager - [swaylock-effects](https://github.com/jirutka/swaylock-effects)
+- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/waybar)
+- Login manager - gdm
+- Lock manager - [gtklock](https://github.com/moucheh/dotfiles/tree/master/config/gtklock/config.ini)
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
 - Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/config/nvim)
 - mvim - [fully native nvim setup no external plugins](https://github.com/moucheh/dotfiles/tree/master/config/mvim)
-- Dock - [nwg-dock](https://github.com/moucheh/dotfiles/blob/master/config/nwg-dock/style.css)
 - niri dock - [lavalauncher](https://git.sr.ht/~leon_plickat/lavalauncher)
 - Notification center - [SwayNC](https://github.com/ErikReider/SwayNotificationCenter)
 - OSD - [SwayOSD](https://github.com/ErikReider/SwayOSD)
-- Drawer - [nwg-drawer](https://github.com/moucheh/dotfiles/blob/master/config/nwg-drawer/drawer.css)
+- Drawer - [nwggrid](https://github.com/moucheh/dotfiles/blob/master/config/nwg-launchers/nwggrid/style.css)
 - Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/config/starship.toml)
 - [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/config/fastfetch/config.jsonc)
 
@@ -27,16 +26,6 @@ And then run the install script, you may need to add executable permissions
 
 If you already have a config for something that is included in these dotfiles, that config will be copied to a backup folder of current date and time, it will start with a dot so it will be hiden, but won't be lost.
 
-If you'd like to have fingerprint unlocking as well as password unlocking
-copy pam.d/swaylock contents to /etc/pam.d/swaylock
-
-    sudo cp etc/pam.d/swaylock /etc/pam.d
-
-You may need to delete the file if it already exists
-
-    sudo rm /etc/pam.d/swaylock
-
-This enables password entry as well as fingerprint scanner login.
 
 I've also added a script that does ascii art generation for nvim dashboard.
 Figlet is a dependency, you can install it through your distro's package manager.

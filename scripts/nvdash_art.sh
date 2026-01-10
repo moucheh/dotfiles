@@ -23,10 +23,3 @@ sed -i '/header = {/,/},/d' $DOTFILES/config/nvim/lua/chadrc.lua
 
 sed -i '/M.nvdash = {/r ascii_art.txt' $DOTFILES/config/nvim/lua/chadrc.lua
 
-if command -v stylua >/dev/null 2>&1; then
-  stylua $DOTFILES/config/nvim/lua/chadrc.lua
-else
-  if [ -f ~/.local/share/nvim/mason/bin/stylua ]; then
-    $HOME/.local/share/nvim/mason/bin/stylua $DOTFILES/config/nvim/lua/chadrc.lua
-  fi
-fi
