@@ -4,7 +4,7 @@
         "separator": "• "
     },
     "logo":{
-      "source": "Fedora_small",
+      "source": "Void_small",
       "padding": {
         "top": 5,
         "left": 2
@@ -27,7 +27,7 @@
         },
         {
             "type": "os",
-            "key": "  OS -  ",
+            "key": "  OS -  ",
             "format": "{2} {9}"
         },
         {
