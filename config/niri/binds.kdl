@@ -140,6 +140,8 @@ binds {
 
     Ctrl+Alt+Delete hotkey-overlay-title="Quit niri" { quit; }
 
+    Ctrl+Shift+Escape { spawn-sh "foot -e btop"; }
+
     Mod+Shift+P hotkey-overlay-title="Power off monitors" { power-off-monitors; }
     Mod+Ctrl+P  hotkey-overlay-title="Toggle hyprpicker"  { spawn "hyprpicker"; }
 
