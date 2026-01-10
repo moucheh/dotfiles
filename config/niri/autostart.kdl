@@ -10,10 +10,7 @@ spawn-at-startup    "swaync"
 spawn-at-startup    "swayosd-server"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
 spawn-at-startup    "lavalauncher"
-spawn-at-startup    "wireplumber"
-spawn-at-startup    "pipewire"
-spawn-at-startup    "pipewire-pulse"
-spawn-sh-at-startup "flatpak run --command=easyeffects com.github.wwmm.easyeffects --service-mode --hide-window"
+spawn-sh-at-startup "dex --environment niri --autostart --search-paths ~/.config/autostart"
 
 xwayland-satellite {
     path "xwayland-satellite"
