@@ -102,3 +102,7 @@ activeBackground=49,54,59
 activeForeground=232,232,232
 inactiveBackground=39,43,47
 inactiveForeground=161,169,177
+
+[Icons]
+Theme=Breeze-Dark
+

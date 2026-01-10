@@ -49,6 +49,7 @@ export GOPATH=$HOME/.go/
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_ICON_THEME="Breeze dark"
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %r %t"
 
