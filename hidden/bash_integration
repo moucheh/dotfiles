@@ -1,0 +1,29 @@
+eval "$(fzf --bash)"
+eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
+
+alias ls='eza --icons'
+alias ll='eza --icons -l'
+alias la='eza --icons -lA'
+
+alias cat='bat'
+
+alias top='btop'
+alias htop='btop'
+
+alias reboot='loginctl reboot'
+alias poweroff='loginctl poweroff'
+
+export PATH="$PATH:$HOME/.eclipse/eclipse/java-2025-12/eclipse"
+
+eval $(keychain -q --eval gh_key)
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+alias ttysolitaire='ttysolitaire -p 100 --no-background-color'
