@@ -42,3 +42,9 @@ window-rule {
 
     open-floating true
 }
+
+window-rule {
+  match title="^Solitaire$"
+
+  open-maximized true
+}
