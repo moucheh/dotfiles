@@ -76,7 +76,7 @@ Default keybinds:
 ### Screenshot 10 (fuzzel)
 ![Image 10](images/pic10.webp)
 
-### Screenshot 11 (nwg-drawer)
+### Screenshot 11 (nwggrid)
 ![Image 11](images/pic11.webp)
 
 ### Screenshot 12 (lavalauncher)
@@ -91,7 +91,7 @@ Default keybinds:
 ### Screenshot 15 (wlogout)
 ![Image 15](images/pic15.webp)
 
-### Screenshot 16 (swaylock)
+### Screenshot 16 (gtklock)
 ![Image 16](images/pic16.webp)
 
 ### Full quality wallpaper
