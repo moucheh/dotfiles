@@ -4,9 +4,9 @@ eval "$(zoxide init --cmd cd bash)"
 
 alias ls='eza --icons'
 alias ll='eza --icons -l'
-alias la='eza --icons -lA'
+alias la='eza --icons -lgA'
 
-alias cat='bat'
+alias cat='bat --plain'
 
 alias top='btop'
 alias htop='btop'
