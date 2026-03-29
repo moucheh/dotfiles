@@ -1,0 +1,112 @@
+// -*- mode: jsonc -*-
+{
+    "height": 30,
+    "spacing": 6,
+    "modules-left": [
+        "ext/workspaces",
+        "dwl/window",
+        "custom/media",
+        "custom/cava_mviz"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "custom/clipboard",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "pulseaudio",
+        "custom/bluetooth_battery",
+        "battery"
+    ],
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%d ~ %I:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%A, %d %B %Y}",
+        "on-click-right": "swaync-client -t"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false,
+        "on-click": "foot -e btop -p 0"
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "0%   {icon}",
+        "format-muted": "0% ",
+        "format-icons": {
+            "headphone": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 30,
+        "format-icons": {
+            "default": ""
+        },
+        "escape": true,
+        "exec": "$HOME/.config/mango/waybar/mediaplayer.py 2> /dev/null"
+    },
+    "custom/cava_mviz": {
+        "exec": "$HOME/.config/mango/waybar/cava.sh",
+        "format": "{}",
+        "tooltip": false
+    },
+    "custom/bluetooth_battery": {
+        "format": "󰥉 {}",
+        "tooltip": false,
+        "exec": "$HOME/.config/mango/waybar/bluetooth_battery.sh",
+        "interval": 60
+    },
+    "custom/clipboard": {
+        "format": "",
+        "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
+        "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
+        "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
+        "on-click-middle": "clipman clear -a"
+    }
+  }
+}
