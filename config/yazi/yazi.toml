@@ -1,0 +1,13 @@
+[opener]
+open = [
+  { run = 'sh -c "xdg-open \"$1\""', desc = "Open", spread = true },
+]
+
+play = [
+	{ run = "mpv %s", desc = "Play" },
+]
+
+[plugin]
+prepend_previewers = [
+  { mime = "video/*", run = "video" },
+]
