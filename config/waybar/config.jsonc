@@ -20,7 +20,8 @@
         "temperature",
         "pulseaudio",
         "custom/bluetooth_battery",
-        "battery"
+        "battery",
+        "custom/power"
     ],
     "tray": {
         "spacing": 10
@@ -116,12 +117,22 @@
       "on-click": "niri msg action maximize-column",
       "on-click-middle": "niri msg action close-window"
     },
+    "niri/workspaces": {
+      "on-scroll-down": "niri msg action focus-workspace-down",
+      "on-scroll-up": "niri msg action focus-workspace-up"
+    },
     "custom/clipboard": {
         "format": "",
         "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
         "on-click": "foot -e $HOME/.config/niri/scripts/clipboard_pick.sh",
         "on-click-right": "foot -e $HOME/.config/niri/scripts/clipboard_clear.sh",
         "on-click-middle": "clipman clear -a"
+    },
+    "custom/power": {
+      "format": "⏻",
+      "tooltip-format": "Show wlogout",
+      "on-click": "wlogout",
+      "on-click-right": "niri msg action power-off-monitors"
     }
   }
 }
