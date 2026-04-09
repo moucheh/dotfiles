@@ -8,7 +8,7 @@ spawn-at-startup    "blueman-applet"
 spawn-at-startup    "/usr/libexec/polkit-mate-authentication-agent-1"
 spawn-at-startup    "swaync"
 spawn-at-startup    "swayosd-server"
-spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/waves.jpg"
+spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/abstract.jpg"
 spawn-at-startup    "lavalauncher"
 spawn-sh-at-startup "dex --environment niri --autostart --search-paths ~/.config/autostart"
 
