@@ -4,3 +4,7 @@ top_margin = 0.9
 max_volume = 100
 
 show_percentage = true
+
+min_brightness = 0
+
+keyboard_backlight = true
