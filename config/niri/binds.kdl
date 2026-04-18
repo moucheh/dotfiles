@@ -6,7 +6,7 @@ binds {
     Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid" { spawn-sh "nwggrid"; }
 
     Mod+B hotkey-overlay-title="Open a web browser: brave" {
-        spawn-sh "flatpak run com.brave.Browser --disable-features=GlobalShortcutsPortal"
+        spawn "brave"
     }
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: gtklock"      { spawn-sh "gtklock"; }

@@ -12,9 +12,6 @@ alias bat='bat --theme=Nord'
 alias top='btop'
 alias htop='btop'
 
-alias reboot='loginctl reboot'
-alias poweroff='loginctl poweroff'
-
 export PATH="$PATH:$HOME/.local/bin/eclipse/eclipse/java-2025-12/eclipse"
 
 eval $(keychain -q --eval gh_key)
