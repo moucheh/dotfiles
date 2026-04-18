@@ -2,7 +2,7 @@
 
 - WM - [niri](https://github.com/moucheh/dotfiles/tree/master/config/niri)
 - Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/waybar)
-- Login manager - gdm
+- Login manager - greetd + tuigret
 - Lock manager - [gtklock](https://github.com/moucheh/dotfiles/tree/master/config/gtklock/config.ini)
 - Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
 - Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
