@@ -14,7 +14,7 @@ alias htop='btop'
 
 export PATH="$PATH:$HOME/.local/bin/eclipse/eclipse/java-2025-12/eclipse"
 
-eval $(keychain -q --eval gh_key)
+eval $(keychain -q --eval gh_key gl_key)
 unset LS_COLORS
 
 function y() {
