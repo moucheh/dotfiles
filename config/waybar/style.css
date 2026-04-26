@@ -8,31 +8,19 @@ window#waybar {
   color: #fff;
   transition-property: background-color;
   transition-duration: .5s;
-}
-.modules-left,
-.modules-right,
-.modules-center {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-bottom: 3px solid #7fc8ff;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modules-left {
   padding-right: 20px;
-  border-radius: 0 0 16px 0;
-  border-right: 3px solid #7fc8ff;
 }
 
 .modules-right {
   padding-left: 20px;
-  border-radius: 0 0 0 16px;
-  border-left: 3px solid #7fc8ff;
 }
 
 .modules-center {
   padding: 0 20px;
-  border-radius: 0 0 16px 16px;
-  border-left: 3px solid #7fc8ff;
-  border-right: 3px solid #7fc8ff;
 }
 
 button {

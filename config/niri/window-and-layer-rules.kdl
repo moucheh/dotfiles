@@ -4,10 +4,27 @@ layer-rule {
 }
 
 layer-rule {
+  match namespace="^waybar$"
+
+  background-effect {
+      blur true
+      xray true
+  }
+}
+
+layer-rule {
     match namespace="^launcher$"
+    match namespace="^~nwggrid$"
+    match namespace=r#"^lhp\.LavaLauncher$"#
+    match namespace="^logout_dialog$"
 
     shadow {
         on
+    }
+
+    background-effect {
+      blur true
+      xray false
     }
 }
 
