@@ -41,7 +41,9 @@ window-rule {
     match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
 
     open-floating true
-    default-floating-position x=32 y=32 relative-to="bottom-right"
+    default-floating-position x=950 y=300 relative-to="bottom-left"
+    default-column-width { fixed 900; }
+    default-window-height { fixed 500; }
 }
 
 window-rule {
