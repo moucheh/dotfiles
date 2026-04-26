@@ -14,7 +14,7 @@ layer-rule {
 layer-rule {
     match namespace="swaync"
 
-    block-out-from  "screencast"
+    block-out-from "screen-capture"
 }
 
 window-rule {
@@ -26,7 +26,7 @@ window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^com\.obsproject\.Studio$"#
 
-    block-out-from "screencast"
+    block-out-from "screen-capture"
 }
 
 window-rule {
