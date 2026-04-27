@@ -34,6 +34,15 @@ layer-rule {
     block-out-from "screen-capture"
 }
 
+layer-rule {
+    match namespace="swayosd"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
