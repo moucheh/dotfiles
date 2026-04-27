@@ -1,0 +1,28 @@
+include "config.kdl"
+
+blur {
+  off
+}
+
+animations {
+  off
+}
+
+input {
+  touchpad {
+      off
+  }
+
+  keyboard {
+      xkb {
+          options "compose:ralt"
+      }
+      numlock
+  }
+}
+
+binds {
+    Mod+Shift+G hotkey-overlay-title="Disable Gaming Mode" {
+      spawn-sh "~/.config/niri/scripts/toggle_gaming_mode.sh disable";
+    }
+}
