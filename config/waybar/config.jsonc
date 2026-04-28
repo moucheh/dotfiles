@@ -5,8 +5,7 @@
     "modules-left": [
         "niri/workspaces",
         "niri/window",
-        "custom/media",
-        "custom/cava_mviz"
+        "group/media"
     ],
     "modules-center": [
         "clock"
@@ -15,14 +14,34 @@
         "tray",
         "custom/clipboard",
         "network",
-        "cpu",
-        "memory",
-        "temperature",
+        "group/hardware",
         "pulseaudio",
         "custom/bluetooth_battery",
         "battery",
         "custom/power"
     ],
+    "group/hardware": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 600,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
+    "group/media": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 600
+        },
+        "modules": [
+            "custom/cava_mviz",
+            "custom/media"
+        ]
+    },
     "tray": {
         "spacing": 10
     },
