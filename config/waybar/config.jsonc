@@ -3,6 +3,7 @@
     "height": 30,
     "spacing": 6,
     "modules-left": [
+        "custom/logo",
         "niri/workspaces",
         "niri/window",
         "group/media"
@@ -99,6 +100,12 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "foot -e $HOME/.config/waybar/fastfetch.sh",
+        "on-click-right": "niri msg action toggle-overview"
     },
     "custom/media": {
         "format": "{icon} {text}",
