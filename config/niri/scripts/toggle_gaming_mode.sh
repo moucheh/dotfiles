@@ -5,9 +5,11 @@ CONFIG_PATH="$HOME/.config/niri"
 if [ "$1" == "enable" ]; then
     CONFIG_PATH="$CONFIG_PATH/gaming-mode.kdl"
     ACTION="Enabled"
+    pkill -SIGSTOP lavalauncher
 else
     CONFIG_PATH="$CONFIG_PATH/config.kdl"
     ACTION="Disabled"
+    pkill -SIGCONT lavalauncher
 fi
 
 niri msg action load-config-file --path $CONFIG_PATH

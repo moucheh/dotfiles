@@ -12,7 +12,7 @@ alias bat='bat --theme=Nord'
 alias top='btop'
 alias htop='btop'
 
-export PATH="$PATH:$HOME/.local/bin/eclipse/eclipse/java-2025-12/eclipse"
+export PATH="$PATH:/opt/eclipse"
 
 eval $(keychain -q --eval gh_key gl_key)
 unset LS_COLORS
