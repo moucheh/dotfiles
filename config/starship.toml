@@ -1,5 +1,5 @@
 format = """
-╭─ $directory $git_branch $cpp$c$python$lua$rust$nodejs
+╭─ $directory $git_branch $cpp$c$python$lua$rust$nodejs$java
 ╰$username@$hostname $character"""
 
 add_newline = false
@@ -27,6 +27,10 @@ disabled = false
 
 [c]
 symbol = " "
+format = "[$symbol($version )]($style)"
+
+[java]
+symbol = " "
 format = "[$symbol($version )]($style)"
 
 [username]
