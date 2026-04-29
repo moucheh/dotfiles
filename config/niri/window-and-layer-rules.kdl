@@ -64,7 +64,6 @@ window-rule {
 
 window-rule {
     match title=r#"^Picture in picture$"#
-    match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
 
     open-floating true
     default-floating-position x=950 y=300 relative-to="bottom-left"
@@ -73,7 +72,22 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
+
+    open-floating true
+    default-floating-position x=20 y=20 relative-to="bottom-right"
+}
+
+window-rule {
   match title="^Solitaire$"
 
   open-maximized true
+}
+
+window-rule {
+  match app-id="neovide"
+
+  background-effect {
+    blur true
+  }
 }

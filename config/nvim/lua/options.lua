@@ -59,7 +59,7 @@ opt.encoding = 'UTF-8'
 opt.splitbelow = true
 opt.splitright = true
 
-vim.g.neovide_opacity = 0.9
+vim.g.neovide_opacity = 0.6
 o.guifont = 'CaskaydiaCove Nerd Font:h12'
 
 o.laststatus = 3
