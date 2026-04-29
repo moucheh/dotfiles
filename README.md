@@ -95,5 +95,5 @@ Default keybinds:
 ![Image 16](images/pic16.webp)
 
 ### Full quality wallpaper
-![Background](images/waves.jpg)
+![Background](images/abstract.jpg)
 
