@@ -1,9 +1,5 @@
 screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H-%M-%S.png"
 
-switch-events {
-    lid-close { spawn "gtklock"; }
-}
-
 prefer-no-csd
 
 hotkey-overlay {
