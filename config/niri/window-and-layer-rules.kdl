@@ -89,5 +89,35 @@ window-rule {
 
   background-effect {
     blur true
+    xray true
+  }
+}
+
+window-rule {
+  match app-id="^brave"
+
+  draw-border-with-background false
+  opacity 0.9
+  background-effect {
+      blur true
+      xray true
+  }
+}
+
+window-rule {
+  match app-id=r#"^org\.gnome\.Nautilus$"#
+  match app-id=r#"^org\.gnome\.Calculator$"#
+  match app-id=r#"^org\.gnome\.Evince$"#
+  match app-id="^xdg-desktop-portal-gtk$"
+  match app-id=r#"^org\.pulseaudio\.pavucontrol$"#
+  match app-id="^blueman-manager$"
+  match app-id="^FreeTube$"
+
+  draw-border-with-background false
+  opacity 0.8
+  open-floating false
+  background-effect {
+      blur true
+      xray true
   }
 }
