@@ -11,6 +11,7 @@ spawn-at-startup    "swayosd-server"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/abstract.jpg"
 spawn-at-startup    "lavalauncher"
 spawn-sh-at-startup "dex --environment niri --autostart --search-paths ~/.config/autostart"
+spawn-sh-at-startup "foot -s"
 
 xwayland-satellite {
     path "xwayland-satellite"

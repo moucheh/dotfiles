@@ -1,8 +1,8 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot"                { spawn "foot"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel"           { spawn-sh "fuzzel -T\"foot -e\""; }
+    Mod+T hotkey-overlay-title="Open a Terminal: foot"                { spawn "footclient"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel"           { spawn-sh "fuzzel -T\"footclient -e\""; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid"    { spawn-sh "nwggrid -b 00000099"; }
 
     Mod+B hotkey-overlay-title="Open a web browser: brave" {
@@ -12,7 +12,7 @@ binds {
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: gtklock"      { spawn-sh "gtklock"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu: wlogout"      { spawn-sh "wlogout -c 8 -r 8"; }
     Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"                { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
-    Mod+E hotkey-overlay-title="Open file manager: yazi"            { spawn-sh "foot -e yazi"; }
+    Mod+E hotkey-overlay-title="Open file manager: yazi"            { spawn-sh "footclient -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center: swaync" { spawn-sh "swaync-client -t"; }
 
     XF86AudioRaiseVolume allow-when-locked=true  { spawn-sh "swayosd-client --output-volume raise"; }
@@ -28,7 +28,7 @@ binds {
 
     XF86Display  { spawn-sh "wl-mirror eDP-1"; }
 
-    XF86Tools    { spawn-sh "foot -e nvim ~/.config/niri/config.kdl"; }
+    XF86Tools    { spawn-sh "footclient -e nvim ~/.config/niri/config.kdl"; }
 
     XF86Keyboard { spawn "gnome-calculator"; }
 
@@ -136,17 +136,17 @@ binds {
 
     Ctrl+Alt+Delete hotkey-overlay-title="Quit niri" { quit; }
 
-    Ctrl+Shift+Escape { spawn-sh "foot -e btop"; }
+    Ctrl+Shift+Escape { spawn-sh "footclient -e btop"; }
 
     Mod+Shift+P hotkey-overlay-title="Power off monitors" { power-off-monitors; }
     Mod+Ctrl+P  hotkey-overlay-title="Toggle hyprpicker"  { spawn "hyprpicker"; }
 
     Mod+C hotkey-overlay-title="Pick an entry from clipboard history" {
-        spawn-sh "foot -e ~/.config/niri/scripts/clipboard_pick.sh";
+        spawn-sh "footclient -e ~/.config/niri/scripts/clipboard_pick.sh";
     }
 
     Mod+Shift+C hotkey-overlay-title="Clear an entry from clipboard history" {
-        spawn-sh "foot -e ~/.config/niri/scripts/clipboard_clear.sh";
+        spawn-sh "footclient -e ~/.config/niri/scripts/clipboard_clear.sh";
     }
 
     Mod+Alt+C hotkey-overlay-title="Clear all entries from clipboard history" {
