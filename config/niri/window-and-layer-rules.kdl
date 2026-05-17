@@ -35,6 +35,15 @@ layer-rule {
 }
 
 layer-rule {
+    match namespace="swaync-control-center"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+layer-rule {
     match namespace="swayosd"
 
     background-effect {
