@@ -65,6 +65,8 @@ map({ 'n', 't' }, '<C-.>', function()
   require('opencode').toggle()
 end, { desc = 'Toggle opencode' })
 
+map({ 'n' }, '<leader>rc', ':e ~/.config/nvim/init.lua<CR>')
+
 -- Taken from nvchad
 
 map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
