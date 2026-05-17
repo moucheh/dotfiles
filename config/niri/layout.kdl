@@ -20,5 +20,5 @@ layout {
         gradient from="#7fc8ff" to="#24ddd4"
     }
 
-    background-color   "#00000050"
+    background-color   "#00000000"
 }

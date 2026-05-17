@@ -12,7 +12,7 @@ overview {
         softness 40
         spread   10
         offset   x=0 y=10
-        color "#7fc8ff50"
+        color "#00000050"
     }
 }
 
