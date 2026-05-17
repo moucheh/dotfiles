@@ -134,7 +134,6 @@
         "YouTube Music -.*": "YouTube Music",
         ".*- Brave": "Brave",
         ".*- FreeTube": "FreeTube",
-        "SuperTux.*": "SuperTux",
         "OBS.*": "OBS"
       },
       "icon": true,
@@ -145,7 +144,12 @@
     },
     "niri/workspaces": {
       "on-scroll-down": "niri msg action focus-workspace-down",
-      "on-scroll-up": "niri msg action focus-workspace-up"
+      "on-scroll-up": "niri msg action focus-workspace-up",
+      "format": "{icon}",
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
     },
     "custom/clipboard": {
         "format": "",
