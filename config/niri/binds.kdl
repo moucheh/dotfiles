@@ -28,7 +28,7 @@ binds {
 
     XF86Display  { spawn-sh "wl-mirror eDP-1"; }
 
-    XF86Tools    { spawn-sh "footclient -e nvim ~/.config/niri/config.kdl"; }
+    XF86Tools    { spawn-sh "footclient -e ~/.config/niri/scripts/open_config.sh"; }
 
     XF86Keyboard { spawn "gnome-calculator"; }
 
