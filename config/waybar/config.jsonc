@@ -134,6 +134,7 @@
       "rewrite": {
         "YouTube Music -.*": "YouTube Music",
         ".*- Brave": "Brave",
+        ".*- Helium": "Helium",
         ".*- FreeTube": "FreeTube",
         "OBS.*": "OBS"
       },

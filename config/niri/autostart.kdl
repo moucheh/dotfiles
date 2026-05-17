@@ -13,6 +13,4 @@ spawn-at-startup    "lavalauncher"
 spawn-sh-at-startup "dex --environment niri --autostart --search-paths ~/.config/autostart"
 spawn-sh-at-startup "foot -s"
 
-xwayland-satellite {
-    path "xwayland-satellite"
-}
+xwayland-satellite { path "xwayland-satellite"; }

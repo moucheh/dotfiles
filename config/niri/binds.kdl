@@ -1,13 +1,10 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot"                { spawn "footclient"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel"           { spawn-sh "fuzzel -T\"footclient -e\""; }
-    Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid"    { spawn-sh "nwggrid -b 00000099"; }
-
-    Mod+B hotkey-overlay-title="Open a web browser: brave" {
-        spawn "brave"
-    }
+    Mod+T hotkey-overlay-title="Open a Terminal: foot"              { spawn    "footclient"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel"         { spawn-sh "fuzzel -T\"footclient -e\""; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid"  { spawn-sh "nwggrid -b 00000099"; }
+    Mod+B hotkey-overlay-title="Open a web browser: brave"          { spawn    "brave"; }
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: gtklock"      { spawn-sh "gtklock"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu: wlogout"      { spawn-sh "wlogout -c 8 -r 8"; }
@@ -148,11 +145,11 @@ binds {
     }
 
     Mod+Alt+C hotkey-overlay-title="Clear all entries from clipboard history" {
-        spawn "clipman" "clear" "-a";
+        spawn-sh "clipman clear -a";
     }
 
     Mod+Shift+S hotkey-overlay-title="Toggle wayscriber annotation tool" {
-      spawn "wayscriber" "--active"
+        spawn-sh "wayscriber --active"
     }
 
     Mod+Shift+U hotkey-overlay-title="Start screen capture: OBS" {
