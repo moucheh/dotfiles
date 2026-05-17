@@ -32,9 +32,7 @@ binds {
 
     XF86Keyboard { spawn "gnome-calculator"; }
 
-    Mod+O hotkey-overlay-title="Toggle overview (hides waybar)" repeat=false {
-        spawn-sh "~/.config/niri/scripts/toggle_overview.sh";
-    }
+    Mod+O hotkey-overlay-title="Toggle overview" repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
