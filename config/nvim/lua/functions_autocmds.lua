@@ -2,7 +2,6 @@ require 'lazygit'
 
 local augroup = vim.api.nvim_create_augroup('UserConfig', {})
 local autocmd = vim.api.nvim_create_autocmd
-local opt = vim.opt
 
 autocmd('TextYankPost', {
   group = augroup,
@@ -16,7 +15,8 @@ autocmd('BufReadPost', {
   callback = function()
     local mark = vim.api.nvim_buf_get_mark(0, '"')
     local lcount = vim.api.nvim_buf_line_count(0)
-    if mark[1] > 0 and mark[1] <= lcount then pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    if mark[1] > 0 and mark[1] <= lcount then
+      pcall(vim.api.nvim_win_set_cursor, 0, mark)
     end
   end,
 })
@@ -34,6 +34,19 @@ autocmd({ 'BufRead', 'BufNewFile' }, {
   end,
 })
 
+autocmd({ 'BufRead', 'BufNewFile' }, {
+  callback = function(args)
+    local buf = args.buf
+    local name = vim.api.nvim_buf_get_name(buf)
+
+    if vim.bo[buf].filetype == '' then
+      if name:match 'bash' then
+        vim.bo[buf].filetype = 'bash'
+      end
+    end
+  end,
+})
+
 autocmd('VimResized', {
   group = augroup,
   callback = function()
@@ -41,21 +54,7 @@ autocmd('VimResized', {
   end,
 })
 
-opt.wildmenu = true
-opt.wildmode = 'longest:full,full'
-opt.wildignore:append { '*.o', '*.obj', '*.pyc', '*.class', '*.jar' }
-
-opt.diffopt:append 'linematch:60'
-
-opt.redrawtime = 10000
-opt.maxmempattern = 20000
-
-local undodir = vim.fn.expand '~/.vim/undodir'
-if vim.fn.isdirectory(undodir) == 0 then
-  vim.fn.mkdir(undodir, 'p')
-end
-
-vim.api.nvim_create_autocmd('FileType', {
+autocmd('FileType', {
   pattern = {
     'bash',
     'c',

@@ -75,10 +75,24 @@ o.signcolumn = 'yes'
 
 opt.whichwrap:append '<>[]hl'
 
+opt.wildmenu = true
+opt.wildmode = 'longest:full,full'
+opt.wildignore:append { '*.o', '*.obj', '*.pyc', '*.class', '*.jar' }
+
+opt.diffopt:append 'linematch:60'
+
+opt.redrawtime = 10000
+opt.maxmempattern = 20000
+
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
+
+local undodir = vim.fn.expand '~/.vim/undodir'
+if vim.fn.isdirectory(undodir) == 0 then
+  vim.fn.mkdir(undodir, 'p')
+end
 
 local is_windows = vim.fn.has 'win32' ~= 0
 local sep = is_windows and '\\' or '/'
