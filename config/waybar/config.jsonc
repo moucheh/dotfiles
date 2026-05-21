@@ -18,7 +18,6 @@
         "network",
         "group/hardware",
         "pulseaudio",
-        "custom/bluetooth_battery",
         "battery",
         "custom/power"
     ],
@@ -122,12 +121,6 @@
         "exec": "$HOME/.config/waybar/cava.sh",
         "format": "{}",
         "tooltip": false
-    },
-    "custom/bluetooth_battery": {
-        "format": "󰥉 {}",
-        "tooltip": false,
-        "exec": "$HOME/.config/waybar/bluetooth_battery.sh",
-        "interval": 60
     },
     "niri/window": {
       "format": "{}",
