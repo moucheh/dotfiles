@@ -50,7 +50,7 @@ use_logical_path = false
 truncate_to_repo = false
 
 [character]
-format = "[->>](blue) "
+format = "[󰜥](blue) "
 
 [git_branch]
 symbol = " "
