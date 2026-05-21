@@ -120,7 +120,7 @@ window-rule {
   match app-id="^xdg-desktop-portal-gtk$"
   match app-id=r#"^org\.pulseaudio\.pavucontrol$"#
   match app-id="^blueman-manager$"
-  match app-id="^FreeTube$"
+  match app-id="^freetube$"
 
   draw-border-with-background false
   opacity 0.8
