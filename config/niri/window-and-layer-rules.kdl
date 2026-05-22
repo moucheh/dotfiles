@@ -13,6 +13,16 @@ layer-rule {
 }
 
 layer-rule {
+    match namespace="^conky_namespace$"
+
+    opacity 0.6
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+layer-rule {
     match namespace="^launcher$"
     match namespace="^~nwggrid$"
     match namespace=r#"^lhp\.LavaLauncher$"#
