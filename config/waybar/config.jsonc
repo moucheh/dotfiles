@@ -10,14 +10,15 @@
         "group/media"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "privacy"
     ],
     "modules-right": [
         "tray",
         "custom/clipboard",
         "network",
         "group/hardware",
-        "pulseaudio",
+        "wireplumber",
         "battery",
         "custom/power"
     ],
@@ -86,7 +87,7 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "0%   {icon}",
@@ -100,6 +101,30 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ],
+        "ignore-monitor": true,
+        "ignore": [
+            {
+                "type": "audio-in",
+                "name": "cava"
+            }
+        ]
     },
     "custom/logo": {
         "format": "",
@@ -122,30 +147,6 @@
         "format": "{}",
         "tooltip": false
     },
-    "niri/window": {
-      "format": "{}",
-      "rewrite": {
-        "YouTube Music -.*": "YouTube Music",
-        ".*- Brave": "Brave",
-        ".*- Helium": "Helium",
-        ".*- FreeTube": "FreeTube",
-        "OBS.*": "OBS"
-      },
-      "icon": true,
-      "icon-size": 20,
-      "tooltip": false,
-      "on-click": "niri msg action maximize-column",
-      "on-click-middle": "niri msg action close-window"
-    },
-    "niri/workspaces": {
-      "on-scroll-down": "niri msg action focus-workspace-down",
-      "on-scroll-up": "niri msg action focus-workspace-up",
-      "format": "{icon}",
-      "format-icons": {
-        "active": "",
-        "default": ""
-      }
-    },
     "custom/clipboard": {
         "format": "",
         "tooltip-format": "Clipboard history\nLMB = pick\nRMB = clear\nMMB = clear all",
@@ -154,10 +155,33 @@
         "on-click-middle": "clipman clear -a"
     },
     "custom/power": {
-      "format": "⏻",
-      "tooltip-format": "Show wlogout",
-      "on-click": "wlogout",
-      "on-click-right": "niri msg action power-off-monitors"
+        "format": "⏻",
+        "tooltip-format": "Show wlogout",
+        "on-click": "wlogout",
+        "on-click-right": "niri msg action power-off-monitors"
+    },
+    "niri/window": {
+        "format": "{}",
+        "rewrite": {
+            "YouTube Music -.*": "YouTube Music",
+            ".*- Brave": "Brave",
+            ".*- Helium": "Helium",
+            ".*- FreeTube": "FreeTube",
+            "OBS.*": "OBS"
+        },
+        "icon": true,
+        "icon-size": 20,
+        "tooltip": false,
+        "on-click": "niri msg action maximize-column",
+        "on-click-middle": "niri msg action close-window"
+    },
+    "niri/workspaces": {
+        "on-scroll-down": "niri msg action focus-workspace-down",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
     }
-  }
 }

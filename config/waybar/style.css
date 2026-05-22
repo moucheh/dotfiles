@@ -1,5 +1,5 @@
 * {
-  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
 
@@ -7,7 +7,7 @@ window#waybar {
   background-color: transparent;
   color: #fff;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -54,73 +54,57 @@ button:hover {
   background-color: #eb4d4b;
 }
 
-#mode {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 -3px #fff;
-}
-
 #clock,
 #battery,
 #cpu,
 #memory,
-#disk,
 #temperature,
-#backlight,
 #network,
-#pulseaudio,
 #wireplumber,
 #custom-media,
 #custom-clipboard,
 #custom-power,
 #custom-logo,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
 #mpd,
-#window,
-#language {
+#window {
   padding: 0 10px;
   color: #fff;
   border-radius: 3px;
-  transition: padding 200ms, border 200ms, background-color 200ms;
+  transition:
+    padding 200ms,
+    border 200ms,
+    background-color 200ms;
 }
 
 #clock:hover,
 #battery:hover,
 #cpu:hover,
 #memory:hover,
-#disk:hover,
 #temperature:hover,
-#backlight:hover,
 #network:hover,
-#pulseaudio:hover,
 #wireplumber:hover,
 #custom-media:hover,
 #custom-clipboard:hover,
 #custom-power:hover,
 #custom-logo:hover,
-#mode:hover,
-#idle_inhibitor:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
 #mpd:hover,
-#window:hover,
-#language:hover {
+#window:hover {
   padding: 0 15px;
   color: #fff;
-  background-color: rgba(255, 255, 255, .35);
+  background-color: rgba(255, 255, 255, 0.35);
   border: 1px solid #fff;
 }
 
 #tray * {
   padding: 0 4px;
   border-radius: 3px;
-  transition: border 200ms, background-color 200ms;
+  transition:
+    border 200ms,
+    background-color 200ms;
 }
 
 #tray *:hover {
-  background-color: rgba(255, 255, 255, .35);
+  background-color: rgba(255, 255, 255, 0.35);
   border: 1px solid #fff;
 }
 
@@ -162,30 +146,12 @@ label:focus {
   background-color: #000000;
 }
 
-#wireplumber {
-  background-color: #fff0f5;
-  color: #000000;
-}
-
-#wireplumber.muted {
-  background-color: #f53c3c;
-}
-
-
-#keyboard-state > label {
-  padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 #privacy {
   padding: 0;
 }
 
 #privacy-item {
-  padding: 0 5px;
+  padding: 0 3px;
   color: #fff;
 }
 
@@ -202,10 +168,13 @@ label:focus {
 }
 
 #custom-cava_mviz {
-  font-family: 'Courier New';
+  font-family: "Courier New";
   border-radius: 3px;
   padding: 0 5px;
-  transition: padding 200ms, background-color 200ms, border 200ms;
+  transition:
+    padding 200ms,
+    background-color 200ms,
+    border 200ms;
 }
 
 #custom-cava_mviz:hover {
