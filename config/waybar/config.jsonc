@@ -127,7 +127,7 @@
         ]
     },
     "custom/logo": {
-        "format": "",
+        "format": " ",
         "tooltip": false,
         "on-click": "footclient -e $HOME/.config/waybar/fastfetch.sh",
         "on-click-right": "niri msg action toggle-overview"
@@ -155,7 +155,7 @@
         "on-click-middle": "clipman clear -a"
     },
     "custom/power": {
-        "format": "⏻",
+        "format": "⏻ ",
         "tooltip-format": "Show wlogout",
         "on-click": "wlogout",
         "on-click-right": "niri msg action power-off-monitors"
@@ -180,8 +180,8 @@
         "on-scroll-up": "niri msg action focus-workspace-up",
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+            "active": " ",
+            "default": " "
         }
     }
 }
