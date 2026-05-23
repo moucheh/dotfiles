@@ -1,7 +1,7 @@
 local M = {}
 
 M.base46 = {
-  theme = 'poimandres',
+  theme = 'poimandres-modified',
   transparency = true,
 
   hl_override = {
