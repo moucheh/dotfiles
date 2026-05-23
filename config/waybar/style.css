@@ -54,6 +54,14 @@ button:hover {
   background-color: #eb4d4b;
 }
 
+window#waybar.empty #window,
+window#waybar.empty #window:hover {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0;
+}
+
 #clock,
 #battery,
 #cpu,
