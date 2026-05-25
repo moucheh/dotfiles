@@ -9,6 +9,10 @@ binds {
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: gtklock"      { spawn-sh "gtklock"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu: wlogout"      { spawn-sh "wlogout -c 8 -r 8"; }
     Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"                { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
+    Ctrl+Alt+C hotkey-overlay-title="Enlarge cursor" {
+        spawn-sh "niri msg action load-config-file --path ~/.config/niri/large-cursor.kdl"
+    }
+
     Mod+E hotkey-overlay-title="Open file manager: yazi"            { spawn-sh "footclient -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center: swaync" { spawn-sh "swaync-client -t"; }
 

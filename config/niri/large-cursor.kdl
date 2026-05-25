@@ -1,0 +1,11 @@
+include "config.kdl"
+
+cursor {
+    xcursor-size 48
+}
+
+binds {
+    Ctrl+Alt+C hotkey-overlay-title="Make cursor normal size" {
+        spawn-sh "niri msg action load-config-file --path ~/.config/niri/config.kdl";
+    }
+}
