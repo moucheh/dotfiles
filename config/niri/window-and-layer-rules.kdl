@@ -131,7 +131,7 @@ window-rule {
   match app-id="^xdg-desktop-portal-gtk$"
   match app-id=r#"^org\.pulseaudio\.pavucontrol$"#
   match app-id="^blueman-manager$"
-  match app-id="^freetube$"
+  match app-id=r#"^io\.freetubeapp\.FreeTube$"#
 
   draw-border-with-background false
   opacity 0.8
