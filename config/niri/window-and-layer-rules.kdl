@@ -141,3 +141,19 @@ window-rule {
       xray true
   }
 }
+
+window-rule {
+  match app-id=r#"^io\.freetubeapp\.FreeTube$"#
+
+  open-on-workspace "2"
+  open-focused false
+  open-maximized true
+}
+
+window-rule {
+  match app-id=r#"^brave-browser$"#
+
+  open-on-workspace "1"
+  open-focused false
+  open-maximized true
+}
