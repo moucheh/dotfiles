@@ -127,7 +127,7 @@
         ]
     },
     "custom/logo": {
-        "format": " ",
+        "format": " ",
         "tooltip": false,
         "on-click": "footclient -e $HOME/.config/waybar/fastfetch.sh",
         "on-click-right": "niri msg action toggle-overview"

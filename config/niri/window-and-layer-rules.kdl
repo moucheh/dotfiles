@@ -15,7 +15,6 @@ layer-rule {
 layer-rule {
     match namespace="^conky_namespace$"
 
-    opacity 0.6
     background-effect {
         blur true
         xray true
