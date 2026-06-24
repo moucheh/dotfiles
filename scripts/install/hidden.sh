@@ -6,6 +6,8 @@ DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
 DOTFILES_BACKUP_FOLDER=$2
 DOTFILES_BACKUP_FOLDER=${DOTFILES_BACKUP_FOLDER:="$HOME/.backup_$(date +%Y%m%d_%H%M%S)"}
 
+mkdir -p $DOTFILES_BACKUP_FOLDER
+
 HIDDEN_FILES=(
   bashrc
   bash_aliases
