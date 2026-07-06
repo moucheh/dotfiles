@@ -20,7 +20,7 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true  { spawn-sh "swayosd-client --output-volume lower"; }
     XF86AudioMute        allow-when-locked=true  { spawn-sh "swayosd-client --output-volume mute-toggle"; }
     XF86AudioMicMute     allow-when-locked=true  {
-        spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && swayosd-client --input-volume mute-toggle";
+        spawn-sh "swayosd-client --input-volume mute-toggle";
     }
 
     XF86MonBrightnessUp allow-when-locked=true   { spawn-sh "swayosd-client --brightness raise"; }
