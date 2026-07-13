@@ -1,0 +1,221 @@
+[bar.default]
+background_opacity = 0.64999998547136784
+center = [ "clock", "notifications", "weather", "privacy" ]
+end = [ "tray", "clipboard", "network", "bluetooth", "sysmon", "volume", "battery", "session" ]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+start = [ "launcher", "workspaces", "active_window", "media", "audio_visualizer" ]
+widget_spacing = 10
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[dock]
+auto_hide = true
+background_opacity = 0.64999998547136784
+enabled = true
+launcher_position = "end"
+pinned = [ "brave-browser", "freetube", "footclient" ]
+radius = 32
+reserve_space = false
+show_dots = true
+
+[keybinds]
+down = [ "Down", "Ctrl+j" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+tab_next = [ "Tab", "Ctrl+u" ]
+tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+i" ]
+up = [ "Up", "Ctrl+k" ]
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 636.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.29999999999999999
+        background_radius = 12.0
+        input_opacity = 0.65000000000000002
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 304.0
+    box_width = 320.0
+    cx = 960.0
+    cy = 388.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        format = "{:%I:%M}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 128.0
+    box_width = 272.0
+    cx = 1112.0
+    cy = 844.0
+    output = "eDP-1"
+    rotation = -0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        bands = 32
+        show_when_idle = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 48.0
+    box_width = 160.0
+    cx = 960.0
+    cy = 1036.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 128.0
+    box_width = 272.0
+    cx = 808.0
+    cy = 844.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+
+[notification]
+background_opacity = 0.64999998547136784
+layer = "overlay"
+
+[osd]
+background_opacity = 0.59999998658895493
+
+[shell]
+avatar_path = "/var/lib/AccountsService/icons/moucheh"
+clipboard_auto_paste = "ctrl_shift_v"
+niri_overview_type_to_launch_enabled = true
+polkit_agent = true
+screen_time_enabled = true
+settings_show_advanced = true
+time_format = "{:%I:%M}"
+
+    [shell.launcher]
+    app_grid = true
+    session_search = true
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    polkit_placement = "attached"
+    transparency_mode = "glass"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "l"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "e"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "Ctrl+l"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "r"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "p"
+    variant = "destructive"
+
+[theme]
+source = "wallpaper"
+
+[wallpaper]
+directory = "/home/moucheh/.dotfiles/images"
+enabled = false
+
+    [wallpaper.default]
+    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+
+    [wallpaper.last]
+    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+
+[widget.active_window]
+max_length = 150
+min_length = 40
+
+[widget.clock]
+format = "{:%d ~ %I:%M}"
+
+[widget.launcher]
+custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
+custom_image_colorize = true
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "always"
+
+[widget.sysmon]
+display = "text"
+
+[widget.tray]
+hidden = [ "nm-applet", "blueman-tray" ]
+
+[widget.weather]
+show_condition = false
