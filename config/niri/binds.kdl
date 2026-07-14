@@ -8,14 +8,28 @@ binds {
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen"               { spawn-sh "loginctl lock-session"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu"               { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Alt+S hotkey-overlay-title="Open power menu"               { spawn-sh "noctalia msg settings-toggle"; }
     Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"                { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
     Ctrl+Alt+C hotkey-overlay-title="Enlarge cursor" {
         spawn-sh "niri msg action load-config-file --path ~/.config/niri/large-cursor.kdl"
     }
 
+    Ctrl+Alt+1 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center home"; }
+    Ctrl+Alt+2 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center media"; }
+    Ctrl+Alt+3 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center audio"; }
+    Ctrl+Alt+4 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center system"; }
+    Ctrl+Alt+5 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center network"; }
+    Ctrl+Alt+6 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center bluetooth"; }
+
     Mod+E hotkey-overlay-title="Open file manager: yazi"    { spawn-sh "footclient -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center" {
         spawn-sh "noctalia msg panel-toggle control-center notifications";
+    }
+    Mod+Shift+N hotkey-overlay-title="Clear notification history" {
+        spawn-sh "noctalia msg notification-clear-history";
+    }
+    Mod+Alt+N hotkey-overlay-title="Toggle Do Not Disturb" {
+        spawn-sh "noctalia msg notification-dnd-toggle";
     }
 
     XF86AudioRaiseVolume allow-when-locked=true  { spawn-sh "noctalia msg volume-up"; }
