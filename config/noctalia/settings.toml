@@ -184,7 +184,8 @@ time_format = "{:%I:%M}"
     variant = "destructive"
 
 [theme]
-source = "wallpaper"
+custom_palette = "abstract-mc"
+source = "custom"
 
 [wallpaper]
 directory = "/home/moucheh/.dotfiles/images"
