@@ -199,6 +199,10 @@ time_format = "{:%I:%M}"
 custom_palette = "abstract-mc"
 source = "custom"
 
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
+    community_ids = [ "zed", "obs", "yazi" ]
+
 [wallpaper]
 directory = "/home/moucheh/.dotfiles/images"
 enabled = false

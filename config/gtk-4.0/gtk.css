@@ -9,3 +9,5 @@
   --accent-disabled-bg-color: #c0c0c0;
   --accent-disabled-fg-color: #666666;
 }
+
+@import url("noctalia.css");
