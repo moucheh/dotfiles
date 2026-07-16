@@ -20,6 +20,111 @@ type = "noctalia/screen_recorder:toggle"
 [[control_center.shortcuts]]
 type = "notification"
 
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000006"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 201.2890625
+    box_width = 270.0703125
+    cx = 1719.03515625
+    cy = 364.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        forecast_days = 3
+        show_forecast = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 224.0
+    box_width = 336.0
+    cx = 1680.0
+    cy = 556.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 224.0
+    box_width = 304.0
+    cx = 1680.0
+    cy = 172.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        clock_style = "digital"
+        format = "{:%I:%M %p}"
+        shadow = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1680.0
+    cy = 751.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "button"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = true
+        command = "footclient -e ~/.config/waybar/fastfetch.sh"
+        glyph = "terminal-2"
+        label = "fastfetch"
+        variant = "default"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 752.0
+    box_width = 432.0
+    cx = 1680.0
+    cy = 436.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "label"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background_opacity = 0.59999999999999998
+        opacity = 1.0
+        title = ""
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 48.0
+    box_width = 144.0
+    cx = 1680.0
+    cy = 692.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background = false
+        display = "gauge"
+        gauge_layout = "horizontal"
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
 [dock]
 auto_hide = true
 background_opacity = 0.64999998547136784
@@ -64,6 +169,7 @@ fingerprint = false
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@winit",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
@@ -74,13 +180,13 @@ widget_order = [
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
-    visible = true
+    visible = false
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 70.0
     box_width = 400.0
     cx = 960.0
-    cy = 636.0
+    cy = 540.0
     output = "eDP-1"
     rotation = 0.0
     type = "login_box"
@@ -96,18 +202,38 @@ widget_order = [
         show_login_button = true
         show_password_hint = true
 
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 474.0
+    cy = 911.0
+    output = "winit"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 304.0
-    box_width = 320.0
+    box_height = 288.0
+    box_width = 432.0
     cx = 960.0
-    cy = 388.0
+    cy = 363.328125
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
         background = false
-        format = "{:%I:%M}"
+        format = "{:%I:%M %p}"
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 128.0
@@ -121,13 +247,13 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
         background = false
         bands = 32
-        show_when_idle = true
+        show_when_idle = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
-    box_height = 48.0
-    box_width = 160.0
-    cx = 960.0
-    cy = 1036.0
+    box_height = 96.0
+    box_width = 208.0
+    cx = 975.14453125
+    cy = 1008.49609375
     output = "eDP-1"
     rotation = 0.0
     type = "weather"
@@ -146,6 +272,7 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
+        hide_when_no_media = true
 
 [notification]
 background_opacity = 0.64999998547136784

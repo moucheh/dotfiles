@@ -3,6 +3,5 @@ spawn-at-startup    "kdeconnect-indicator"
 spawn-sh-at-startup "wlsunset -l 44.5 -L 18.6 -t 4500 -T 6500"
 spawn-sh-at-startup "swaybg -m fill -o \"*\" -i ~/.dotfiles/images/abstract.jpg"
 spawn-sh-at-startup "foot -s"
-spawn-sh-at-startup "conky -d"
 
 xwayland-satellite { path "xwayland-satellite"; }
