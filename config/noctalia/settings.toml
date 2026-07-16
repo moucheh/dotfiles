@@ -14,6 +14,12 @@ type = "wifi"
 [[control_center.shortcuts]]
 type = "bluetooth"
 
+[[control_center.shortcuts]]
+type = "noctalia/screen_recorder:toggle"
+
+[[control_center.shortcuts]]
+type = "notification"
+
 [dock]
 auto_hide = true
 background_opacity = 0.64999998547136784
@@ -129,6 +135,12 @@ layer = "overlay"
 [osd]
 background_opacity = 0.59999998658895493
 
+[plugin_settings."noctalia/screen_recorder"]
+restore_portal = true
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
 [shell]
 avatar_path = "/var/lib/AccountsService/icons/moucheh"
 clipboard_auto_paste = "ctrl_shift_v"
@@ -211,6 +223,12 @@ custom_image_colorize = true
 [widget.media]
 hide_when_no_media = true
 title_scroll = "always"
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
 
 [widget.sysmon]
 display = "text"
