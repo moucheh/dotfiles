@@ -1,19 +1,13 @@
 # moucheh Dotfiles
 
-- WM - [niri](https://github.com/moucheh/dotfiles/tree/master/config/niri)
-- Bar - [waybar](https://github.com/moucheh/dotfiles/tree/master/config/waybar)
-- Login manager - greetd + tuigret
-- Lock manager - [gtklock](https://github.com/moucheh/dotfiles/tree/master/config/gtklock/config.ini)
-- Launcher - [fuzzel](https://github.com/moucheh/dotfiles/blob/master/config/fuzzel/fuzzel.ini)
-- Terminal - [foot](https://github.com/moucheh/dotfiles/blob/master/config/foot/foot.ini)
-- Editor - [nvim](https://github.com/moucheh/dotfiles/tree/master/config/nvim)
+- WM - [niri](https://niri-wm.github.io/niri/)
+- Bar and shell - [noctalia](https://noctalia.dev/)
+- Login manager - greetd + noctalia-greeter
+- Terminal - [foot](https://codeberg.org/dnkl/foot)
+- Editor - [nvim](https://neovim.io/)
 - mvim - [fully native nvim setup no external plugins](https://github.com/moucheh/dotfiles/tree/master/config/mvim)
-- niri dock - [lavalauncher](https://git.sr.ht/~leon_plickat/lavalauncher)
-- Notification center - [SwayNC](https://github.com/ErikReider/SwayNotificationCenter)
-- OSD - [SwayOSD](https://github.com/ErikReider/SwayOSD)
-- Drawer - [nwggrid](https://github.com/moucheh/dotfiles/blob/master/config/nwg-launchers/nwggrid/style.css)
-- Starship - [starship](https://github.com/moucheh/dotfiles/blob/master/config/starship.toml)
-- [Fastfetch](https://github.com/moucheh/dotfiles/blob/master/config/fastfetch/config.jsonc)
+- Starship - [starship](https://starship.rs/)
+- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 
 Make sure to clone the repository in your home directory
     
@@ -24,7 +18,7 @@ And then run the install script, you may need to add executable permissions
     chmod +x install.sh
     ./install.sh
 
-If you already have a config for something that is included in these dotfiles, that config will be copied to a backup folder of current date and time, it will start with a dot so it will be hiden, but won't be lost.
+If you already have a config for something that is included in these dotfiles, that config will be copied to a backup folder of current date and time, it will start with a dot so it will be hidden, but won't be lost.
 
 
 I've also added a script that does ascii art generation for nvim dashboard.
@@ -55,12 +49,7 @@ If you would like to try out the fully native nvim setup (mvim - it has no exter
 ![Image 5](images/pic5.webp)
 
 ### Screenshot 6
-Clipboard management using wl-clipboard + clipman + fzf
-
-Default keybinds:
-- Super+C        - pick an entry
-- Super+Shift+C  - clear an entry
-- Super+Alt+C    - clear all entries
+Clipboard management built into noctalia shell
 
 ![Image 6](images/pic6.webp)
 
@@ -73,26 +62,23 @@ Default keybinds:
 ### Screenshot 9 (yazi)
 ![Image 9](images/pic9.webp)
 
-### Screenshot 10 (fuzzel)
+### Screenshot 10 (noctalia launcher)
 ![Image 10](images/pic10.webp)
 
-### Screenshot 11 (nwggrid)
+### Screenshot 11 (noctalia dock)
 ![Image 11](images/pic11.webp)
 
-### Screenshot 12 (lavalauncher)
+### Screenshot 12 (noctalia notification center)
 ![Image 12](images/pic12.webp)
 
-### Screenshot 13 (swaync)
+### Screenshot 13 (noctalia osd)
 ![Image 13](images/pic13.webp)
 
-### Screenshot 14 (swayosd)
+### Screenshot 14 (noctalia session management)
 ![Image 14](images/pic14.webp)
 
-### Screenshot 15 (wlogout)
-![Image 15](images/pic15.webp)
-
-### Screenshot 16 (gtklock)
-![Image 16](images/pic16.webp)
+### Screenshot 15 (noctalia lockscreen)
+![Image 15](images/pic16.webp)
 
 ### Full quality wallpaper
 ![Background](images/abstract.jpg)
