@@ -1,17 +1,14 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot"              { spawn    "footclient"; }
-    Mod+D hotkey-overlay-title="Run an Application"                 { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Shift+D hotkey-overlay-title="Run an Application: nwggrid"  { spawn-sh "nwggrid -b 00000099"; }
-    Mod+B hotkey-overlay-title="Open a web browser: brave" {
-        spawn-sh "gtk-launch com.brave.Browser.desktop"
-    }
+    Mod+T hotkey-overlay-title="Open a Terminal: foot"     { spawn    "footclient"; }
+    Mod+D hotkey-overlay-title="Run an Application"        { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn-sh "gtk-launch com.brave.Browser.desktop"; }
 
-    Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen"               { spawn-sh "loginctl lock-session"; }
-    Ctrl+Alt+E hotkey-overlay-title="Open power menu"               { spawn-sh "noctalia msg panel-toggle session"; }
-    Ctrl+Alt+S hotkey-overlay-title="Open power menu"               { spawn-sh "noctalia msg settings-toggle"; }
-    Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"                { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
+    Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen"      { spawn-sh "loginctl lock-session"; }
+    Ctrl+Alt+E hotkey-overlay-title="Open power menu"      { spawn-sh "noctalia msg panel-toggle session"; }
+    Ctrl+Alt+S hotkey-overlay-title="Open power menu"      { spawn-sh "noctalia msg settings-toggle"; }
+    Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"       { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
     Ctrl+Alt+C hotkey-overlay-title="Enlarge cursor" {
         spawn-sh "niri msg action load-config-file --path ~/.config/niri/large-cursor.kdl"
     }
