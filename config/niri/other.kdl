@@ -7,6 +7,12 @@ hotkey-overlay {
     hide-not-bound
 }
 
+switch-events {
+    lid-close {
+        spawn "noctalia" "msg" "session" "lock-and-suspend";
+    }
+}
+
 overview {
     workspace-shadow {
         softness 40
