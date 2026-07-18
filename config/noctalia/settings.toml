@@ -1,12 +1,18 @@
 [bar.default]
 background_opacity = 0.64999998547136784
-center = [ "clock", "notifications", "weather", "privacy" ]
-end = [ "tray", "clipboard", "network", "bluetooth", "sysmon", "volume", "battery", "session" ]
+center = [ "clock", "notifications", "privacy" ]
+end = [ "tray", "network", "bluetooth", "volume", "battery" ]
 margin_edge = 0
 margin_ends = 0
 radius = 0
-start = [ "launcher", "workspaces", "active_window", "media", "audio_visualizer" ]
-widget_spacing = 10
+start = [ "launcher", "workspaces", "active_window" ]
+thickness = 32
+widget_spacing = 16
+
+    [bar.default.dead_zone]
+    command = "noctalia msg panel-toggle control-center home"
+    middle_command = "niri msg action close-window"
+    right_command = "niri msg action maximize-column"
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -19,6 +25,12 @@ type = "noctalia/screen_recorder:toggle"
 
 [[control_center.shortcuts]]
 type = "notification"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "caffeine"
 
 [desktop_widgets]
 schema_version = 2
@@ -129,7 +141,9 @@ widget_order = [
 auto_hide = true
 background_opacity = 0.64999998547136784
 enabled = true
+item_spacing = 8
 launcher_position = "end"
+magnification_scale = 1.1500000022351742
 pinned = [ "brave-browser", "freetube", "footclient" ]
 radius = 32
 reserve_space = false
@@ -287,9 +301,20 @@ restore_portal = true
 [plugins]
 enabled = [ "noctalia/screen_recorder" ]
 
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
 [shell]
 avatar_path = "/var/lib/AccountsService/icons/moucheh"
 clipboard_auto_paste = "ctrl_shift_v"
+date_format = "%A, %d %B %Y"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 screen_time_enabled = true
@@ -362,12 +387,21 @@ enabled = false
     [wallpaper.last]
     path = "/home/moucheh/.dotfiles/images/abstract.jpg"
 
+    [wallpaper.monitors.eDP-1]
+    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+
 [widget.active_window]
 max_length = 150
 min_length = 40
 
+[widget.bluetooth]
+hide_when_no_connected_device = true
+show_label = true
+
 [widget.clock]
-format = "{:%d ~ %I:%M}"
+enabled = true
+format = "{:%I:%M ~ %d}"
+tooltip_format = "{:%d %B %Y}"
 
 [widget.launcher]
 custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
@@ -376,6 +410,9 @@ custom_image_colorize = true
 [widget.media]
 hide_when_no_media = true
 title_scroll = "always"
+
+[widget.notifications]
+hide_when_no_unread = true
 
 [widget.privacy]
 hide_inactive = true
@@ -387,6 +424,8 @@ type = "noctalia/screen_recorder:recorder"
 display = "text"
 
 [widget.tray]
+drawer = true
+enabled = true
 hidden = [ "nm-applet", "blueman-tray" ]
 
 [widget.weather]
