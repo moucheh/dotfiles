@@ -40,19 +40,21 @@ widget_order = [
     "desktop-widget-0000000000000002",
     "desktop-widget-0000000000000003",
     "desktop-widget-0000000000000004",
-    "desktop-widget-0000000000000006"
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000008",
+    "desktop-widget-0000000000000009"
 ]
 
     [desktop_widgets.grid]
-    cell_size = 8
+    cell_size = 32
     major_interval = 4
     visible = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000001]
-    box_height = 201.2890625
-    box_width = 270.0703125
-    cx = 1719.03515625
-    cy = 364.0
+    box_height = 192.0
+    box_width = 256.0
+    cx = 1696.0
+    cy = 340.0
     output = "eDP-1"
     rotation = 0.0
     type = "weather"
@@ -63,10 +65,10 @@ widget_order = [
         show_forecast = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 224.0
-    box_width = 336.0
-    cx = 1680.0
-    cy = 556.0
+    box_height = 192.0
+    box_width = 320.0
+    cx = 1664.0
+    cy = 508.0
     output = "eDP-1"
     rotation = 0.0
     type = "sysmon"
@@ -77,10 +79,10 @@ widget_order = [
         stat2 = "cpu_temp"
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
-    box_height = 224.0
-    box_width = 304.0
-    cx = 1680.0
-    cy = 172.0
+    box_height = 128.0
+    box_width = 320.0
+    cx = 1664.0
+    cy = 167.35546875
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
@@ -94,8 +96,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000004]
     box_height = 0.0
     box_width = 0.0
-    cx = 1680.0
-    cy = 751.0
+    cx = 1555.5
+    cy = 856.0
     output = "eDP-1"
     rotation = 0.0
     type = "button"
@@ -108,10 +110,10 @@ widget_order = [
         variant = "default"
 
     [desktop_widgets.widget.desktop-widget-0000000000000005]
-    box_height = 752.0
-    box_width = 432.0
-    cx = 1680.0
-    cy = 436.0
+    box_height = 896.0
+    box_width = 448.0
+    cx = 1664.0
+    cy = 508.0
     output = "eDP-1"
     rotation = 0.0
     type = "label"
@@ -122,10 +124,10 @@ widget_order = [
         title = ""
 
     [desktop_widgets.widget.desktop-widget-0000000000000006]
-    box_height = 48.0
-    box_width = 144.0
-    cx = 1680.0
-    cy = 692.0
+    box_height = 64.0
+    box_width = 128.0
+    cx = 1664.0
+    cy = 652.0
     output = "eDP-1"
     rotation = 0.0
     type = "sysmon"
@@ -136,6 +138,33 @@ widget_order = [
         gauge_layout = "horizontal"
         stat = "ram_pct"
         stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000008]
+    box_height = 64.0
+    box_width = 384.0
+    cx = 1664.0
+    cy = 740.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
+        background = false
+        bands = 32
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000009]
+    box_height = 128.0
+    box_width = 128.0
+    cx = 1760.0
+    cy = 856.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "noctalia/timer:timer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
+        background = false
+        duration = 600
 
 [dock]
 auto_hide = true
@@ -188,13 +217,14 @@ widget_order = [
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
     "lockscreen-widget-0000000000000003",
-    "lockscreen-widget-0000000000000004"
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000005"
 ]
 
     [lockscreen_widgets.grid]
-    cell_size = 16
+    cell_size = 64
     major_interval = 4
-    visible = false
+    visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 70.0
@@ -237,10 +267,10 @@ widget_order = [
         show_password_hint = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 288.0
-    box_width = 432.0
+    box_height = 128.0
+    box_width = 448.0
     cx = 960.0
-    cy = 363.328125
+    cy = 284.0
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
@@ -251,9 +281,9 @@ widget_order = [
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
     box_height = 128.0
-    box_width = 272.0
-    cx = 1112.0
-    cy = 844.0
+    box_width = 256.0
+    cx = 1152.0
+    cy = 796.0
     output = "eDP-1"
     rotation = -0.0
     type = "audio_visualizer"
@@ -264,10 +294,10 @@ widget_order = [
         show_when_idle = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
-    box_height = 96.0
-    box_width = 208.0
-    cx = 975.14453125
-    cy = 1008.49609375
+    box_height = 64.0
+    box_width = 192.0
+    cx = 976.0
+    cy = 1036.0
     output = "eDP-1"
     rotation = 0.0
     type = "weather"
@@ -278,8 +308,8 @@ widget_order = [
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
     box_height = 128.0
     box_width = 272.0
-    cx = 808.0
-    cy = 844.0
+    cx = 760.0
+    cy = 796.0
     output = "eDP-1"
     rotation = 0.0
     type = "media_player"
@@ -287,6 +317,21 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
         hide_when_no_media = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 64.0
+    box_width = 320.0
+    cx = 960.0
+    cy = 380.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        background = false
+        circle = true
+        clock_style = "digital"
+        format = "{:%d %B %Y}"
 
 [notification]
 background_opacity = 0.64999998547136784
@@ -299,7 +344,7 @@ background_opacity = 0.59999998658895493
 restore_portal = true
 
 [plugins]
-enabled = [ "noctalia/screen_recorder" ]
+enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator" ]
 
     [[plugins.source]]
     kind = "git"
