@@ -9,10 +9,13 @@ start = [ "launcher", "workspaces", "active_window" ]
 thickness = 32
 widget_spacing = 16
 
-    [bar.default.dead_zone]
-    command = "noctalia msg panel-toggle control-center home"
-    middle_command = "niri msg action close-window"
-    right_command = "niri msg action maximize-column"
+    [bar.default.dead_zone.actions]
+    left = "panel-toggle control-center home"
+    middle = "exec niri msg action close-window"
+    right = "exec niri msg action maximize-column"
+
+[control_center.calendar]
+show_events_card = false
 
 [[control_center.shortcuts]]
 type = "wifi"
@@ -42,7 +45,7 @@ widget_order = [
     "desktop-widget-0000000000000004",
     "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000008",
-    "desktop-widget-0000000000000009"
+    "desktop-widget-000000000000000a"
 ]
 
     [desktop_widgets.grid]
@@ -153,18 +156,17 @@ widget_order = [
         bands = 32
         show_when_idle = true
 
-    [desktop_widgets.widget.desktop-widget-0000000000000009]
-    box_height = 128.0
-    box_width = 128.0
-    cx = 1760.0
-    cy = 856.0
+    [desktop_widgets.widget.desktop-widget-000000000000000a]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1774.0
+    cy = 845.0
     output = "eDP-1"
     rotation = 0.0
-    type = "noctalia/timer:timer"
+    type = "noctalia/timer:desktop"
 
-        [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
+        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
         background = false
-        duration = 600
 
 [dock]
 auto_hide = true
@@ -206,7 +208,7 @@ tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+i" ]
 up = [ "Up", "Ctrl+k" ]
 
 [lockscreen]
-fingerprint = false
+fingerprint = true
 
 [lockscreen_widgets]
 enabled = true
@@ -239,16 +241,18 @@ widget_order = [
         background_color = "surface_variant"
         background_opacity = 0.29999999999999999
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 0.65000000000000002
         input_radius = 6.0
+        layout = "compact"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_session_buttons = false
 
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
-    box_height = 70.0
-    box_width = 400.0
+    box_height = 201.0
+    box_width = 720.0
     cx = 474.0
     cy = 911.0
     output = "winit"
@@ -259,12 +263,14 @@ widget_order = [
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_session_buttons = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 128.0
@@ -371,7 +377,25 @@ time_format = "{:%I:%M}"
 
     [shell.launcher]
     app_grid = true
-    session_search = true
+
+        [shell.launcher.providers.calculator]
+        global = true
+
+        [shell.launcher.providers.emoji]
+        global = false
+        prefix = "emo"
+
+        [shell.launcher.providers.session]
+        global = false
+        prefix = "session"
+
+        [shell.launcher.providers.wallpaper]
+        global = false
+        prefix = "wall"
+
+        [shell.launcher.providers.windows]
+        global = false
+        prefix = "win"
 
     [shell.panel]
     clipboard_placement = "attached"
@@ -420,7 +444,7 @@ source = "custom"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
-    community_ids = [ "zed", "obs", "yazi" ]
+    community_ids = [ "zen-browser", "zed", "obs", "yazi" ]
 
 [wallpaper]
 directory = "/home/moucheh/.dotfiles/images"
