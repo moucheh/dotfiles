@@ -1,5 +1,5 @@
 layer-rule {
-  match namespace="^wallpaper$"
+  match namespace="^noctalia-wallpaper$"
   place-within-backdrop true
 }
 

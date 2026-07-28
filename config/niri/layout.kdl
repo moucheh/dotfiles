@@ -12,12 +12,6 @@ layout {
 
     focus-ring {
         width 3
-        active-gradient from="#7fc8ff" to="#24ddd4"
-        inactive-gradient from="#505050" to="#606060"
-    }
-
-    insert-hint {
-        gradient from="#7fc8ff" to="#24ddd4"
     }
 
     background-color   "#00000000"

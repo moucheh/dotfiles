@@ -5,3 +5,5 @@ include "layout.kdl"
 include "window-and-layer-rules.kdl"
 include "other.kdl"
 include "binds.kdl"
+
+include "noctalia.kdl"

@@ -175,7 +175,7 @@ enabled = true
 item_spacing = 8
 launcher_position = "end"
 magnification_scale = 1.1500000022351742
-pinned = [ "brave-browser", "freetube", "footclient" ]
+pinned = [ "brave-origin", "freetube", "footclient" ]
 radius = 32
 reserve_space = false
 show_dots = true
@@ -208,7 +208,7 @@ tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+i" ]
 up = [ "Up", "Ctrl+k" ]
 
 [lockscreen]
-fingerprint = true
+fingerprint = false
 
 [lockscreen_widgets]
 enabled = true
@@ -229,7 +229,7 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 70.0
+    box_height = 103.0
     box_width = 400.0
     cx = 960.0
     cy = 540.0
@@ -248,10 +248,12 @@ widget_order = [
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
+        show_media = true
         show_session_buttons = false
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
-    box_height = 201.0
+    box_height = 229.0
     box_width = 720.0
     cx = 474.0
     cy = 911.0
@@ -270,7 +272,9 @@ widget_order = [
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
+        show_media = true
         show_session_buttons = true
+        show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
     box_height = 128.0
@@ -339,6 +343,10 @@ widget_order = [
         clock_style = "digital"
         format = "{:%d %B %Y}"
 
+[nightlight]
+enabled = true
+temperature_night = 4500
+
 [notification]
 background_opacity = 0.64999998547136784
 layer = "overlay"
@@ -363,7 +371,7 @@ enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator" 
     name = "community"
 
 [shell]
-avatar_path = "/var/lib/AccountsService/icons/moucheh"
+avatar_path = "/home/moucheh/Pictures/tenma.png"
 clipboard_auto_paste = "ctrl_shift_v"
 date_format = "%A, %d %B %Y"
 niri_overview_type_to_launch_enabled = true
@@ -439,25 +447,29 @@ time_format = "{:%I:%M}"
     variant = "destructive"
 
 [theme]
+builtin = "Noctalia"
 custom_palette = "abstract-mc"
-source = "custom"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "qt" ]
-    community_ids = [ "zen-browser", "zed", "obs", "yazi" ]
+    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "niri", "qt" ]
+    community_ids = [ "zen-browser", "zed", "yazi" ]
 
 [wallpaper]
-directory = "/home/moucheh/.dotfiles/images"
-enabled = false
+directory = "/home/moucheh/Pictures/WallPapers"
+enabled = true
+transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+    path = "/home/moucheh/Pictures/WallPapers/e46.jpg"
 
     [wallpaper.last]
-    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+    path = "/home/moucheh/Pictures/WallPapers/e46.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/moucheh/.dotfiles/images/abstract.jpg"
+    path = "/home/moucheh/Pictures/WallPapers/e46.jpg"
 
 [widget.active_window]
 max_length = 150
