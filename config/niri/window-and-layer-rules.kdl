@@ -133,7 +133,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^brave-browser$"#
+  match app-id=r#"^brave-origin$"#
 
   open-on-workspace "1"
   open-focused false

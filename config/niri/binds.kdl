@@ -3,7 +3,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: foot"     { spawn    "footclient"; }
     Mod+D hotkey-overlay-title="Run an Application"        { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn-sh "gtk-launch com.brave.Browser.desktop"; }
+    Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn-sh "gtk-launch com.brave.Origin.desktop"; }
 
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen"      { spawn-sh "loginctl lock-session"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu"      { spawn-sh "noctalia msg panel-toggle session"; }
