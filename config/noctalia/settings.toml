@@ -175,7 +175,7 @@ enabled = true
 item_spacing = 8
 launcher_position = "end"
 magnification_scale = 1.1500000022351742
-pinned = [ "brave-origin", "freetube", "footclient" ]
+pinned = [ "brave-origin", "freetube", "org.wezfurlong.wezterm" ]
 radius = 32
 reserve_space = false
 show_dots = true
@@ -371,7 +371,7 @@ enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator" 
     name = "community"
 
 [shell]
-avatar_path = "/home/moucheh/Pictures/tenma.png"
+avatar_path = "~/Pictures/tenma.png"
 clipboard_auto_paste = "ctrl_shift_v"
 date_format = "%A, %d %B %Y"
 niri_overview_type_to_launch_enabled = true
@@ -382,6 +382,9 @@ time_format = "{:%I:%M}"
 
     [shell.animation]
     enabled = true
+
+    [shell.greeter_sync]
+    auto_sync = false
 
     [shell.launcher]
     app_grid = true
@@ -454,11 +457,11 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "kcolorscheme", "niri", "qt" ]
+    builtin_ids = [ "cava", "gtk3", "gtk4", "kcolorscheme", "niri", "qt", "wezterm" ]
     community_ids = [ "zen-browser", "zed", "yazi" ]
 
 [wallpaper]
-directory = "/home/moucheh/Pictures/WallPapers"
+directory = "~/Pictures/WallPapers"
 enabled = true
 transition_on_startup = true
 
@@ -470,6 +473,10 @@ transition_on_startup = true
 
     [wallpaper.monitors.eDP-1]
     path = "/home/moucheh/Pictures/WallPapers/e46.jpg"
+
+    [[wallpaper.favorite]]
+    path = "~/Pictures/WallPapers/tp-wallpaper.jpg"
+    theme_mode = "auto"
 
 [widget.active_window]
 max_length = 150
@@ -487,6 +494,9 @@ tooltip_format = "{:%d %B %Y}"
 [widget.launcher]
 custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
 custom_image_colorize = true
+
+    [widget.launcher.actions]
+    right = "exec niri msg action toggle-overview"
 
 [widget.media]
 hide_when_no_media = true

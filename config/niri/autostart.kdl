@@ -1,5 +1,4 @@
 spawn-sh-at-startup "noctalia"
 spawn-at-startup    "kdeconnect-indicator"
-spawn-sh-at-startup "foot -s"
 
 xwayland-satellite { path "xwayland-satellite"; }

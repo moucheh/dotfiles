@@ -1,7 +1,7 @@
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: foot"     { spawn    "footclient"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: wezterm"  { spawn    "wezterm"; }
     Mod+D hotkey-overlay-title="Run an Application"        { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+B hotkey-overlay-title="Open a web browser: brave" { spawn-sh "gtk-launch com.brave.Origin.desktop"; }
 
@@ -20,7 +20,7 @@ binds {
     Ctrl+Alt+5 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center network"; }
     Ctrl+Alt+6 hotkey-overlay-title=null { spawn-sh "noctalia msg panel-toggle control-center bluetooth"; }
 
-    Mod+E hotkey-overlay-title="Open file manager: yazi"    { spawn-sh "footclient -e yazi"; }
+    Mod+E hotkey-overlay-title="Open file manager: yazi"    { spawn-sh "wezterm -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center" {
         spawn-sh "noctalia msg panel-toggle control-center notifications";
     }
@@ -42,7 +42,7 @@ binds {
 
     XF86Display  { spawn-sh "wl-mirror eDP-1"; }
 
-    XF86Tools    { spawn-sh "footclient -e ~/.config/niri/scripts/open_config.sh"; }
+    XF86Tools    { spawn-sh "wezterm -e ~/.config/niri/scripts/open_config.sh"; }
 
     XF86Keyboard { spawn "gnome-calculator"; }
 
@@ -148,7 +148,7 @@ binds {
 
     Ctrl+Alt+Delete hotkey-overlay-title="Quit niri" { quit; }
 
-    Ctrl+Shift+Escape { spawn-sh "footclient -e btop"; }
+    Ctrl+Shift+Escape { spawn-sh "wezterm -e btop"; }
 
     Mod+Shift+P hotkey-overlay-title="Power off monitors" { power-off-monitors; }
     Mod+Ctrl+P  hotkey-overlay-title="Toggle hyprpicker"  { spawn "hyprpicker"; }
