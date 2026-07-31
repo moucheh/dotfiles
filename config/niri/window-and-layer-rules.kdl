@@ -4,28 +4,7 @@ layer-rule {
 }
 
 layer-rule {
-  match namespace="^waybar$"
-
-  background-effect {
-      blur true
-      xray true
-  }
-}
-
-layer-rule {
-    match namespace="^conky_namespace$"
-
-    opacity 0.6
-    background-effect {
-        blur true
-        xray true
-    }
-}
-
-layer-rule {
     match namespace="^launcher$"
-    match namespace="^~nwggrid$"
-    match namespace=r#"^lhp\.LavaLauncher$"#
     match namespace="^logout_dialog$"
 
     shadow {
@@ -96,17 +75,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="^brave"
-
-  draw-border-with-background false
-  opacity 0.9
-  background-effect {
-      blur true
-      xray true
-  }
-}
-
-window-rule {
+  match app-id=r#"^brave"#
   match app-id=r#"^org\.gnome\.Nautilus$"#
   match app-id=r#"^org\.gnome\.Calculator$"#
   match app-id=r#"^org\.gnome\.Evince$"#
@@ -114,10 +83,11 @@ window-rule {
   match app-id=r#"^org\.pulseaudio\.pavucontrol$"#
   match app-id="^blueman-manager$"
   match app-id=r#"^io\.freetubeapp\.FreeTube$"#
+  match app-id=r#"^dev\.noctalia\.Noctalia$"#
+  match app-id=r#"^heroic$"#
 
   draw-border-with-background false
-  opacity 0.8
-  open-floating false
+  opacity 0.9
   background-effect {
       blur true
       xray true
