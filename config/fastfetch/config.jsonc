@@ -4,9 +4,11 @@
         "separator": "• "
     },
     "logo":{
-      "source": "~/.config/fastfetch/thinkpad.txt",
+      "source": "~/.config/fastfetch/fedora.png",
+      "type":"kitty",
       "padding": {
-        "left": 2
+        "top": 4,
+        "left": 6
       }
     },
     "modules": [

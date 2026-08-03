@@ -107,7 +107,7 @@ widget_order = [
 
         [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
         background = true
-        command = "footclient -e ~/.config/niri/scripts/fastfetch.sh"
+        command = "wezterm start -- bash -c 'sleep 1;~/.config/niri/scripts/fastfetch.sh'"
         glyph = "terminal-2"
         label = "fastfetch"
         variant = "default"
