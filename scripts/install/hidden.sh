@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 DOTFILES=$1
 DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
@@ -9,16 +9,17 @@ DOTFILES_BACKUP_FOLDER=${DOTFILES_BACKUP_FOLDER:="$HOME/.backup_$(date +%Y%m%d_%
 mkdir -p $DOTFILES_BACKUP_FOLDER
 
 HIDDEN_FILES=(
-  bashrc
   bash_aliases
   bash_git
-  inputrc
-  gitconfig
+  bash_integration
+  bashrc
   clang-format
-  prettierrc
-  octaverc
-  tmux.conf
+  gitconfig
   'gtkrc-2.0'
+  inputrc
+  octaverc
+  prettierrc
+  tmux.conf
 )
 
 for i in "${HIDDEN_FILES[@]}"; do

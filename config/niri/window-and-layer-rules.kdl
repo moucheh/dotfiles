@@ -47,6 +47,7 @@ window-rule {
     match title=r#"^Picture in picture$"#
 
     open-floating true
+    open-focused false
     default-floating-position x=950 y=300 relative-to="bottom-left"
     default-column-width { fixed 900; }
     default-window-height { fixed 500; }

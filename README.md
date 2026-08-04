@@ -3,7 +3,7 @@
 - WM - [niri](https://niri-wm.github.io/niri/)
 - Bar and shell - [noctalia](https://noctalia.dev/)
 - Login manager - greetd + noctalia-greeter
-- Terminal - [foot](https://codeberg.org/dnkl/foot)
+- Terminal - [wezterm](https://wezterm.org/)
 - Editor - [nvim](https://neovim.io/)
 - mvim - [fully native nvim setup no external plugins](https://github.com/moucheh/dotfiles/tree/master/config/mvim)
 - Starship - [starship](https://starship.rs/)
@@ -19,7 +19,6 @@ And then run the install script, you may need to add executable permissions
     ./install.sh
 
 If you already have a config for something that is included in these dotfiles, that config will be copied to a backup folder of current date and time, it will start with a dot so it will be hidden, but won't be lost.
-
 
 I've also added a script that does ascii art generation for nvim dashboard.
 Figlet is a dependency, you can install it through your distro's package manager.

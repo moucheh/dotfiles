@@ -1,2 +1,6 @@
 atim/starship
+avengemedia/danklinux
 erikreider/swayosd
+jc141/DwarFS
+marcelohdez/dim
+wezfurlong/wezterm-nightly

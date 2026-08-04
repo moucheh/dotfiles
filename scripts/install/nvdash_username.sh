@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 DOTFILES=$1
 DOTFILES=${DOTFILES:="$HOME/.dotfiles"}

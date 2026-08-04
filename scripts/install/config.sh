@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 DOTFILES=$1
 DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
@@ -7,30 +7,26 @@ DOTFILES_BACKUP_FOLDER=$2
 DOTFILES_BACKUP_FOLDER=${DOTFILES_BACKUP_FOLDER:="$HOME/.backup_$(date +%Y%m%d_%H%M%S)"}
 
 mkdir -p $DOTFILES_BACKUP_FOLDER
+mkdir -p ~/.config/
 
 CONFIG_FILES=(
-  'gtk-2.0'
-  'gtk-3.0'
-  'gtk-4.0'
-  qt5ct
-  qt6ct
-  kdeglobals
-  lazygit
+  btop
   eza
   fastfetch
   foot
-  nvim
-  swaync
-  swayosd
+  'gtk-2.0'
+  'gtk-3.0'
+  'gtk-4.0'
+  kdeglobals
+  lazygit
   niri
-  wlogout
-  gtklock
-  waybar
-  fuzzel
-  nwg-launchers
+  noctalia
+  nvim
+  qt5ct
+  qt6ct
   starship.toml
-  lavalauncher
-  btop
+  wezterm
+  yazi
 )
 
 for i in "${CONFIG_FILES[@]}"; do

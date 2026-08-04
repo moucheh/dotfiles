@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 read -n1 -p "Do you want to install lavalauncher with dnf as well? (requires sudo) [Y/n]: " doit
 case $doit in

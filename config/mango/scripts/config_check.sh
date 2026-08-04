@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # 获取mango命令输出并清理格式
 output=$(mango -p 2>&1 | sed -r '

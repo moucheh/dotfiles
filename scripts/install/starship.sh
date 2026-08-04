@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 read -n1 -p "Do you want to install starship to customize your prompt? [Y/n]: " doit
 case $doit in

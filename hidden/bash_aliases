@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
  
 make_directory_and_cd_into_it () { 
     mkdir $1

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 if ! [ -f /tmp/bluetooth_volume ]; then
   touch /tmp/bluetooth_battery

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # change this variable to the dotfiles directory
 DOTFILES=$HOME/.dotfiles
@@ -16,14 +16,8 @@ $SCRIPTS/install/hidden.sh $DOTFILES $DOTFILES_BACKUP_FOLDER
 
 printf "Configs installed\n\nContinuing...\n\n"
 
-$SCRIPTS/install/eza.sh
-
-$SCRIPTS/install/zoxide.sh
-
-$SCRIPTS/install/starship.sh
-
 $SCRIPTS/install/nerdfont.sh
 
 $SCRIPTS/install/nvdash_username.sh $DOTFILES
 
-printf "\nSetup finished, enjoy!\nNote: You may want to reload your sway config, default keybind is Win+Shift+C\n"
+printf "\nSetup finished, enjoy!\n"
