@@ -2,9 +2,9 @@ eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
 
-alias ls='eza --icons'
-alias ll='eza --icons -l'
-alias la='eza --icons -lgA'
+alias ls='eza --icons always'
+alias ll='eza --icons always -l'
+alias la='eza --icons always -lgA'
 
 alias cat='bat --plain'
 

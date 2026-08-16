@@ -68,6 +68,7 @@ window-rule {
 
 window-rule {
   match app-id="neovide"
+  match app-id="st-256color"
 
   background-effect {
     blur true

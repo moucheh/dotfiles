@@ -38,135 +38,129 @@ type = "caffeine"
 [desktop_widgets]
 schema_version = 2
 widget_order = [
-    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000007",
     "desktop-widget-0000000000000001",
     "desktop-widget-0000000000000002",
     "desktop-widget-0000000000000003",
     "desktop-widget-0000000000000004",
-    "desktop-widget-0000000000000006",
-    "desktop-widget-0000000000000008",
-    "desktop-widget-000000000000000a"
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000006"
 ]
 
     [desktop_widgets.grid]
-    cell_size = 32
+    cell_size = 8
     major_interval = 4
     visible = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000001]
-    box_height = 192.0
-    box_width = 256.0
-    cx = 1696.0
-    cy = 340.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "weather"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
-        background = false
-        forecast_days = 3
-        show_forecast = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 192.0
-    box_width = 320.0
-    cx = 1664.0
-    cy = 508.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "sysmon"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
-        background = false
-        stat = "cpu_usage"
-        stat2 = "cpu_temp"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000003]
-    box_height = 128.0
-    box_width = 320.0
-    cx = 1664.0
-    cy = 167.35546875
+    box_height = 152.0
+    box_width = 344.0
+    cx = 1712.0
+    cy = 140.0
     output = "eDP-1"
     rotation = 0.0
     type = "clock"
 
-        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
-        background = false
-        clock_style = "digital"
-        format = "{:%I:%M %p}"
-        shadow = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000004]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1555.5
-    cy = 856.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "button"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
         background = true
-        command = "wezterm start -- bash -c 'sleep 1;~/.config/niri/scripts/fastfetch.sh'"
-        glyph = "terminal-2"
-        label = "fastfetch"
-        variant = "default"
+        background_padding = 20
+        center_text = false
+        clock_style = "digital"
+        font_family = ""
+        format = "{:%I:%M %p}"
 
-    [desktop_widgets.widget.desktop-widget-0000000000000005]
-    box_height = 896.0
-    box_width = 448.0
-    cx = 1664.0
-    cy = 508.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "label"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
-        background_opacity = 0.59999999999999998
-        opacity = 1.0
-        title = ""
-
-    [desktop_widgets.widget.desktop-widget-0000000000000006]
-    box_height = 64.0
-    box_width = 128.0
-    cx = 1664.0
-    cy = 652.0
-    output = "eDP-1"
-    rotation = 0.0
-    type = "sysmon"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
-        background = false
-        display = "gauge"
-        gauge_layout = "horizontal"
-        stat = "ram_pct"
-        stat2 = "cpu_temp"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000008]
-    box_height = 64.0
-    box_width = 384.0
-    cx = 1664.0
-    cy = 740.0
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 160.0
+    box_width = 344.0
+    cx = 1712.0
+    cy = 636.0
     output = "eDP-1"
     rotation = 0.0
     type = "audio_visualizer"
 
-        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
-        background = false
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = true
         bands = 32
+        centered = true
+        mirrored = true
         show_when_idle = true
 
-    [desktop_widgets.widget.desktop-widget-000000000000000a]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1774.0
-    cy = 845.0
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 88.0
+    box_width = 96.0
+    cx = 1588.0
+    cy = 772.0
     output = "eDP-1"
     rotation = 0.0
-    type = "noctalia/timer:desktop"
+    type = "sysmon"
 
-        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = true
+        display = "gauge"
+        gauge_layout = "vertical"
+        shadow = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 88.0
+    box_width = 104.0
+    cx = 1832.0
+    cy = 772.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = true
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "ram_pct"
+        stat2 = ""
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 88.0
+    box_width = 112.0
+    cx = 1708.0
+    cy = 772.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background_opacity = 0.80000000000000004
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "cpu_temp"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 312.0
+    box_width = 344.0
+    cx = 1748.0
+    cy = 376.0
+    output = "eDP-1"
+    rotation = -0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
         background = false
+        background_padding = 30
+        font_family = "Adwaita Mono"
+        show_forecast = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000007]
+    box_height = 312.0
+    box_width = 344.0
+    cx = 1712.0
+    cy = 384.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "label"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
+        opacity = 1.0
+        title = ""
 
 [dock]
 auto_hide = true
@@ -179,6 +173,13 @@ pinned = [ "brave-origin", "freetube", "org.wezfurlong.wezterm" ]
 radius = 32
 reserve_space = false
 show_dots = true
+
+[hot_corners]
+enabled = true
+
+    [hot_corners.top_left]
+    action = "command"
+    command = "niri msg action toggle-overview"
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
@@ -457,7 +458,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "cava", "gtk3", "gtk4", "kcolorscheme", "niri", "qt", "wezterm" ]
+    builtin_ids = [ "cava", "foot", "gtk3", "gtk4", "kcolorscheme", "niri", "qt", "wezterm" ]
     community_ids = [ "zed", "bat", "yazi" ]
 
 [wallpaper]
@@ -482,6 +483,11 @@ transition_on_startup = true
 max_length = 150
 min_length = 40
 
+[widget.audio_visualizer]
+bands = 4
+mirrored = false
+width = 10
+
 [widget.bluetooth]
 hide_when_no_connected_device = true
 show_label = true
@@ -496,7 +502,7 @@ custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
 custom_image_colorize = true
 
     [widget.launcher.actions]
-    right = "exec niri msg action toggle-overview"
+    right = "exec wezterm -e ~/.config/niri/scripts/fastfetch.sh"
 
 [widget.media]
 hide_when_no_media = true
@@ -512,7 +518,8 @@ hide_inactive = true
 type = "noctalia/screen_recorder:recorder"
 
 [widget.sysmon]
-display = "text"
+show_value = true
+visualization = "gauge"
 
 [widget.tray]
 drawer = true
