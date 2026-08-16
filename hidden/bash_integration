@@ -13,7 +13,7 @@ alias htop='btop'
 
 export PATH="$PATH:/opt/eclipse"
 
-eval $(keychain -q --eval gh_key gl_key)
+eval "$(keychain -q --immediate --eval gh_key gl_key)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
