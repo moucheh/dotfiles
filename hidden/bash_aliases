@@ -18,8 +18,6 @@ alias bldnruncpp='g++ -std=c++17 *.cpp -o main && clear && ./main'
 alias bldwas='clang++ -fsanitize=address *.cpp -o main'
 alias bldwasc='clang++ -fsanitize=address *.c -o main'
 
-alias vim='nvim'
-alias vi='nvim'
 alias v='nvim'
 
 alias lg='lazygit'

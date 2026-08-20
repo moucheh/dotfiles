@@ -2,16 +2,16 @@ eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
 
-alias ls='eza --icons always'
-alias ll='eza --icons always -l'
-alias la='eza --icons always -lgA'
+alias ls='eza --icons always --group-directories-first'
+alias ll='eza --icons always -l --group-directories-first'
+alias la='eza --icons always -lgA --group-directories-first'
 
 alias cat='bat --plain'
 
 alias top='btop'
 alias htop='btop'
 
-export PATH="$PATH:/opt/eclipse"
+export PATH="$PATH:$HOME/.eclipse/eclipse"
 
 eval "$(keychain -q --immediate --eval gh_key gl_key)"
 
