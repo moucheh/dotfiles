@@ -222,9 +222,6 @@ tab_next = [ "Tab", "Ctrl+u" ]
 tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+i" ]
 up = [ "Up", "Ctrl+k" ]
 
-[location]
-auto_locate = true
-
 [lockscreen]
 fingerprint = false
 
