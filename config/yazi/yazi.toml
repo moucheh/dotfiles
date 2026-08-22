@@ -1,6 +1,10 @@
 [opener]
 open = [
-  { run = 'sh -c "xdg-open \"$1\""', desc = "Open", spread = true },
+  { run = "xdg-open %s1", desc = "Open", spread = true },
+]
+
+edit = [
+  { run = "$EDITOR %s", desc = "Edit", block = true, for = "unix" },
 ]
 
 play = [
