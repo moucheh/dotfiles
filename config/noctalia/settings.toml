@@ -58,6 +58,8 @@ widget_order = [
     cx = 1712.0
     cy = 140.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "clock"
 
@@ -75,6 +77,8 @@ widget_order = [
     cx = 1712.0
     cy = 636.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "audio_visualizer"
 
@@ -91,6 +95,8 @@ widget_order = [
     cx = 1588.0
     cy = 772.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "sysmon"
 
@@ -108,6 +114,8 @@ widget_order = [
     cx = 1832.0
     cy = 772.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "sysmon"
 
@@ -124,6 +132,8 @@ widget_order = [
     cx = 1708.0
     cy = 772.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "sysmon"
 
@@ -140,6 +150,8 @@ widget_order = [
     cx = 1748.0
     cy = 376.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = -0.0
     type = "weather"
 
@@ -155,6 +167,8 @@ widget_order = [
     cx = 1712.0
     cy = 384.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "label"
 
@@ -169,7 +183,7 @@ enabled = true
 item_spacing = 8
 launcher_position = "end"
 magnification_scale = 1.1500000022351742
-pinned = [ "brave-origin", "freetube", "org.wezfurlong.wezterm" ]
+pinned = [ "brave-origin", "io.freetubeapp.FreeTube", "org.wezfurlong.wezterm" ]
 radius = 32
 reserve_space = false
 show_dots = true
@@ -208,6 +222,9 @@ tab_next = [ "Tab", "Ctrl+u" ]
 tab_previous = [ "Shift+ISO_Left_Tab", "Ctrl+i" ]
 up = [ "Up", "Ctrl+k" ]
 
+[location]
+auto_locate = true
+
 [lockscreen]
 fingerprint = false
 
@@ -230,11 +247,13 @@ widget_order = [
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 103.0
+    box_height = 70.0
     box_width = 400.0
     cx = 960.0
     cy = 540.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -251,14 +270,17 @@ widget_order = [
         show_login_button = true
         show_media = true
         show_session_buttons = false
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@winit"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 720.0
     cx = 474.0
     cy = 911.0
     output = "winit"
+    placement_height = 0.0
+    placement_width = 0.0
     rotation = 0.0
     type = "login_box"
 
@@ -275,6 +297,7 @@ widget_order = [
         show_login_button = true
         show_media = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
@@ -283,6 +306,8 @@ widget_order = [
     cx = 960.0
     cy = 284.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "clock"
 
@@ -296,6 +321,8 @@ widget_order = [
     cx = 1152.0
     cy = 796.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = -0.0
     type = "audio_visualizer"
 
@@ -310,6 +337,8 @@ widget_order = [
     cx = 976.0
     cy = 1036.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "weather"
 
@@ -322,6 +351,8 @@ widget_order = [
     cx = 760.0
     cy = 796.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "media_player"
 
@@ -335,6 +366,8 @@ widget_order = [
     cx = 960.0
     cy = 380.0
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "clock"
 
