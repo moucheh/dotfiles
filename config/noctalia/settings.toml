@@ -488,7 +488,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "cava", "foot", "gtk3", "gtk4", "kcolorscheme", "niri", "qt", "wezterm" ]
+    builtin_ids = [ "cava", "foot", "gtk3", "gtk4", "kcolorscheme", "mango", "niri", "qt", "wezterm" ]
     community_ids = [ "zed", "bat", "yazi" ]
 
 [wallpaper]
