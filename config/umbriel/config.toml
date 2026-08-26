@@ -1,0 +1,236 @@
+[include]
+files = ["noctalia.toml"]
+
+[general]
+autostart = ['noctalia', 'kdeconnect-indicator']
+mod_key = "Super"
+xwayland = true
+show_cheatsheet = false
+focus_on_activate = false
+honor_restored_maximize = false
+
+# [environment]
+# GTK_THEME = "Adwaita:dark"
+# QT_QPA_PLATFORMTHEME = "qt5ct"
+
+[workspaces]
+back_and_forth = false
+
+# Appearance -----------------------------------------------------------------
+
+[appearance]
+prefer_no_csd = true
+border_width = 3               # 0-100
+outer_border_width = 0         # 0-100
+corner_radius = 10             # 0-100
+animation_ms = 250             # 1-10000
+
+[appearance.blur]
+enabled = true
+optimized = true
+passes = 3                     # 0-8
+radius = 3                     # 0-100
+noise = 0.02                   # 0.0-1.0
+brightness = 0.9               # 0.0-2.0
+contrast = 0.9                 # 0.0-2.0
+saturation = 1.1               # 0.0-2.0
+
+[appearance.shadow]
+enabled = true
+softness = 10                  # 0-200, 0 = hard edge
+offset_x = 2                   # -200 to 200
+offset_y = 2
+color = "#0000007F"
+
+# Overview -------------------------------------------------------------------
+
+[overview]
+zoom = 0.5
+background_blur = false
+
+# Hot corners ---------------------------------------------------------------
+
+[hot_corners.top_left]
+enabled = true
+delay_ms = 500
+action = "overview-open"
+
+[hot_corners.top_right]
+enabled = false
+delay_ms = 500
+action = "overview-close"
+
+[hot_corners.bottom_left]
+enabled = false
+delay_ms = 500
+action = "overview-toggle"
+
+[hot_corners.bottom_right]
+enabled = false
+delay_ms = 500
+action = "spawn:notify-send 'Bottom right'"
+
+# Layout ---------------------------------------------------------------------
+
+[layout]
+mode = "scrolling"             # "scrolling" or "dwindle"
+gap = 8                        # 0-500
+width_presets = [0.333, 0.5, 0.667] # shared by scrolling and dwindle
+
+[layout.scrolling]
+default_width_fraction = 0.5  # remove to let clients choose their initial width
+center_underfull_strip = false  # center the strip whenever it is narrower than the viewport
+
+# Outputs (see docs/user/outputs.md) ----------------------------------------
+
+[output."eDP-1"]
+mode = "1920x1080@60"
+position = [1920, 0]
+scale = 1
+vrr = "disabled"
+hdr = "off"
+enabled = true
+
+[output."HDMI-A-1"]
+mode = "1920x1080@60"
+position = [0, 0]
+scale = 1
+vrr = "disabled"
+hdr = "off"
+enabled = true
+
+
+# Input ----------------------------------------------------------------------
+
+[input]
+middle_click_paste = false      # primary-selection clipboard, applies on reload
+
+[input.keyboard]
+layout = ""                    # "us,de" loads both; switch with keyboard-layout-next
+variant = ""
+options = "caps:swapescape,compose:ralt"                   # XKB options, e.g. "grp:alt_shift_toggle"
+repeat_rate = 25               # 0-1000 Hz
+repeat_delay = 600             # 0-10000 ms
+numlock_toggle = true # true enables NumLock when a keyboard connects; false leaves it off
+
+[input.touchpad]
+tap = true                      # enabled by default; false disables tap-to-click
+natural_scroll = true
+
+[input.mouse]
+natural_scroll = false
+accel_profile = "flat"       # omitted preserves the device's libinput default
+sensitivity = 0.0              # pointer speed, -1.0 to 1.0
+scroll_wheel_step = 60         # 1-1000
+
+[input.cursor]
+theme = ""
+size = 24                      # 1-512
+hardware_cursor = true         # false forces software cursor composition
+hide_when_typing = true       # hide after a non-modifier key press
+hide_timeout_ms = 3000            # 0-3600000, 0 disables hiding
+
+[input.focus]
+follows_mouse = false
+
+# Keybinds (see docs/user/keybinds.md) --------------------------------------
+
+[keybinds]
+"Mod+T" = "spawn:wezterm"
+"Mod+B" = "spawn:gtk-launch com.brave.Origin.desktop"
+"Mod+E" = "spawn:wezterm -e yazi"
+"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
+"Mod+Shift+N" = "spawn:noctalia msg notification-clear-history"
+"Mod+Alt+N" = "spawn:noctalia msg notification-dnd-toggle"
+"Mod+V" = "window-toggle-floating"
+"Mod+M" = "window-toggle-maximize-to-edges"
+"Mod+F" = "window-toggle-maximize"
+"Mod+Shift+F" = "window-toggle-fullscreen"
+"Mod+Q" = "window-close"
+"Mod+D" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+O" = "overview-toggle"
+"Mod+Space" = "spawn:noctalia msg panel-toggle control-center home"
+"Mod+R" = "window-cycle-width"
+
+"Print" = "spawn:noctalia msg screenshot-region"
+"Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen"
+
+"Ctrl+Alt+Q" = "spawn:loginctl lock-session"
+"Ctrl+Alt+E" = "spawn:noctalia msg panel-toggle session"
+"Ctrl+Alt+S" = "spawn:noctalia msg settings-toggle"
+"Ctrl+Alt+D" = "spawn:pkill dim || dim -d 0 -p -a 0.5"
+"Ctrl+Alt+Delete" = "session-quit"
+"Ctrl+Shift+Escape" = "spawn:wezterm -e btop"
+
+"Mod+C" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+Alt+C" = "spawn:noctalia msg clipboard-clear"
+
+# Output, workspace, and window movement actions.
+"Mod+H" = "window-focus-left"
+"Mod+J" = "workspace-next"
+"Mod+K" = "workspace-previous"
+"Mod+L" = "window-focus-right"
+"Mod+Shift+H" = "column-move-left"
+"Mod+Shift+J" = "window-move-to-workspace-next"
+"Mod+Shift+K" = "window-move-to-workspace-previous"
+"Mod+Shift+L" = "column-move-right"
+"Mod+Bracketleft" = "window-consume-left"
+"Mod+Bracketright" = "window-expel-right"
+"Mod+Shift+P" = "dpms-off"
+"Mod+Minus" = "window-modify-width:-0.1"
+"Mod+Equal" = "window-modify-width:+0.1"
+
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+
+"Mod+Shift+1" = "window-move-to-workspace:1"
+"Mod+Shift+2" = "window-move-to-workspace:2"
+"Mod+Shift+3" = "window-move-to-workspace:3"
+"Mod+Shift+4" = "window-move-to-workspace:4"
+"Mod+Shift+5" = "window-move-to-workspace:5"
+"Mod+Shift+6" = "window-move-to-workspace:6"
+"Mod+Shift+7" = "window-move-to-workspace:7"
+"Mod+Shift+8" = "window-move-to-workspace:8"
+"Mod+Shift+9" = "window-move-to-workspace:9"
+
+"XF86AudioRaiseVolume"  = "spawn:noctalia msg volume-up"
+"XF86AudioLowerVolume"  = "spawn:noctalia msg volume-down"
+"XF86AudioMute"         = "spawn:noctalia msg volume-mute"
+"XF86AudioMicMute"      = "spawn:noctalia msg mic-mute"
+"XF86MonBrightnessUp"   = "spawn:noctalia msg brightness-up"
+"XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down"
+"XF86Display"           = "spawn:wl-mirror eDP-1"
+
+"XF86Keyboard" = "spawn:gnome-calculator"
+
+# Window and layer rules (see docs/user/rules.md) ---------------------------
+
+# Blur all windows
+[[window_rule]]
+blur = true
+blur_optimized = true
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+# Layer rules (see docs/user/rules.md#layer-rules) ---------------------------
+
+[[layer_rule]]
+match.namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_optimized = false
