@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 CONFIG_PATH="$HOME/.config/niri"
 

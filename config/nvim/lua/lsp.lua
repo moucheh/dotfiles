@@ -1,20 +1,20 @@
 local servers = {
+  'bashls',
   'clangd',
+  'cssls',
+  'cssls',
   'emmet_language_server',
   'html',
-  'cssls',
-  'vhdl_ls',
-  'ts_ls',
-  'yamlls',
-  'bashls',
-  'cssls',
-  'html',
-  'lua_ls',
-  'pyright',
-  'tinymist',
   'jdtls',
+  'lua_ls',
+  'nil_ls',
+  'pyright',
+  'rust_analyzer',
   'sqls',
-  'rust_analyzer'
+  'tinymist',
+  'ts_ls',
+  'vhdl_ls',
+  'yamlls',
 }
 
 vim.lsp.enable(servers)

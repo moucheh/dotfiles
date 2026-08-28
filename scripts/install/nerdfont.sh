@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 read -n1 -p "Do you want to download and install CascaydiaCove Nerd Font? [Y/n]: " doit
 case $doit in

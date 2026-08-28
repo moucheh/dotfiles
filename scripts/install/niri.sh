@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 read -n1 -p "Do you want to install Niri and all of its dependencies with dnf as well? (requires sudo) [Y/n]: " doit
 case $doit in

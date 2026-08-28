@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # change this variable to the dotfiles directory
 DOTFILES=$HOME/.dotfiles
