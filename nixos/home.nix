@@ -1,4 +1,5 @@
 { config, ... }:
+
 let
   dotconfig = "${config.home.homeDirectory}/.dotfiles/config";
   dothome = "${config.home.homeDirectory}/.dotfiles/hidden";

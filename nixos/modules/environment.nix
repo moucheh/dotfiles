@@ -1,0 +1,118 @@
+{ pkgs, ... }:
+
+let
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
+in
+{
+  environment = {
+    variables = {
+      EDITOR = "nvim";
+    };
+
+    systemPackages = with pkgs; [
+      adwaita-icon-theme
+      adw-gtk3
+      android-tools
+      asciinema
+      bash-language-server
+      bat
+      black
+      btop
+      bubblewrap
+      cargo
+      cava
+      clang
+      clang-tools
+      cmatrix
+      cowsay
+      distrobox
+      docker
+      dotnet-runtime_10
+      dotnet-sdk_10
+      easyeffects
+      emmet-language-server
+      evince
+      eza
+      fastfetch
+      fd
+      ffmpeg
+      figlet
+      foot
+      fortune
+      fzf
+      gcc
+      git
+      gnome-calculator
+      go
+      gpu-screen-recorder
+      gzip
+      hyprpicker
+      imagemagick
+      imv
+      keepassxc
+      keychain
+      lazygit
+      libxkbcommon
+      lua-language-server
+      mesa
+      mpv
+      ncdu
+      neovim
+      nil
+      nodejs_26
+      opencode
+      pandoc
+      pavucontrol
+      pciutils
+      pipes
+      pkg-config
+      poppler-utils
+      powertop
+      prettierd
+      prettypst
+      proton-vpn
+      pyright
+      qbittorrent
+      ripgrep
+      rust-analyzer
+      rustc
+      starship
+      stow
+      stylua
+      tinymist
+      tldr
+      tree-sitter
+      tty-solitaire
+      typst
+      unrar
+      unstable.brave-origin
+      unstable.noctalia
+      unstable.noctalia-greeter
+      unstable.wezterm
+      unzip
+      usbutils
+      vim
+      vscode-langservers-extracted
+      wev
+      wget
+      wl-clipboard
+      wl-mirror
+      xdg-desktop-portal
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      xdg-user-dirs
+      xdg-utils
+      xwayland-satellite
+      xz
+      yaml-language-server
+      yazi
+      zip
+      zoxide
+    ];
+  };
+}
