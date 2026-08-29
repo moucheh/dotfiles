@@ -27,6 +27,7 @@
       };
     };
 
+    blueman.enable = true;
     gnome.gnome-keyring.enable = true;
     openssh.enable = true;
     fprintd.enable = true;
