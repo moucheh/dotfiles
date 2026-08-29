@@ -34,17 +34,32 @@ let
     ".prettierrc" = "prettierrc";
     ".vimrc" = "vimrc";
   };
+  mimeapps = {
+    "application/pdf" = [ "org.gnome.Evince.desktop" ];
+    "image/png" = [ "imv.desktop" ];
+    "image/jpeg" = [ "imv.desktop" ];
+    "image/jpg" = [ "imv.desktop" ];
+    "image/webp" = [ "imv.desktop" ];
+  };
 in
 {
   home.username = "moucheh";
   home.homeDirectory = "/home/moucheh";
   home.stateVersion = "26.05";
+
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symLink "${dotconfig}/${subpath}";
     recursive = true;
   }) configs;
+
   home.file = builtins.mapAttrs (name: subpath: {
     source = create_symLink "${dothome}/${subpath}";
     recursive = false;
   }) home_files;
+
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = mimeapps;
+    defaultApplications = mimeapps;
+  };
 }
