@@ -159,6 +159,7 @@ in
       tinymist
       tldr
       tree-sitter
+      tty-solitaire
       typst
       unrar
       unstable.brave-origin

@@ -4,10 +4,9 @@
         "separator": "• "
     },
     "logo":{
-      "source": "~/.config/fastfetch/fedora.png",
-      "type":"kitty",
+      "type": "small",
       "padding": {
-        "top": 4,
+        "top": 6,
         "left": 6
       }
     },
@@ -28,7 +27,7 @@
         },
         {
             "type": "os",
-            "key": "  OS -  ",
+            "key": "  OS -  ",
             "format": "{2} {9}"
         },
         {
