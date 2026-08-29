@@ -94,6 +94,16 @@ window-rule {
       blur true
       xray true
   }
+
+  popups {
+    opacity 0.6
+    geometry-corner-radius 12
+
+    background-effect {
+      xray false
+      blur true
+    }
+  }
 }
 
 window-rule {
