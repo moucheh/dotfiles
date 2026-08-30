@@ -31,3 +31,8 @@ gl++ () {
   g++ $1 -lGL -lGLU -lglut -o scene
 }
 
+nrs () {
+  pushd ~/.dotfiles/nixos || exit
+  sudo nixos-rebuild switch --impure --flake .
+  popd || exit
+}

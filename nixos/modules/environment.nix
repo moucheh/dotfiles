@@ -1,11 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 let
-  unstable = import <nixos-unstable> {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  unstable = pkgs-unstable;
 in
 {
   environment = {
@@ -20,8 +16,10 @@ in
       asciinema
       bash-language-server
       bat
+      binutils
       black
       btop
+      btop-rocm
       bubblewrap
       cargo
       cava
@@ -31,7 +29,6 @@ in
       cowsay
       distrobox
       docker
-      dotnet-runtime_10
       dotnet-sdk_10
       easyeffects
       emmet-language-server
@@ -47,6 +44,7 @@ in
       gcc
       git
       gnome-calculator
+      gnumake
       go
       gpu-screen-recorder
       gzip
@@ -56,7 +54,6 @@ in
       keepassxc
       keychain
       lazygit
-      libxkbcommon
       lua-language-server
       mesa
       mpv
@@ -77,12 +74,14 @@ in
       proton-vpn
       pyright
       qbittorrent
+      qemu
       ripgrep
       rust-analyzer
       rustc
       starship
       stow
       stylua
+      supertux
       tinymist
       tldr
       tree-sitter
