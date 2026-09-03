@@ -55,6 +55,8 @@ in
       keychain
       lazygit
       lua-language-server
+      man-pages
+      man-pages-posix
       mesa
       mpv
       ncdu
@@ -113,5 +115,11 @@ in
       zip
       zoxide
     ];
+  };
+
+  documentation = {
+    enable = true;
+    dev.enable = true;
+    man.enable = true;
   };
 }
