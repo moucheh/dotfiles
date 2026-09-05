@@ -19,6 +19,7 @@ alias bldwas='clang++ -fsanitize=address *.cpp -o main'
 alias bldwasc='clang++ -fsanitize=address *.c -o main'
 
 alias v='nvim'
+alias nixvim="nix run ~/.config/nixvim"
 
 alias lg='lazygit'
 alias gst='git status'
