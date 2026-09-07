@@ -470,10 +470,19 @@ time_format = "{:%I:%M}"
         prefix = "win"
 
     [shell.panel]
-    clipboard_placement = "attached"
-    launcher_placement = "attached"
-    polkit_placement = "attached"
+    clipboard_placement = "floating"
+    clipboard_position = "top_center"
+    control_center_placement = "floating"
+    control_center_position = "top_center"
+    launcher_placement = "floating"
+    launcher_position = "top_center"
+    polkit_placement = "floating"
+    polkit_position = "top_center"
+    session_placement = "floating"
+    session_position = "center"
     transparency_mode = "glass"
+    wallpaper_placement = "floating"
+    wallpaper_position = "top_center"
 
     [[shell.session.actions]]
     action = "lock"

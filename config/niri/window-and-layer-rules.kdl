@@ -4,60 +4,55 @@ layer-rule {
 }
 
 layer-rule {
-    match namespace="^launcher$"
-    match namespace="^logout_dialog$"
+  match namespace="^noctalia-(panel|osd|notification)$"
 
-    shadow {
-        on
-    }
-
-    background-effect {
-      blur true
-      xray false
-    }
+  background-effect {
+    blur true
+    xray false
+  }
 }
 
 layer-rule {
-    match namespace="^noctalia-notification$"
+  match namespace="^noctalia-notification$"
 
-    block-out-from "screen-capture"
+  block-out-from "screen-capture"
 }
 
 window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-    open-maximized-to-edges false
+  geometry-corner-radius 12
+  clip-to-geometry true
+  open-maximized-to-edges false
 }
 
 window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^com\.obsproject\.Studio$"#
+  match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+  match app-id=r#"^com\.obsproject\.Studio$"#
 
-    block-out-from "screen-capture"
+  block-out-from "screen-capture"
 }
 
 window-rule {
-    match app-id=r#"^at\.yrlf\.wl_mirror$"#
+  match app-id=r#"^at\.yrlf\.wl_mirror$"#
 
-    open-on-output "HDMI-A-1"
-    open-fullscreen true
+  open-on-output "HDMI-A-1"
+  open-fullscreen true
 }
 
 window-rule {
-    match title=r#"^Picture in picture$"#
+  match title=r#"^Picture in picture$"#
 
-    open-floating true
-    open-focused false
-    default-floating-position x=950 y=300 relative-to="bottom-left"
-    default-column-width { fixed 900; }
-    default-window-height { fixed 500; }
+  open-floating true
+  open-focused false
+  default-floating-position x=950 y=300 relative-to="bottom-left"
+  default-column-width { fixed 900; }
+  default-window-height { fixed 500; }
 }
 
 window-rule {
-    match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
+  match app-id=r#"^org\.kde\.kdeconnect\.(handler|daemon)$"#
 
-    open-floating true
-    default-floating-position x=20 y=20 relative-to="bottom-right"
+  open-floating true
+  default-floating-position x=20 y=20 relative-to="bottom-right"
 }
 
 window-rule {
@@ -91,8 +86,8 @@ window-rule {
   draw-border-with-background false
   opacity 0.9
   background-effect {
-      blur true
-      xray true
+    blur true
+    xray true
   }
 
   popups {
