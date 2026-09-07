@@ -41,6 +41,9 @@ let
     "image/jpeg" = [ "imv.desktop" ];
     "image/jpg" = [ "imv.desktop" ];
     "image/webp" = [ "imv.desktop" ];
+    "x-scheme-handler/http" = [ "com.brave.Origin.desktop" ];
+    "x-scheme-handler/https" = [ "com.brave.Origin.desktop" ];
+    "text/html" = [ "com.brave.Origin.desktop" ];
   };
 in
 {
