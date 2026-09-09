@@ -8,6 +8,9 @@ in
     variables = {
       EDITOR = "nvim";
     };
+    sessionVariables = {
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
+    };
 
     systemPackages = with pkgs; [
       adwaita-icon-theme
@@ -54,6 +57,7 @@ in
       keepassxc
       keychain
       lazygit
+      libnotify
       lua-language-server
       man-pages
       man-pages-posix
@@ -75,6 +79,7 @@ in
       prettypst
       proton-vpn
       pyright
+      python314
       qbittorrent
       qemu
       ripgrep
