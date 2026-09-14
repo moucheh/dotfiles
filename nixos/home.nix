@@ -33,6 +33,7 @@ let
     ".inputrc" = "inputrc";
     ".prettierrc" = "prettierrc";
     ".vimrc" = "vimrc";
+    ".tmux.conf" = "tmux.conf";
   };
   mimeapps = {
     "application/pdf" = [ "org.gnome.Evince.desktop" ];
