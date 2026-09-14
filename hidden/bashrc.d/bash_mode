@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+set -o vi
+bind -m vi-insert "\\C-L":clear-screen

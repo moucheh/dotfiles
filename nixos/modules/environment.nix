@@ -21,7 +21,6 @@ in
       bat
       binutils
       black
-      btop
       btop-rocm
       bubblewrap
       cargo
@@ -91,6 +90,7 @@ in
       supertux
       tinymist
       tldr
+      tmux
       tree-sitter
       tty-solitaire
       typst

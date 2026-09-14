@@ -9,10 +9,8 @@ DOTFILES_BACKUP_FOLDER=${DOTFILES_BACKUP_FOLDER:="$HOME/.backup_$(date +%Y%m%d_%
 mkdir -p $DOTFILES_BACKUP_FOLDER
 
 HIDDEN_FILES=(
-  bash_aliases
-  bash_git
-  bash_integration
   bashrc
+  bashrc.d
   clang-format
   gitconfig
   'gtkrc-2.0'

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+export GOPATH=$HOME/.go/
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_ICON_THEME="Breeze dark"
+
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT="%Y-%m-%d %r %t"
+
+PROMPT_COMMAND='printf "\e]7;file://%s%s\a" "$HOSTNAME" "$PWD"; '"$PROMPT_COMMAND"
+
+export PS1="\[╭─ \w\n╰\[\033[0;34m\]\u\[\033[0m\]@\h \[\033[0;34m\]->>\[\033[0m\] "
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:" ]]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.go/bin:$PATH"
+PATH="$HOME/.dotnet/tools/:$PATH"
+export PATH

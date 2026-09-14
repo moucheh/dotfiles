@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+nrs () {
+  pushd ~/.dotfiles/nixos || exit
+  sudo nixos-rebuild switch --impure --flake .
+  popd || exit
+}
+
+make_directory_and_cd_into_it () {
+    mkdir "$1"
+    cd "$1" || exit
+}
+
+alias c='clear'
+alias md='make_directory_and_cd_into_it'
+
+alias v='nvim'
+alias nixvim="nix run ~/.config/nixvim"
+
+alias lg='lazygit'
+
+alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
@@ -10,8 +12,6 @@ alias cat='bat --plain'
 
 alias top='btop'
 alias htop='btop'
-
-export PATH="$PATH:$HOME/.eclipse/eclipse"
 
 eval "$(keychain -q --eval gh_key gl_key)"
 

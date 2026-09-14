@@ -24,10 +24,9 @@ let
     yazi = "yazi";
   };
   home_files = {
-    ".bash_aliases" = "bash_aliases";
-    ".bash_git" = "bash_git";
-    ".bash_integration" = "bash_integration";
+    ".bash_profile" = "bash_profile";
     ".bashrc" = "bashrc";
+    ".bashrc.d" = "bashrc.d";
     ".clang-format" = "clang-format";
     ".gitconfig" = "gitconfig";
     ".gtkrc-2.0" = "gtkrc-2.0";
