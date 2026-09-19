@@ -4,5 +4,20 @@
 [push]
   autoSetupRemote = true
 
+[core]
+  editor = nvim
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  algorithm = histogram
+  colorMoved = default
+  mnemonicPrefix = true
+
+[rerere]
+  enabled = true
+
 [include]
   path = ~/.gitconfig.user

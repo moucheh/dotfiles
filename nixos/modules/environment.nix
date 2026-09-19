@@ -29,6 +29,7 @@ in
       clang-tools
       cmatrix
       cowsay
+      delta
       distrobox
       docker
       dotnet-sdk_10

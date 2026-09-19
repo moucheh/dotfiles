@@ -1,6 +1,5 @@
 os:
   editPreset: 'nvim'
-
 gui:
   nerdFontsVersion: "3"
   theme:
@@ -23,6 +22,9 @@ gui:
       - '#cad3f5'
     searchingActiveBorderColor:
       - '#eed49f'
-
   authorColors:
     '*': '#b7bdf8'
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
