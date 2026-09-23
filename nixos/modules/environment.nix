@@ -67,7 +67,6 @@ in
       neovim
       nil
       nodejs_26
-      opencode
       pandoc
       pavucontrol
       pciutils
@@ -99,6 +98,7 @@ in
       unstable.brave-origin
       unstable.noctalia
       unstable.noctalia-greeter
+      unstable.opencode
       unstable.wezterm
       unzip
       usbutils
