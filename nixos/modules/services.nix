@@ -1,6 +1,18 @@
 {
   services = {
-    auto-cpufreq.enable = true;
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersave";
+          turbo = "auto";
+        };
+        charger = {
+          governor = "default";
+          turbo = "auto";
+        };
+      };
+    };
 
     acpid = {
       enable = true;
@@ -34,4 +46,6 @@
     upower.enable = true;
     flatpak.enable = true;
   };
+
+  powerManagement.powertop.enable = true;
 }
