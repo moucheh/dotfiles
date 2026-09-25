@@ -18,5 +18,6 @@ alias v='nvim'
 alias nixvim="nix run ~/.config/nixvim"
 
 alias lg='lazygit'
+alias fetch='fetch -l nixos-old'
 
 alias led='echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness'

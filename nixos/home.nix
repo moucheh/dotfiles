@@ -8,6 +8,7 @@ let
     btop = "btop";
     eza = "eza";
     fastfetch = "fastfetch";
+    fetch = "fetch";
     foot = "foot";
     "gtk-2.0" = "gtk-2.0";
     "gtk-3.0" = "gtk-3.0";

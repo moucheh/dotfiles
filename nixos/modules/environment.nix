@@ -96,6 +96,7 @@ in
       typst
       unrar
       unstable.brave-origin
+      unstable.fetch
       unstable.noctalia
       unstable.noctalia-greeter
       unstable.opencode
