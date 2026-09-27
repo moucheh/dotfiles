@@ -14,6 +14,8 @@ widget_spacing = 16
     middle = "exec niri msg action close-window"
     right = "exec niri msg action maximize-column"
 
+[calendar]
+
 [control_center.calendar]
 show_events_card = false
 
@@ -229,6 +231,7 @@ fingerprint = false
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@HDMI-A-1",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
@@ -241,6 +244,33 @@ widget_order = [
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 540.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
     box_height = 196.0
@@ -337,7 +367,6 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
         background = false
         bands = 32
-        format = "{:%I:%M %p}"
         show_when_idle = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
@@ -353,9 +382,7 @@ widget_order = [
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
         background = false
-        bands = 32
         hide_when_no_media = true
-        show_when_idle = false
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
     box_height = 0.0
@@ -385,7 +412,6 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         background = false
         format = "{:%I:%M %p}"
-        hide_when_no_media = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
     box_height = 32.0
