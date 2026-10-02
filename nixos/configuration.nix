@@ -24,9 +24,10 @@
     isNormalUser = true;
     description = "moucheh";
     extraGroups = [
+      "libvirtd"
       "networkmanager"
-      "wheel"
       "video"
+      "wheel"
     ];
   };
 
