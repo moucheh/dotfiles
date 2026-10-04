@@ -68,6 +68,7 @@ in
       neovim
       nil
       nodejs_26
+      nushell
       pandoc
       pavucontrol
       pciutils
