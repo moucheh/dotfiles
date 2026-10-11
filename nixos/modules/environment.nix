@@ -32,7 +32,6 @@ in
       delta
       distrobox
       dnsmasq
-      docker
       dotnet-sdk_10
       easyeffects
       emmet-language-server
