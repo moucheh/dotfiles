@@ -55,6 +55,7 @@ in
       imagemagick
       imv
       jdk25
+      jq
       keepassxc
       keychain
       lazygit
@@ -65,6 +66,7 @@ in
       maven
       mesa
       mpv
+      mpvScripts.mpris
       ncdu
       neovim
       nil
@@ -122,6 +124,7 @@ in
       xz
       yaml-language-server
       yazi
+      yt-dlp
       zip
       zoxide
     ];
