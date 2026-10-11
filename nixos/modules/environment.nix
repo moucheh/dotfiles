@@ -54,6 +54,7 @@ in
       hyprpicker
       imagemagick
       imv
+      jdk25
       keepassxc
       keychain
       lazygit
@@ -61,6 +62,7 @@ in
       lua-language-server
       man-pages
       man-pages-posix
+      maven
       mesa
       mpv
       ncdu
