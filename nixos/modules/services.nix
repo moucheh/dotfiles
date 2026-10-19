@@ -8,7 +8,8 @@
           turbo = "auto";
         };
         charger = {
-          governor = "default";
+          governor = "performance";
+          energy_perf_bias = "default";
           turbo = "auto";
         };
       };

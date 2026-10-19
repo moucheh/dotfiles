@@ -179,6 +179,7 @@ widget_order = [
         title = ""
 
 [dock]
+active_monitor_only = true
 auto_hide = true
 background_opacity = 0.64999998547136784
 enabled = true
@@ -199,7 +200,7 @@ enabled = true
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
-pre_action_fade_seconds = 0
+pre_action_fade_seconds = 10
 
     [idle.behavior.lock]
     action = "lock"
@@ -436,6 +437,7 @@ temperature_night = 4500
 
 [notification]
 background_opacity = 0.64999998547136784
+history_retention_hours = 1
 layer = "overlay"
 
 [osd]
@@ -475,6 +477,8 @@ time_format = "{:%I:%M}"
 
     [shell.launcher]
     app_grid = true
+    category_icons_only = true
+    layout = "simple"
 
         [shell.launcher.providers.calculator]
         global = true
