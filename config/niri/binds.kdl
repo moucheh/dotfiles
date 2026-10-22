@@ -25,6 +25,12 @@ binds {
     Mod+Alt+N hotkey-overlay-title="Toggle Do Not Disturb" {
         spawn-sh "noctalia msg notification-dnd-toggle";
     }
+    Mod+Shift+B hotkey-overlay-title="Toggle Bluetooth" {
+        spawn-sh "noctalia msg bluetooth-toggle";
+    }
+    Mod+Shift+C hotkey-overlay-title="Toggle Caffeine" {
+        spawn-sh "noctalia msg caffeine-toggle";
+    }
 
     XF86AudioRaiseVolume allow-when-locked=true  { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume allow-when-locked=true  { spawn-sh "noctalia msg volume-down"; }
