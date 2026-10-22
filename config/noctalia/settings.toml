@@ -601,7 +601,7 @@ custom_image = "/home/moucheh/Pictures/nixos.svg"
 custom_image_colorize = true
 
     [widget.launcher.actions]
-    right = "exec wezterm -e ~/.config/niri/scripts/fastfetch.sh"
+    right = "exec footclient -e ~/.config/niri/scripts/fastfetch.sh"
 
 [widget.media]
 hide_when_no_media = true

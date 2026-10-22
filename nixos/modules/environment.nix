@@ -7,6 +7,7 @@ in
   environment = {
     variables = {
       EDITOR = "nvim";
+      TERMINAL = "footclient";
     };
     sessionVariables = {
       DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";

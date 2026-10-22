@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [[ -z "$TMUX" && -n "$WAYLAND_DISPLAY" ]]; then
+    exec tmux new-session
+fi
+
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"
