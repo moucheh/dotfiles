@@ -67,8 +67,7 @@ in
       man-pages-posix
       maven
       mesa
-      mpv
-      mpvScripts.mpris
+      (mpv.override { scripts = [ mpvScripts.mpris ]; })
       ncdu
       neovim
       nil
