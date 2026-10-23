@@ -11,6 +11,7 @@ in
     };
     sessionVariables = {
       DOTNET_ROOT = "${pkgs.dotnet-sdk_10}/share/dotnet";
+      JAVA_HOME = "${pkgs.jdk25}/lib/openjdk";
     };
 
     systemPackages = with pkgs; [
@@ -73,6 +74,7 @@ in
       nil
       nodejs_26
       nushell
+      onlyoffice-desktopeditors
       pandoc
       pavucontrol
       pciutils
@@ -90,6 +92,7 @@ in
       ripgrep
       rust-analyzer
       rustc
+      snapshot
       starship
       stow
       stylua
