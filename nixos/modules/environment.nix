@@ -128,6 +128,7 @@ in
       yaml-language-server
       yazi
       yt-dlp
+      ytsub
       zip
       zoxide
     ];

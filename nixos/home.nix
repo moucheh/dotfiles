@@ -14,6 +14,7 @@ let
     "gtk-3.0" = "gtk-3.0";
     "gtk-4.0" = "gtk-4.0";
     lazygit = "lazygit";
+    mpv = "mpv";
     niri = "niri";
     noctalia = "noctalia";
     nushell = "nushell";
@@ -24,6 +25,7 @@ let
     vim = "vim";
     wezterm = "wezterm";
     yazi = "yazi";
+    ytsub = "ytsub";
   };
   home_files = {
     ".bash_profile" = "bash_profile";
