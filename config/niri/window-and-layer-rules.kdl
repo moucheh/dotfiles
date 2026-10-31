@@ -79,7 +79,6 @@ window-rule {
   match app-id="^xdg-desktop-portal-gtk$"
   match app-id=r#"^org\.pulseaudio\.pavucontrol$"#
   match app-id="^blueman-manager$"
-  match app-id=r#"^io\.freetubeapp\.FreeTube$"#
   match app-id=r#"^dev\.noctalia\.Noctalia$"#
   match app-id=r#"^heroic$"#
 
@@ -99,14 +98,6 @@ window-rule {
       blur true
     }
   }
-}
-
-window-rule {
-  match app-id=r#"^io\.freetubeapp\.FreeTube$"#
-
-  open-on-workspace "2"
-  open-focused false
-  open-maximized true
 }
 
 window-rule {
