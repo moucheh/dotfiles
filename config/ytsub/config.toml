@@ -1,1 +1,7 @@
 mode = "latest_videos"
+
+[key_bindings]
+"P" = ""
+"f" = ""
+"p" = "play_using_ytdlp"
+"enter" = "play_using_ytdlp"
