@@ -127,6 +127,7 @@ in
       xz
       yaml-language-server
       yazi
+      youtube-tui
       yt-dlp
       ytsub
       zip
