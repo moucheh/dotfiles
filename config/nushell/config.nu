@@ -9,6 +9,7 @@ $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
 $env.config.cursor_shape.vi_insert = 'line'
 $env.config.cursor_shape.vi_normal = 'block'
+$env.config.hooks.display_output = { table --icons }
 
 alias c = clear
 alias ll = ls -l
