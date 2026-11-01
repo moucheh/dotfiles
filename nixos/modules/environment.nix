@@ -77,6 +77,7 @@ in
       pandoc
       pavucontrol
       pciutils
+      pdfarranger
       pipes
       pkg-config
       poppler-utils
