@@ -32,10 +32,10 @@ type = "noctalia/screen_recorder:toggle"
 type = "notification"
 
 [[control_center.shortcuts]]
-type = "clipboard"
+type = "caffeine"
 
 [[control_center.shortcuts]]
-type = "caffeine"
+type = "local/screen-dimmer:toggle"
 
 [desktop_widgets]
 schema_version = 2
@@ -258,7 +258,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -285,7 +285,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -312,7 +312,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -339,7 +339,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -443,11 +443,15 @@ layer = "overlay"
 [osd]
 background_opacity = 0.59999998658895493
 
+[plugin_settings."local/screen-dimmer"]
+opacity = 0.5
+
 [plugin_settings."noctalia/screen_recorder"]
 restore_portal = true
 
 [plugins]
-enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator" ]
+auto_update = "all"
+enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator", "local/screen-dimmer" ]
 
     [[plugins.source]]
     kind = "git"
@@ -458,6 +462,11 @@ enabled = [ "noctalia/screen_recorder", "noctalia/timer", "noctalia/translator" 
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "~/.config/noctalia/plugins"
+    name = "local"
 
 [shell]
 avatar_path = "~/Pictures/tenma.png"
@@ -575,8 +584,10 @@ transition_on_startup = true
     path = "/home/moucheh/Pictures/WallPapers/e46.jpg"
 
     [[wallpaper.favorite]]
-    path = "~/Pictures/WallPapers/tp-wallpaper.jpg"
+    palette_source = "wallpaper"
+    path = "/home/moucheh/~/Pictures/WallPapers/tp-wallpaper.jpg"
     theme_mode = "auto"
+    wallpaper_scheme = "m3-content"
 
 [widget.active_window]
 max_length = 150

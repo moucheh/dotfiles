@@ -1,0 +1,4 @@
+{
+  "settings.opacity": "Dimmer opacity",
+  "settings.opacity_description": "How strongly the screen should be dimmed (0–95%)."
+}

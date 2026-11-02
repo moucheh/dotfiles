@@ -1,0 +1,37 @@
+id = "local/screen-dimmer"
+name = "Screen Dimmer"
+version = "1.0.0"
+description = "Fullscreen translucent black overlay"
+author = "local"
+license = "MIT"
+plugin_api = 36
+
+[[setting]]
+key = "opacity"
+type = "double"
+label_key = "settings.opacity"
+description_key = "settings.opacity_description"
+default = 0.45
+min = 0.0
+max = 0.95
+step = 0.01
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[shortcut]]
+id = "toggle"
+entry = "shortcut.luau"
+
+[[layer]]
+id = "dimmer"
+entry = "dimmer.luau"
+
+layer = "overlay"
+anchors = ["top", "bottom", "left", "right"]
+exclusive_zone = -1
+keyboard = "none"
+click_through = true
+output = "all"
+visible = false

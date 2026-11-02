@@ -8,7 +8,7 @@ binds {
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen"          { spawn-sh "loginctl lock-session"; }
     Ctrl+Alt+E hotkey-overlay-title="Open power menu"          { spawn-sh "noctalia msg panel-toggle session"; }
     Ctrl+Alt+S hotkey-overlay-title="Toggle Noctalia Settings" { spawn-sh "noctalia msg settings-toggle"; }
-    Ctrl+Alt+D hotkey-overlay-title="Dim the Screen"           { spawn-sh "pkill dim || dim -d 0 -p -a 0.5"; }
+    Ctrl+Alt+D hotkey-overlay-title="Toggle Screen Dimmer"     { spawn-sh "noctalia msg plugin local/screen-dimmer:service all toggle"; }
     Ctrl+Alt+C hotkey-overlay-title="Enlarge cursor" {
         spawn-sh "niri msg action load-config-file --path ~/.config/niri/large-cursor.kdl"
     }
