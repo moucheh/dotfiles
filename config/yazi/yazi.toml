@@ -8,7 +8,7 @@ edit = [
 ]
 
 play = [
-	{ run = "mpv %s", desc = "Play" },
+	{ run = "mpv %s & disown", desc = "Play" },
 ]
 
 [plugin]
