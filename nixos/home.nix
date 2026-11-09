@@ -16,6 +16,8 @@ let
     lazygit = "lazygit";
     mpv = "mpv";
     niri = "niri";
+    nix = "nix";
+    nixpkgs = "nixpkgs";
     noctalia = "noctalia";
     nushell = "nushell";
     nvim = "nvim";
