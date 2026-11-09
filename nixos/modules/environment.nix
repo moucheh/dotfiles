@@ -4,6 +4,14 @@ let
   unstable = pkgs-unstable;
 in
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      qutebrowser = prev.qutebrowser.override {
+        enableWideVine = true;
+      };
+    })
+  ];
+
   environment = {
     variables = {
       EDITOR = "nvim";
@@ -89,6 +97,7 @@ in
       python314
       qbittorrent
       qemu
+      qutebrowser
       ripgrep
       rust-analyzer
       rustc

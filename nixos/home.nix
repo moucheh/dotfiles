@@ -23,6 +23,7 @@ let
     nvim = "nvim";
     qt5ct = "qt5ct";
     qt6ct = "qt6ct";
+    qutebrowser = "qutebrowser";
     "starship.toml" = "starship.toml";
     vim = "vim";
     wezterm = "wezterm";
@@ -48,9 +49,9 @@ let
     "image/jpeg" = [ "imv.desktop" ];
     "image/jpg" = [ "imv.desktop" ];
     "image/webp" = [ "imv.desktop" ];
-    "x-scheme-handler/http" = [ "com.brave.Origin.desktop" ];
-    "x-scheme-handler/https" = [ "com.brave.Origin.desktop" ];
-    "text/html" = [ "com.brave.Origin.desktop" ];
+    "x-scheme-handler/http" = [ "org.qutebrowser.qutebrowser.desktop" ];
+    "x-scheme-handler/https" = [ "org.qutebrowser.qutebrowser.desktop" ];
+    "text/html" = [ "org.qutebrowser.qutebrowser.desktop" ];
   };
 in
 {

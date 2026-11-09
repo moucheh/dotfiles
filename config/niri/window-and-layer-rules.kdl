@@ -73,6 +73,7 @@ window-rule {
 
 window-rule {
   match app-id=r#"^brave"#
+  match app-id=r#"^org\.qutebrowser\.qutebrowser$"#
   match app-id=r#"^org\.gnome\.Nautilus$"#
   match app-id=r#"^org\.gnome\.Calculator$"#
   match app-id=r#"^org\.gnome\.Evince$"#
@@ -101,7 +102,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"^brave-origin$"#
+  match app-id=r#"^org\.qutebrowser\.qutebrowser$"#
 
   open-on-workspace "1"
   open-focused false
