@@ -28,6 +28,7 @@ let
     wezterm = "wezterm";
     yazi = "yazi";
     ytsub = "ytsub";
+    ytm-player = "ytm-player";
   };
   home_files = {
     ".bash_profile" = "bash_profile";

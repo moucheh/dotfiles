@@ -1,0 +1,82 @@
+[general]
+startup_page = "library"
+playback_bar_position = "bottom"
+brand_account_id = ""
+check_for_updates = true
+
+[playback]
+audio_quality = "high"
+autoplay = true
+prefer_audio = true
+default_volume = 80
+seek_step = 5
+gapless = true
+api_timeout = 15
+resume_on_launch = true
+history_min_listen_seconds = 5
+sync_history_to_ytmusic = true
+
+[yt_dlp]
+cookies_file = ""
+use_session_cookies = false
+cookie_browser = ""
+ca_bundle = ""
+remote_components = ""
+js_runtimes = ""
+
+[search]
+default_mode = "music"
+max_history = 500
+predictive = true
+
+[cache]
+enabled = true
+max_size_mb = 1024
+prefetch_next = true
+location = ""
+
+[ui]
+theme = "ansi-dark"
+album_art = true
+progress_style = "block"
+sidebar_width = 30
+col_index = 4
+col_title = 0
+col_artist = 0
+col_album = 0
+col_duration = 8
+bidi_mode = "auto"
+show_selection_info = true
+home_shelves = 3
+region = "ZZ"
+sidebar_overflow = "truncate"
+show_queue_source = true
+
+[notifications]
+enabled = true
+timeout_seconds = 5
+format = "{title} — {artist}"
+
+[mpris]
+enabled = true
+
+[lyrics]
+transliteration = false
+
+[discord]
+enabled = false
+client_id = ""
+
+[lastfm]
+enabled = false
+api_key = ""
+api_secret = ""
+session_key = ""
+username = ""
+password_hash = ""
+
+[logging]
+level = "WARNING"
+max_bytes = 5242880
+backup_count = 3
+keep_crashes = 10
