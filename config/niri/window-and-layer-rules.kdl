@@ -62,6 +62,19 @@ window-rule {
 }
 
 window-rule {
+  match title="^Qutebrowser Input$"
+
+  default-column-width { fixed 1000; }
+  default-window-height { fixed 1000; }
+  open-floating true
+
+  background-effect {
+    blur true
+    xray false
+  }
+}
+
+window-rule {
   match app-id="neovide"
   match app-id="st-256color"
 
