@@ -1,7 +1,18 @@
-{ pkgs, pkgs-unstable, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  pinnedBtop,
+  ...
+}:
 
 let
   unstable = pkgs-unstable;
+
+  patchedBtop = pinnedBtop.btop-rocm.overrideAttrs (old: {
+    patches = (old.patches or [ ]) ++ [
+      ./patches/btop-normalize-processes.patch
+    ];
+  });
 in
 {
   nixpkgs.overlays = [
@@ -9,6 +20,8 @@ in
       qutebrowser = prev.qutebrowser.override {
         enableWideVine = true;
       };
+
+      btop-rocm = patchedBtop;
     })
   ];
 
