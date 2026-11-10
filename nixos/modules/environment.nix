@@ -137,8 +137,8 @@ in
       xz
       yaml-language-server
       yazi
-      youtube-tui
       yt-dlp
+      ytfzf
       ytsub
       zip
       zoxide

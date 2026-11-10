@@ -75,6 +75,12 @@ window-rule {
 }
 
 window-rule {
+  match title=r#"^imv.*ytfzf.*$"#
+
+  open-focused false
+}
+
+window-rule {
   match app-id="neovide"
   match app-id="st-256color"
 
