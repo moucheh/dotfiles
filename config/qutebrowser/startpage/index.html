@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+            color: #cdd6f4;
+            font-family: "JetBrains Mono", monospace;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        #clock {
+            font-size: clamp(80px, 12vw, 160px);
+            font-weight: 300;
+            letter-spacing: -8px;
+        }
+
+        #date {
+            margin-top: 12px;
+            font-size: 18px;
+            color: #a6adc8;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="clock">12:00 AM</div>
+        <div id="date">Loading...</div>
+    </main>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            document.getElementById("clock").textContent =
+                now.toLocaleTimeString("en-US", {
+                    hour: "numeric",
+                    minute: "2-digit",
+                    hour12: true
+                });
+
+            document.getElementById("date").textContent =
+                now.toLocaleDateString("en-GB", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                });
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

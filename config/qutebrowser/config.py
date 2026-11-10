@@ -10,7 +10,7 @@
 config.load_autoconfig(True)
 config.source("noctalia/colors.py")
 
-c.url.start_pages = ["https://start.duckduckgo.com/"]
+c.url.start_pages = ["file:///home/moucheh/.config/qutebrowser/startpage/index.html"]
 
 c.colors.webpage.preferred_color_scheme = "dark"
 c.colors.webpage.darkmode.enabled = True
@@ -21,7 +21,7 @@ c.colors.webpage.darkmode.policy.page = "smart"
 c.tabs.show = "multiple"
 c.tabs.position = "left"
 c.tabs.width = 50
-c.tabs.last_close = "blank"
+c.tabs.last_close = "startpage"
 c.tabs.favicons.show = "always"
 c.tabs.favicons.scale = 2.0
 c.tabs.title.format = "{audio}{current_title}"
