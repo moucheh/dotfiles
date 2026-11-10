@@ -18,7 +18,13 @@
     "flakes"
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    permittedInsecurePackages = [
+      "qutebrowser-3.7.0"
+    ];
+  };
 
   users.users."moucheh" = {
     isNormalUser = true;

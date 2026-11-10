@@ -44,6 +44,7 @@ in
       bat
       binutils
       black
+      brave-origin
       btop-rocm
       bubblewrap
       cargo
@@ -126,7 +127,6 @@ in
       tty-solitaire
       typst
       unrar
-      unstable.brave-origin
       unstable.fetch
       unstable.noctalia
       unstable.noctalia-greeter
