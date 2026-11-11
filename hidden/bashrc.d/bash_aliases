@@ -15,7 +15,6 @@ alias c='clear'
 alias md='make_directory_and_cd_into_it'
 
 alias v='nvim'
-alias nixvim="nix run ~/.config/nixvim"
 
 alias lg='lazygit'
 alias fetch='fetch -l nixos-old'
