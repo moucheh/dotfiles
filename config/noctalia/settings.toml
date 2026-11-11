@@ -566,8 +566,8 @@ source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
     [theme.templates]
-    builtin_ids = [ "cava", "foot", "gtk3", "gtk4", "kcolorscheme", "mango", "niri", "qt", "umbriel", "wezterm" ]
-    community_ids = [ "zed", "bat", "yazi" ]
+    builtin_ids = [ "cava", "foot", "gtk3", "gtk4", "kcolorscheme", "niri", "qt", "wezterm" ]
+    community_ids = [ "qutebrowser", "bat", "yazi" ]
 
 [wallpaper]
 directory = "~/Pictures/WallPapers"
