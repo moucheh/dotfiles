@@ -11,4 +11,4 @@ else
 fi
 
 niri msg action load-config-file --path $CONFIG_PATH
-notify-send -i heroic "Gaming Mode" $ACTION
+notify-send -e "Gaming Mode" $ACTION
