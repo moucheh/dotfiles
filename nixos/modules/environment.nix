@@ -134,7 +134,6 @@ in
       unstable.wezterm
       unzip
       usbutils
-      vim
       vscode-langservers-extracted
       wev
       wget
