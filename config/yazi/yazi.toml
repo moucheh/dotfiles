@@ -15,3 +15,8 @@ play = [
 prepend_previewers = [
   { mime = "video/*", run = "video" },
 ]
+
+[open]
+rules = [
+  { mime = "text/html", use = ["open", "edit"] }
+]
