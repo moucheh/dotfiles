@@ -169,4 +169,8 @@ binds {
     Mod+Shift+G hotkey-overlay-title="Enable Gaming Mode" {
         spawn-sh "~/.config/niri/scripts/toggle_gaming_mode.sh enable";
     }
+
+    Ctrl+Shift+Alt+N { spawn-sh "playerctl next"; }
+    Ctrl+Shift+Alt+P { spawn-sh "playerctl previous"; }
+    Ctrl+Shift+Alt+Space { spawn-sh "playerctl play-pause"; }
 }

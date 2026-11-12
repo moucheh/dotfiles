@@ -102,6 +102,7 @@ in
       pdfarranger
       pipes
       pkg-config
+      playerctl
       poppler-utils
       powertop
       prettierd
