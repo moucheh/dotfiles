@@ -17,7 +17,9 @@ binds {
 
     Mod+M hotkey-overlay-title="Open YouTube Music client: ytm player" { spawn-sh "footclient -e ytm"; }
     Mod+Y hotkey-overlay-title="Open YouTube client: ytsub" { spawn-sh "footclient -e ytsub"; }
-    Mod+Shift+Y hotkey-overlay-title="Open YouTube client: ytfzf" { spawn-sh "footclient -e ytfzf -t -T imv"; }
+    Mod+Shift+Y hotkey-overlay-title="Open YouTube client: ytfzf" {
+      spawn-sh "footclient -e ytfzf --video-pref='bestvideo[height<=720][fps<=30][vcodec^=avc1]' -t -T imv";
+    }
     Mod+E hotkey-overlay-title="Open file manager: yazi"    { spawn-sh "footclient -e yazi"; }
     Mod+N hotkey-overlay-title="Toggle notification center" {
         spawn-sh "noctalia msg panel-toggle control-center notifications";
