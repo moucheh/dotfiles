@@ -17,6 +17,6 @@ prepend_previewers = [
 ]
 
 [open]
-rules = [
+prepend_rules = [
   { mime = "text/html", use = ["open", "edit"] }
 ]
