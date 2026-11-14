@@ -108,6 +108,7 @@ in
       prettierd
       prettypst
       proton-vpn
+      proton-vpn-cli
       pyright
       python314
       qbittorrent
