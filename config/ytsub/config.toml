@@ -1,4 +1,5 @@
 mode = "latest_videos"
+hide_members_only = true
 
 [key_bindings]
 "P" = ""
